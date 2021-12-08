@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://haidog-yaqub.github.io/cn/music/</loc>
+    <lastmod>2021-11-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://haidog-yaqub.github.io/music/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://haidog-yaqub.github.io/cn/music/"
+                />
+  </url><url>
     <loc>https://haidog-yaqub.github.io/cn/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -455,19 +468,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://haidog-yaqub.github.io/cn/imprint/"
-                />
-  </url><url>
-    <loc>https://haidog-yaqub.github.io/cn/music/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://haidog-yaqub.github.io/music/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://haidog-yaqub.github.io/cn/music/"
                 />
   </url><url>
     <loc>https://haidog-yaqub.github.io/cn/research/</loc>

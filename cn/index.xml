@@ -8,6 +8,19 @@
     <language>en</language>
     <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://haidog-yaqub.github.io/cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://haidog-yaqub.github.io/cn/music/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://haidog-yaqub.github.io/cn/music/</guid>
+      
+        <description>HigoBeatz 音乐制作人/Rapper
+Credits: 摩登天空, 一周说唱歌手, 三联周刊, TED, Swang多雷等。 
+🎧 作品</description>
+      
+    </item>
+    
+    <item>
       <title>Series Part 2</title>
       <link>https://haidog-yaqub.github.io/cn/post/series-part-2/</link>
       <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
@@ -158,17 +171,6 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://haidog-yaqub.github.io/cn/imprint/</guid>
-      
-        <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.</description>
-      
-    </item>
-    
-    <item>
-      <title>Music</title>
-      <link>https://haidog-yaqub.github.io/cn/music/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://haidog-yaqub.github.io/cn/music/</guid>
       
         <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.</description>
       
