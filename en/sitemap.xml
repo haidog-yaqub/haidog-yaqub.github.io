@@ -2,6 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://haidog-yaqub.github.io/</loc>
+    <lastmod>2021-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://haidog-yaqub.github.io/cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://haidog-yaqub.github.io/"
+                />
+  </url><url>
+    <loc>https://haidog-yaqub.github.io/projects/auto-rap/</loc>
+    <lastmod>2021-12-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://haidog-yaqub.github.io/projects/</loc>
+    <lastmod>2021-12-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://haidog-yaqub.github.io/music/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -26,19 +45,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://haidog-yaqub.github.io/research/"
-                />
-  </url><url>
-    <loc>https://haidog-yaqub.github.io/</loc>
-    <lastmod>2021-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://haidog-yaqub.github.io/cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://haidog-yaqub.github.io/"
                 />
   </url><url>
     <loc>https://haidog-yaqub.github.io/post/</loc>
@@ -106,10 +112,7 @@
                 href="https://haidog-yaqub.github.io/post/series-part-1/"
                 />
   </url><url>
-    <loc>https://haidog-yaqub.github.io/projects/series-part-1/</loc>
-    <lastmod>2021-06-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://haidog-yaqub.github.io/projects/</loc>
+    <loc>https://haidog-yaqub.github.io/projects/mer/</loc>
     <lastmod>2021-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://haidog-yaqub.github.io/post/redirect/</loc>
