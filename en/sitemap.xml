@@ -18,8 +18,24 @@
     <loc>https://haidog-yaqub.github.io/projects/auto-rap/</loc>
     <lastmod>2021-12-31T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://haidog-yaqub.github.io/series/projects/</loc>
+    <lastmod>2021-12-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://haidog-yaqub.github.io/projects/</loc>
     <lastmod>2021-12-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://haidog-yaqub.github.io/series/</loc>
+    <lastmod>2021-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://haidog-yaqub.github.io/cn/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://haidog-yaqub.github.io/series/"
+                />
   </url><url>
     <loc>https://haidog-yaqub.github.io/music/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
@@ -36,16 +52,6 @@
   </url><url>
     <loc>https://haidog-yaqub.github.io/research/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://haidog-yaqub.github.io/cn/research/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://haidog-yaqub.github.io/research/"
-                />
   </url><url>
     <loc>https://haidog-yaqub.github.io/post/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
@@ -58,19 +64,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://haidog-yaqub.github.io/post/"
-                />
-  </url><url>
-    <loc>https://haidog-yaqub.github.io/series/</loc>
-    <lastmod>2021-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://haidog-yaqub.github.io/cn/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://haidog-yaqub.github.io/series/"
                 />
   </url><url>
     <loc>https://haidog-yaqub.github.io/post/series-part-2/</loc>

@@ -176,16 +176,5 @@ Credits: 摩登天空, 一周说唱歌手, 三联周刊, TED, Swang多雷等。
       
     </item>
     
-    <item>
-      <title>Research</title>
-      <link>https://haidog-yaqub.github.io/cn/research/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://haidog-yaqub.github.io/cn/research/</guid>
-      
-        <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.</description>
-      
-    </item>
-    
   </channel>
 </rss>

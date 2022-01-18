@@ -6,7 +6,18 @@
     <description>Recent content in Series on Jiarui Hai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://haidog-yaqub.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://haidog-yaqub.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects</title>
+      <link>https://haidog-yaqub.github.io/series/projects/</link>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://haidog-yaqub.github.io/series/projects/</guid>
+      
+        <description></description>
+      
+    </item>
+    
     <item>
       <title>series-setup</title>
       <link>https://haidog-yaqub.github.io/series/series-setup/</link>

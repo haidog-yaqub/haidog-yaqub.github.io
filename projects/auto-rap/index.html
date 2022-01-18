@@ -29,8 +29,8 @@
   
   <link
     rel="stylesheet"
-    href="/css/main.min.1aacb62d60668d6077701fd28f5a2ccfa3db38eb8b00d420d2e5d579c7dd1f97.css"
-    integrity="sha256-Gqy2LWBmjWB3cB/Sj1osz6PbOOuLANQg0uXVecfdH5c="
+    href="/css/main.min.1609c05129979623284f7e8d4f45d2002fb7f50195edb7ffb7cb957a8a63293c.css"
+    integrity="sha256-FgnAUSmXliMoT36NT0XSAC&#43;39QGV7bf/t8uVeopjKTw="
     crossorigin="anonymous"
     type="text/css"
   />
@@ -94,6 +94,7 @@
 <meta property="og:url" content="https://haidog-yaqub.github.io/projects/auto-rap/" /><meta property="og:image" content="https://haidog-yaqub.github.io/images/site-feature-image.png"/><meta property="article:section" content="projects" />
 <meta property="article:published_time" content="2021-12-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-12-31T00:00:00+00:00" /><meta property="og:site_name" content="Jiarui Hai" />
+<meta property="og:see_also" content="https://haidog-yaqub.github.io/projects/mer/" />
 
 
 
@@ -163,7 +164,7 @@
 
     ,
         "url" : "https:\/\/haidog-yaqub.github.io\/projects\/auto-rap\/",
-        "wordCount" : "274",
+        "wordCount" : "325",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -205,7 +206,7 @@
           <li>
             <a
               
-              href="/projects/"
+              href="/research/"
               
               title=""
               >Research</a
@@ -339,15 +340,28 @@
       <div class="post-title">
         <h1>Automatic Rap Music Synthesis</h1>
         
-      </div><h2 id="introduction">Introduction</h2>
+      </div><h1 id="introduction">Introduction</h1>
 <p>Considering the promising market of rap music in social media and the poor performance of speech-to-singing methods for rap music, our team decided to focus on rap music synthesis.</p>
-<h2 id="rhythm-alignment">Rhythm Alignment</h2>
+<h1 id="rhythm-alignment">Rhythm Alignment</h1>
 <p>Rhythm, also called rap flow, is the core of rap music. Rappers enrich the fun of rap music through a variety of rhythmic variations. Different rap styles have different rhythmic characteristics, for example, triplets are often used in trap music, and Eminem&rsquo;s rap flow has many quarter notes.</p>
 <p>When labelling rhythm information, instead of annotating the timeline of lyrics, I assigned each song’s BPM and annotated fine-grained rhythmic patterns for each song in the form of MIDI files. Then, we utilized the force-alignment and PSOLA to align the rhythm of simple speech audio while maintaining its original pitch to make it have &ldquo;flow&rdquo;.</p>
-<h2 id="style-transfer">Style Transfer</h2>
+<p align="center">
+<img class="rounded" width="40%" src="/images/AutoRap/rhythm.png">
+</p>
+<p style="text-align: center;">
+F1. The process of rhythm alignment.
+</p>
+<h1 id="style-transfer">Style Transfer</h1>
 <p>However, according to our comparison, we found that melody is actually an important part of rap flow as well. If we only align the rhythm of the speech, it would sound more like a rhythmic reading than a rap song.</p>
 <p>To make the processed audio sound more like real rap music, we trained a modified version of the HiFi-GAN vocoder, which takes the fundamental frequency and spectrogram as input to adjust the audio pitch. We add rap styles to aligned speech by extracting pitches from existing rap audio or by using GAN to generate pitches.</p>
-<h2 id="demo">Demo</h2>
+<p align="center">
+<img class="rounded" width="50%" src="/images/AutoRap/autorap.png">
+</p>
+<p style="text-align: center;">
+F2. The overview of our modified HiFi-GAN vocoder based on KaraTuner. </br>
+(The source filter block is used to decomposite and rebuild spectrogram. The vocoder generates waveform based on SF block's output.)
+</p>
+<h1 id="demo">Demo</h1>
 <figure class="something">
 <audio controls preload="metadata">
 <source src="/audio/speech1.wav" type="audio/mpeg">
@@ -375,8 +389,23 @@ Aligned speech
 <p style="text-align: center;">
 Aligned speech with modified pitch contour
 </p>
-<h2 id="todo">Todo</h2>
+<h1 id="todo">Todo</h1>
 <p>The currently processed speech still has significant artifacts, so we are training on a larger speech dataset to improve the sound quality. We will continue to update the experimental results.</p>
+<h1 id="resources">Resources</h1>
+<p>Code: The code for modified HiFi-GAN vocoder is available in our <a href="https://github.com/haidog-yaqub/karatuner_hifi">Github</a> repository.</p>
+
+
+
+<h1></br>Recent Projects</h1>
+<ul>
+  
+    <li><a href="/projects/auto-rap/">Automatic Rap Music Synthesis</a></li>
+
+  
+    <li><a href="/projects/mer/">Multi-modal Music Emotion Recognition</a></li>
+
+  
+</ul>
 </div>
     <div class="post-footer">
       <div class="info">
