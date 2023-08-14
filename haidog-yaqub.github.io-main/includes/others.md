@@ -26,4 +26,4 @@
 
 # Activities
 - *2021.08*, Hosted a lecture about music production at ModernSky Studio
-- *2021.05*, Worked in the production of a [rap song](https://www.youtube.com/watch?v=gJGmbaxkdaw) for the TV show "HipHop Bank“
+- *2021.05*, Worked in the production of [this rap song](https://www.youtube.com/watch?v=gJGmbaxkdaw) for the TV show "HipHop Bank“
