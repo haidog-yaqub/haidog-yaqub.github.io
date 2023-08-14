@@ -1,7 +1,7 @@
 
 # Selected Projects 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/fs.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><img src='images/Difftuner.drawio.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Diff-Pitcher: Diffusion-based Singing Voice Pitch Correction \| [**Demo Page**](https://jhu-lcap.github.io/Diff-Pitcher/)  \\
