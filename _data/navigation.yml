@@ -4,19 +4,25 @@ main:
     url: "/#about-me"
 
   - title: "News"
-    url: "/#-news"
+    url: "/#news"
 
   - title: "Publications"
-    url: "/#-publications"
-
-  - title: "Honors and Awards"
-    url: "/#-honors-and-awards"
-
+    url: "/#publications"
+    
+  - title: "Selected Projects"
+    url: "/#selected-projects"
+    
   - title: "Educations"
-    url: "/#-educations"
-
-  - title: "Invited Talks"
-    url: "/#-invited-talks"
-
-  - title: "Internships"
-    url: "/#-internships"
+    url: "/#educations"
+    
+  - title: "Experiences"
+    url: "/#experiences"
+    
+  - title: "Honors and Awards"
+    url: "/#honors-and-awards"
+    
+  - title: "Activities"
+    url: "/#activities"
+    
+#  - title: "Invited Talks"
+#    url: "/#-invited-talks"
