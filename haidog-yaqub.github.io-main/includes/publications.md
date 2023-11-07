@@ -3,7 +3,9 @@
 
 #### Audio Signal Processing
 
-- ``2023`` ``WASPAA`` Diff-Pitcher: Diffusion-based Singing Voice Pitch Correction \| **Jiarui Hai**, Mounya Elhilali
+- ``2023`` ``ASRU`` [Boosting Modality Representation with Pre-trained Models and Multi-task Training for Multimodal Sentiment Analysis\| **Jiarui Hai***, Yu-Jeh Liu*, Mounya Elhilali
+
+- ``2023`` ``WASPAA`` [Diff-Pitcher: Diffusion-based Singing Voice Pitch Correction](https://ieeexplore.ieee.org/abstract/document/10248127) \| **Jiarui Hai**, Mounya Elhilali
 
 - ``2022`` ``ICASSP`` [Progressive Teacher-Student Training Framework for Music Tagging](https://ieeexplore.ieee.org/document/9747342) \| Rui Lu, Baigong Zheng, **Jiarui Hai**, Fei Tao, Zhiyao Duan, Ji Liu
 

@@ -5,16 +5,25 @@
 
 - *2020.08 - 2022.06*, Tsinghua University, Beijing, China
     - Master of Engineering \| Hydraulic Engineering
-    - Big Data Program \| Big Data Research Center
+    - Big Data Program Member \| Big Data Research Center
     
 - *2020.08 - 2022.06*, Tsinghua University, Beijing, China
     - Bachelor of Engineering \| Hydraulic Engineering
     - Bachelor of Science \| Business Analytics
 
 # Experiences
-- *2021.06 - 2022.03*, AI Platform, Kuaishou, Beijing, China
-- *2021.06 - 2021.09*, Department of Psychology, University of Notre Dame, Notre Dame, United States
-- *2019.06 - 2019.09*, Business School, University of Hong Kong, Hongkong, China
+- *2021.06 - 2022.03*, Kuaishou, Beijing, China
+  - Music Technology | AI Platform
+  - Advisor: Prof. Zhiyao Duan
+
+- *2021.06 - 2021.09*, University of Notre Dame, Notre Dame, United States
+  - Summer Research | Department of Psychology
+  - Advisor: Prof. Zhiyong Zhang
+
+- *2019.06 - 2019.09*, University of Hong Kong, Hongkong, China
+  - Summer Research | Business School
+  - Advisor: Prof. Hailiang Chen
+
 
 # Honors and Awards
 - *2021*, Top New Producer (1%), BeatsHome Hip-hop Production Contest, China
@@ -22,7 +31,7 @@
 - *2018*, Comprehensive Excellence Award (10%), Tsinghua University, China
 - *2018*, Arts Excellence Award (5%), Tsinghua University, China
 - *2017*, Arts Excellence Award (5%), Tsinghua University, China
- 
+
 
 # Activities
 - *2021.08*, Hosted a lecture about music production at ModernSky Studio
