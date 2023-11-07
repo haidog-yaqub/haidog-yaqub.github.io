@@ -3,7 +3,7 @@
 
 #### Audio Signal Processing
 
-- ``2023`` ``ASRU`` [Boosting Modality Representation with Pre-trained Models and Multi-task Training for Multimodal Sentiment Analysis\| **Jiarui Hai***, Yu-Jeh Liu*, Mounya Elhilali
+- ``2023`` ``ASRU`` Boosting Modality Representation with Pre-trained Models and Multi-task Training for Multimodal Sentiment Analysis\| **Jiarui Hai***, Yu-Jeh Liu*, Mounya Elhilali
 
 - ``2023`` ``WASPAA`` [Diff-Pitcher: Diffusion-based Singing Voice Pitch Correction](https://ieeexplore.ieee.org/abstract/document/10248127) \| **Jiarui Hai**, Mounya Elhilali
 

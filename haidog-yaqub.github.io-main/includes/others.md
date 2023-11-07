@@ -13,15 +13,13 @@
 
 # Experiences
 - *2021.06 - 2022.03*, Kuaishou, Beijing, China
-  - Music Technology | AI Platform
+  - Music Technology \| AI Platform
   - Advisor: Prof. Zhiyao Duan
-
 - *2021.06 - 2021.09*, University of Notre Dame, Notre Dame, United States
-  - Summer Research | Department of Psychology
+  - Summer Research \| Department of Psychology
   - Advisor: Prof. Zhiyong Zhang
-
 - *2019.06 - 2019.09*, University of Hong Kong, Hongkong, China
-  - Summer Research | Business School
+  - Summer Research \| Business School
   - Advisor: Prof. Hailiang Chen
 
 
