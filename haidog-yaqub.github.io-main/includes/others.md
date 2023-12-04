@@ -12,7 +12,7 @@
     - Bachelor of Science \| Business Analytics
 
 # Experiences
-- *2021.06 - 2022.03*, Kuaishou, Beijing, China
+- *2021.06 - 2022.01*, Kuaishou, Beijing, China
   - Music Technology Intern \| AI Platform
   - Advisor: [Prof. Zhiyao Duan](https://hajim.rochester.edu/ece/sites/zduan/)
 - *2021.06 - 2021.09*, University of Notre Dame, Notre Dame, United States
