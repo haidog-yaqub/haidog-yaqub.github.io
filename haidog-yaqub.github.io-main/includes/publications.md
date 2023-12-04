@@ -21,6 +21,6 @@
 
 - ``2023`` ``arXiv`` [DPM-TSE: A Diffusion Probabilistic Model for Target Sound Extraction](https://arxiv.org/abs/2310.04567) \| **Jiarui Hai\***, Heilin Wang\*, Dongchao Yang, Karan Thakkar, Najim Dehak, Mounya Elhilali
 
-- ``2023`` ``arXiv`` [Investigating Self-Supervised Deep Representations for EEG-based Auditory Attention Decoding](https://arxiv.org/abs/2311.00814) | Karan Thakkar, **Jiarui Hai**, Mounya Elhilali
+- ``2023`` ``arXiv`` [Investigating Self-Supervised Deep Representations for EEG-based Auditory Attention Decoding](https://arxiv.org/abs/2311.00814) \| Karan Thakkar, **Jiarui Hai**, Mounya Elhilali
 
-- ``2023`` ``medRxiv`` [Multimodal Data Hybrid Fusion and Natural Language Processing for Clinical Prediction Models](https://www.medrxiv.org/content/10.1101/2023.08.24.23294597.abstract) | Jiancheng Ye\*, **Jiarui Hai\***, Jiacheng Song, Zidan Wang
+- ``2023`` ``medRxiv`` [Multimodal Data Hybrid Fusion and Natural Language Processing for Clinical Prediction Models](https://www.medrxiv.org/content/10.1101/2023.08.24.23294597.abstract) \| Jiancheng Ye\*, **Jiarui Hai\***, Jiacheng Song, Zidan Wang
