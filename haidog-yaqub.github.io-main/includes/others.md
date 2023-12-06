@@ -7,7 +7,7 @@
     - Master of Engineering \| Hydraulic Engineering
     - Big Data Program Member \| Big Data Research Center
     
-- *2020.08 - 2022.06*, Tsinghua University, Beijing, China
+- *2016.08 - 2020.06*, Tsinghua University, Beijing, China
     - Bachelor of Engineering \| Hydraulic Engineering
     - Bachelor of Science \| Business Analytics
 
