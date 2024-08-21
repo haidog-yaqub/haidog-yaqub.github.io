@@ -1,6 +1,6 @@
 # News
-- 2023.12: 🎉 Two papers were accepcted by ICASSP 2024: DPM-TSE and another one about EEG-based Auditory Attention Decoding
-- 2023.12: 🚀 Released a PyTorch implementation repo of Stable Audio: [Your-Stable-Audio](https://github.com/haidog-yaqub/Your-Stable-Audio)
-- 2023.09: 🎉 One paper about Multimodal Sentiment Analysis was accepcted by ASRU 2023
-- 2023.09: 🎉 I Passed the Departmental Qualifying Exam at JHU
-- *2023.07*: 🎉 One paper Diff-Pitcher was accepcted by WASPAA 2023
+- 2024.06: 🎉 Two papers accepted at Interspeech 2024: *DreamVoice* and *Noise-robust Speech Separation*
+- 2023.12: 🎉 Two papers accepted at ICASSP 2024: *DPM-TSE* a study on *EEG-based Auditory Attention Decoding*
+- 2023.09: 🎉 One paper on *Multimodal Sentiment Analysis* accepcted at ASRU 2023
+- 2023.09: 🎉 I passed the Departmental Qualifying Exam at JHU.
+- *2023.07*: 🎉 *Diff-Pitcher* accepted at WASPAA 2023

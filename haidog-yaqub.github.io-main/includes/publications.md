@@ -3,10 +3,14 @@
 
 #### Audio Signal Processing
 
+- ``2024`` ``Interspeech`` [DreamVoice: Text-Guided Voice Conversion](https://arxiv.org/abs/2406.16314) \|**Jiarui Hai\***, Karan Thakkar*, Helin Wang, Zengyi Qin, Mounya Elhilali
+
+- ``2024`` ``Interspeech`` [Noise-robust Speech Separation with Fast Generative Correction](https://arxiv.org/abs/2406.07461) \|Helin Wang, Jesus Villalba, Laureano Moro-Velazquez, **Jiarui Hai**, Thomas Thebaud, Najim Dehak
+
 - ``2024`` ``ICASSP`` [DPM-TSE: A Diffusion Probabilistic Model for Target Sound Extraction](https://arxiv.org/abs/2310.04567) \| **Jiarui Hai\***, Heilin Wang\*, Dongchao Yang, Karan Thakkar, Najim Dehak, Mounya Elhilali
 
 - ``2024`` ``ICASSP`` [Investigating Self-Supervised Deep Representations for EEG-based Auditory Attention Decoding](https://arxiv.org/abs/2311.00814) \| Karan Thakkar, **Jiarui Hai**, Mounya Elhilali
-- ``2023`` ``ASRU`` Boosting Modality Representation with Pre-trained Models and Multi-task Training for Multimodal Sentiment Analysis \| **Jiarui Hai\***, Yu-Jeh Liu\*, Mounya Elhilali
+- ``2023`` ``ASRU`` [Boosting Modality Representation with Pre-trained Models and Multi-task Training for Multimodal Sentiment Analysis](https://ieeexplore.ieee.org/document/10389694) \| **Jiarui Hai\***, Yu-Jeh Liu\*, Mounya Elhilali
 
 - ``2023`` ``WASPAA`` [Diff-Pitcher: Diffusion-based Singing Voice Pitch Correction](https://ieeexplore.ieee.org/abstract/document/10248127) \| **Jiarui Hai**, Mounya Elhilali
 
