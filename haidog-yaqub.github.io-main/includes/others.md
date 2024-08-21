@@ -12,6 +12,8 @@
     - Bachelor of Science \| Business Analytics
 
 # Experiences
+- *2024.05 - 2024.08*, Tencent Americas, Bellevue, USA
+  - Research Intern \| AI lab
 - *2021.06 - 2022.01*, Kuaishou, Beijing, China
   - Music Technology Intern \| AI Platform
   - Advisor: [Prof. Zhiyao Duan](https://hajim.rochester.edu/ece/sites/zduan/)
