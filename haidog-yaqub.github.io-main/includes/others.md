@@ -4,11 +4,11 @@
     - Advisor: [Prof. Mounya Elhilali](https://engineering.jhu.edu/lcap/index.php?id=mounya)
 
 - *2020.08 - 2022.06*, Tsinghua University, Beijing, China
-    - Master of Engineering \| Hydraulic Engineering
+    - Master of Engineering \| Civil Engineering
     - Big Data Program Member \| Big Data Research Center
     
 - *2016.08 - 2020.06*, Tsinghua University, Beijing, China
-    - Bachelor of Engineering \| Hydraulic Engineering
+    - Bachelor of Engineering \| Civil Engineering
     - Bachelor of Science \| Business Analytics
 
 # Experiences
