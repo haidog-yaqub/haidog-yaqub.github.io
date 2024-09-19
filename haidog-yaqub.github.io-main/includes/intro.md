@@ -1,9 +1,9 @@
 # About Me
 
-I am a PhD student in Electrical and Computer Engineering at Johns Hopkins University. My main research interest lies in Audio Signal Processing, Generative Model, and Multimodal.
+I am a PhD student in Electrical and Computer Engineering at Johns Hopkins University, under the supervision of Prof. Mounya Elhilali. My research focuses on Audio Signal Processing, Generative Models, and Music Technology.
 
-In addition to my academic pursuits, I am a Music Producer, having contributed to many hip-hop/pop songs within the Chinese entertainment industry.
+Outside of academia, I am also a Music Producer, having worked on numerous hip-hop and pop tracks in the Chinese entertainment industry.
 
-For a more detailed overview of my professional journey and academic achievements, please see my [CV](https://haidog-yaqub.github.io/docs/Jiarui_CV.pdf).
+For more details on my academic and professional journey, you can view my [CV](https://haidog-yaqub.github.io/docs/Jiarui_CV.pdf).
 
-I am looking for collaborations on audio/speech signal processing and music technology, please feel free to contact me.
+I am open to collaborations in audio/speech signal processing and music technology. Feel free to reach out at: jhai2@jhu.edu
