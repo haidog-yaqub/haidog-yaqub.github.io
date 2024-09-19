@@ -2,7 +2,7 @@
 # Publications
 
 #### Audio Signal Processing
-- ``2024`` ``pre-print`` EzAudio: Enhancing Text-to-Audio Generation with Efficient Diffusion Transformer \| **Jiarui Hai**, Yong Xu, Hao Zhang, Chenxing Li, Helin Wang, Mounya Elhilali, Dong Yu \| [[paper]](https://arxiv.org/pdf/2409.10819) [[code]](https://github.com/haidog-yaqub/EzAudio) [[homepage]](https://haidog-yaqub.github.io/EzAudio-Page/)
+- ``2024`` ``pre-print`` EzAudio: Enhancing Text-to-Audio Generation with Efficient Diffusion Transformer \| **Jiarui Hai**, Yong Xu, Hao Zhang, Chenxing Li, Helin Wang, Mounya Elhilali, Dong Yu \| [[paper]](https://arxiv.org/pdf/2409.10819) [[code]](https://github.com/haidog-yaqub/EzAudio) [[space]](https://huggingface.co/spaces/OpenSound/EzAudio) [[homepage]](https://haidog-yaqub.github.io/EzAudio-Page/)
 
 - ``2024`` ``pre-print`` SoloAudio: Target Sound Extraction with Language-oriented Audio Diffusion Transformer \| Helin Wang*, **Jiarui Hai\***, Yen-Ju Lu, Karan Thakkar, Mounya Elhilali, Najim Dehak \| [[paper]](https://www.arxiv.org/pdf/2409.08425) [[code]](https://github.com/WangHelin1997/SoloAudio) [[homepage]](https://wanghelin1997.github.io/SoloAudio-Demo/)
 
