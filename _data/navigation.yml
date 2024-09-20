@@ -9,20 +9,14 @@ main:
   - title: "Publications"
     url: "/#publications"
     
-  - title: "Selected Projects"
-    url: "/#selected-projects"
-    
   - title: "Educations"
     url: "/#educations"
     
   - title: "Experiences"
     url: "/#experiences"
     
-  - title: "Honors and Awards"
-    url: "/#honors-and-awards"
-    
-  - title: "Activities"
-    url: "/#activities"
+  - title: "Music Activities"
+    url: "/#-music-activities"
     
 #  - title: "Invited Talks"
 #    url: "/#-invited-talks"
