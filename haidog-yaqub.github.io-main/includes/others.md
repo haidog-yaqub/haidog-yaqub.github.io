@@ -14,6 +14,7 @@
 # Experiences
 - *2024.05 - 2024.08*, Tencent Americas, Bellevue, USA
   - Research Intern \| AI lab
+  - Mentor: [Dr. Yong Xu](https://scholar.google.com.hk/citations?user=nCmKPM4AAAAJ&hl=en), [Dr. Hao Zhang](https://scholar.google.com/citations?user=DmFX6JsAAAAJ&hl), and [Dr. Dong Yu](https://scholar.google.com/citations?user=tMY31_gAAAAJ&hl=en)
 - *2021.06 - 2022.01*, Kuaishou, Beijing, China
   - Music Technology Intern \| AI Platform
   - Advisor: [Prof. Zhiyao Duan](https://hajim.rochester.edu/ece/sites/zduan/)
@@ -25,14 +26,7 @@
   - Advisor: [Prof. Hailiang Chen](http://www.hlchen.com/)
 
 
-# Honors and Awards
-- *2021*, Top New Producer (1%), [BeatsHome Hip-hop Production Contest](https://weibo.com/7532921399/Kh6Ik53aI?type=repost), China
-- *2019*, Arts Excellence Award (5%), Tsinghua University, China
-- *2018*, Comprehensive Excellence Award (10%), Tsinghua University, China
-- *2018*, Arts Excellence Award (5%), Tsinghua University, China
-- *2017*, Arts Excellence Award (5%), Tsinghua University, China
-
-
-# Activities
+# Music Activities
 - *2021.08*, Hosted a lecture about music production at [Modern Sky Studio](https://www.modernsky.com/home/)
 - *2021.05*, Worked in the production of [this rap song](https://www.youtube.com/watch?v=gJGmbaxkdaw) for the TV show "HipHop Bank“
+- *2021.04*, Top New Producer (1%), [BeatsHome Hip-hop Production Contest](https://weibo.com/7532921399/Kh6Ik53aI?type=repost), China
