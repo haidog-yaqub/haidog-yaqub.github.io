@@ -1,5 +1,5 @@
 
-# Publications
+# Selected Publications
 
 #### Audio Signal Processing
 - ``2024`` ``pre-print`` EzAudio: Enhancing Text-to-Audio Generation with Efficient Diffusion Transformer \| **Jiarui Hai**, Yong Xu, Hao Zhang, Chenxing Li, Helin Wang, Mounya Elhilali, Dong Yu \| [[paper]](https://arxiv.org/pdf/2409.10819) [[page]](https://haidog-yaqub.github.io/EzAudio-Page/) [[code]](https://github.com/haidog-yaqub/EzAudio) [[space]](https://huggingface.co/spaces/OpenSound/EzAudio) 
@@ -14,7 +14,7 @@
 
 - ``2024`` ``ICASSP`` DPM-TSE: A Diffusion Probabilistic Model for Target Sound Extraction \|  **Jiarui Hai\***, Heilin Wang\*, Dongchao Yang, Karan Thakkar, Najim Dehak, Mounya Elhilali \| [[paper]](https://arxiv.org/pdf/2406.16314) [[page]](https://jhu-lcap.github.io/DPM-TSE/)  [[code]](https://github.com/haidog-yaqub/DPMTSE/tree/main)
 
-- ``2024`` ``ICASSP``Investigating Self-Supervised Deep Representations for EEG-based Auditory Attention Decoding \| Karan Thakkar, **Jiarui Hai**, Mounya Elhilali \| [[paper]](https://arxiv.org/abs/2311.00814) 
+- ``2024`` ``ICASSP`` Investigating Self-Supervised Deep Representations for EEG-based Auditory Attention Decoding \| Karan Thakkar, **Jiarui Hai**, Mounya Elhilali \| [[paper]](https://arxiv.org/abs/2311.00814) 
 
 - ``2023`` ``ASRU`` Boosting Modality Representation with Pre-trained Models and Multi-task Training for Multimodal Sentiment Analysis \|  **Jiarui Hai\***, Yu-Jeh Liu\*, Mounya Elhilali \| [[paper]](https://ieeexplore.ieee.org/document/10389694)
 
