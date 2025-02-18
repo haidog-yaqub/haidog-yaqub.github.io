@@ -2,11 +2,11 @@
 # Selected Publications
 
 #### Audio Signal Processing
-- ``2024`` ``pre-print`` EzAudio: Enhancing Text-to-Audio Generation with Efficient Diffusion Transformer \| **Jiarui Hai**, Yong Xu, Hao Zhang, Chenxing Li, Helin Wang, Mounya Elhilali, Dong Yu \| [[paper]](https://arxiv.org/pdf/2409.10819) [[page]](https://haidog-yaqub.github.io/EzAudio-Page/) [[code]](https://github.com/haidog-yaqub/EzAudio) [[space]](https://huggingface.co/spaces/OpenSound/EzAudio) 
+- ``2025`` ``pre-print`` EzAudio: Enhancing Text-to-Audio Generation with Efficient Diffusion Transformer \| **Jiarui Hai**, Yong Xu, Hao Zhang, Chenxing Li, Helin Wang, Mounya Elhilali, Dong Yu \| [[paper]](https://arxiv.org/pdf/2409.10819) [[page]](https://haidog-yaqub.github.io/EzAudio-Page/) [[code]](https://github.com/haidog-yaqub/EzAudio) [[space]](https://huggingface.co/spaces/OpenSound/EzAudio) 
 
-- ``2024`` ``pre-print`` SoloAudio: Target Sound Extraction with Language-oriented Audio Diffusion Transformer \| Helin Wang*, **Jiarui Hai\***, Yen-Ju Lu, Karan Thakkar, Mounya Elhilali, Najim Dehak \| [[paper]](https://www.arxiv.org/pdf/2409.08425) [[page]](https://wanghelin1997.github.io/SoloAudio-Demo/) [[code]](https://github.com/WangHelin1997/SoloAudio)
+- ``2025`` ``ICASSP`` SoloAudio: Target Sound Extraction with Language-oriented Audio Diffusion Transformer \| Helin Wang*, **Jiarui Hai\***, Yen-Ju Lu, Karan Thakkar, Mounya Elhilali, Najim Dehak \| [[paper]](https://www.arxiv.org/pdf/2409.08425) [[page]](https://wanghelin1997.github.io/SoloAudio-Demo/) [[code]](https://github.com/WangHelin1997/SoloAudio)
 
-- ``2024`` ``pre-print`` SSR Speech: Towards Stable, Safe, and Robust Zero-shot Text-based Speech Editing and Synthesis \| Helin Wang, Meng Yu, **Jiarui Hai**, Chen Chen, Yuchen Hu, Rilin Chen, Najim Dehak, Dong Yu  \| [[paper]](https://arxiv.org/pdf/2409.07556) [[page]](https://wanghelin1997.github.io/SSR-Speech-Demo/) [[code]](https://github.com/WangHelin1997/SSR-Speech)
+- ``2025`` ``ICASSP`` SSR Speech: Towards Stable, Safe, and Robust Zero-shot Text-based Speech Editing and Synthesis \| Helin Wang, Meng Yu, **Jiarui Hai**, Chen Chen, Yuchen Hu, Rilin Chen, Najim Dehak, Dong Yu  \| [[paper]](https://arxiv.org/pdf/2409.07556) [[page]](https://wanghelin1997.github.io/SSR-Speech-Demo/) [[code]](https://github.com/WangHelin1997/SSR-Speech)
 
 - ``2024`` ``Interspeech`` DreamVoice: Text-Guided Voice Conversion \| **Jiarui Hai\***, Karan Thakkar*, Helin Wang, Zengyi Qin, Mounya Elhilali \| [[paper]](https://arxiv.org/pdf/2406.16314) [[code]](https://github.com/myshell-ai/DreamVoice) [[page]](https://research.myshell.ai/dreamvoice)
 
