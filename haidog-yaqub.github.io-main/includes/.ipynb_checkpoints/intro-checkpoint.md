@@ -17,7 +17,7 @@ I'm open to collaborations in audio and speech signal processing, as well as mus
 <div class="highlight-blocks">
 
 <div class="highlight-block">
-  <h3>💻 Audio Researcher</h3>
+  <h3>Audio Researcher</h3>
   <ul>
     <li>Audio/music generation and speech synthesis</li>
     <li>General audio understanding and analysis</li>
@@ -25,7 +25,7 @@ I'm open to collaborations in audio and speech signal processing, as well as mus
 </div>
 
 <div class="highlight-block">
-  <h3>🎵 Music Producer</h3>
+  <h3>Music Producer</h3>
   <ul>
     <li>Hip-hop/pop producer with 10M+ streams across platforms</li>
     <li>Creator of music production tutorials on <a href="https://space.bilibili.com/182484522" target="_blank" rel="noopener noreferrer">Bilibili</a></li>
