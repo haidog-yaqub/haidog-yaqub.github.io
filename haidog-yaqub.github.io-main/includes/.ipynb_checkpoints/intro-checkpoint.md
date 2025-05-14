@@ -11,8 +11,7 @@ I'm a PhD student in Electrical and Computer Engineering at Johns Hopkins Univer
 
 Beyond academia, I'm a music producer and independent artist.
 
-I'm open to collaborations in audio/speech signal processing and music technology.  
-📄 [CV](https://haidog-yaqub.github.io/docs/Jiarui_CV.pdf) | 🔗 [LinkedIn](https://www.linkedin.com/in/jiarui-hai-297663141)
+I'm open to collaborations in audio and speech signal processing, as well as music technology. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/jiarui-hai-297663141).
 
 
 <div class="highlight-blocks">
