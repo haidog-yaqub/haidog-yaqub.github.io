@@ -19,7 +19,7 @@ I am open to collaborations in audio/speech signal processing and music technolo
 </div>
 
 <div class="highlight-block">
-  <h3>🎵 Music Producer & Writer</h3>
+  <h3>🎵 Music Producer</h3>
   <ul>
     <li>Hip-hop/pop producer with 10M+ streams across platforms</li>
     <li>Creator of music production tutorials on <a href="https://space.bilibili.com/182484522" target="_blank" rel="noopener noreferrer">Bilibili</a></li>
