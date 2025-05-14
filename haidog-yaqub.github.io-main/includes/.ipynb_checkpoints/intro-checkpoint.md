@@ -11,7 +11,7 @@ I am open to collaborations in audio/speech signal processing and music technolo
 <div class="highlight-blocks">
 
 <div class="highlight-block">
-  <h3>💻 Researcher</h3>
+  <h3>💻 Audio Researcher</h3>
   <ul>
     <li>Audio/music generation and speech synthesis</li>
     <li>General audio understanding and analysis</li>
