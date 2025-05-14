@@ -26,8 +26,8 @@
   - Advisor: [Prof. Hailiang Chen](http://www.hlchen.com/)
   
 # Academic Services
-- Conference reviewer for ICASSP, InterSpeech, SLT
-- Workshop reviewer for ICLR 2025 Workshop on Deep Generative Model in Machine Learning: Theory, Principle and Efficacy, NeurIPS 2024 Workshop on Audio Imagenation
+- Conference reviewer for ICASSP, Interspeech, SLT
+- Workshop reviewer for ICLR 2025 Workshop DeLTa, NeurIPS 2024 Workshop Audio Imagenation
 - Journal reviewer for IJCV
 
 # Music Activities
