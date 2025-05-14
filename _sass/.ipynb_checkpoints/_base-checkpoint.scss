@@ -362,7 +362,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-unit);
-    margin: 0 0;
+    margin: calc(var(--spacing-unit) * 0.8) 0;
   }
   
   .highlight-block {
@@ -372,7 +372,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     border: 1px solid rgba(1, 47, 99, 0.08);
-    margin-bottom: calc(var(--spacing-unit) * 0.6);  // 减小下方间距
+    // margin-bottom: calc(var(--spacing-unit) * 0.6);  // 减小下方间距
   
     &:hover {
       transform: translateY(-5px);
