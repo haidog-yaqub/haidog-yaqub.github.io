@@ -25,7 +25,10 @@
   - Summer Research \| Business School
   - Advisor: [Prof. Hailiang Chen](http://www.hlchen.com/)
   
-
+# Academic Services
+- Conference reviewer for ICASSP, InterSpeech, SLT
+- Workshop reviewer for ICLR 2025 Workshop on Deep Generative Model in Machine Learning: Theory, Principle and Efficacy, NeurIPS 2024 Workshop on Audio Imagenation
+- Journal reviewer for IJCV
 
 # Music Activities
 - *2021.08*, Hosted a lecture about music production at [Modern Sky Studio](https://www.modernsky.com/home/)
