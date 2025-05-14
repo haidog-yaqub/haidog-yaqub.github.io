@@ -378,7 +378,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
       transform: translateY(-5px);
       box-shadow: var(--hover-shadow);
         h3 {
-            color: $strong-color; // Change on hover
+            color: $info-color; // Change on hover
         }
     }
   
