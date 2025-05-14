@@ -9,30 +9,32 @@ For more details on my academic and professional journey, you can view my [CV](h
 I am open to collaborations in audio/speech signal processing and music technology. Feel free to reach out at: jhai2@jhu.edu
 
 <div class="highlight-blocks">
-  <div class="highlight-block">
-    <h3>🔬 AI Researcher</h3>
-    <ul>
-      <li>Research focus on LLMs and NLP</li>
-      <li>Multiple internships at top institutions</li>
-      <li>Publication at AAAI, ACL</li>
-    </ul>
-  </div>
 
-  <div class="highlight-block">
-    <h3>✍️ Content Creator</h3>
-    <ul>
-      <li>Technical blogs with 500K+ views</li>
-      <li>Active on <a href="https://www.xiaohongshu.com/user/profile/60c47bae000000000100b07e">Xiaohongshu</a></li>
-      <li>Growing <a href="https://mp.weixin.qq.com/s/5wn3NvB2FBpJD1jK0L4qbQ">WeChat Public Account</a> on Tech & Humanities</li>
-    </ul>
-  </div>
+<div class="highlight-block">
+  <h3>💻 Researcher</h3>
+  <ul>
+    <li>Audio/music generation and speech synthesis</li>
+    <li>General audio understanding and analysis</li>
+  </ul>
+</div>
 
-  <div class="highlight-block">
-    <h3>🌎 Life Explorer</h3>
+<div class="highlight-block">
+  <h3>🎵 Music Producer & Writer</h3>
+  <ul>
+    <li>Hip-hop/pop producer with 10M+ streams across platforms</li>
+    <li>Creator of music production tutorials on <a href="https://space.bilibili.com/182484522" target="_blank" rel="noopener noreferrer">Bilibili</a></li>
+  </ul>
+</div>
+
+
+
+  <!-- <div class="highlight-block">
+    <h3>🌍 Entrepreneur</h3>
     <ul>
-      <li>Visited 7 countries worldwide</li>
-      <li>Traveled to 32 provinces in China</li>
-      <li>Rich experience in social work & activities</li>
+      <li>Visited 7 countries across the globe</li>
+      <li>Traveled through 32 provinces in China</li>
+      <li>Extensive experience in social initiatives and community activities</li>
     </ul>
-  </div>
+  </div> -->
+
 </div>
