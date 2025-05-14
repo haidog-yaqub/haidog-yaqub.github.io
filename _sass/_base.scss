@@ -362,7 +362,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-unit);
-    margin: calc(var(--spacing-unit) * 0.8) 0;
+    margin: 0 0;
   }
   
   .highlight-block {
