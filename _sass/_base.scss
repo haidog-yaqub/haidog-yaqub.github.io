@@ -377,12 +377,15 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
     &:hover {
       transform: translateY(-5px);
       box-shadow: var(--hover-shadow);
+        h3 {
+            color: $strong-color; // Change on hover
+        }
     }
   
     h3 {
       margin-top: 0;
       margin-bottom: calc(var(--spacing-unit) * 0.5);  // 减小标题下方间距
-      // color: $strong-color;
+      color: $primary-color;
       font-size: 1.3em;
       font-weight: 600;
     }
