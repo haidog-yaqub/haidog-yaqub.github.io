@@ -12,11 +12,8 @@
 
 #### Speech Processing
 - ``2025`` ``ICASSP`` SSR Speech: Towards Stable, Safe, and Robust Zero-shot Text-based Speech Editing and Synthesis \| Helin Wang, Meng Yu, **Jiarui Hai**, Chen Chen, Yuchen Hu, Rilin Chen, Najim Dehak, Dong Yu  \| [[paper]](https://arxiv.org/pdf/2409.07556) [[page]](https://wanghelin1997.github.io/SSR-Speech-Demo/) [[code]](https://github.com/WangHelin1997/SSR-Speech)
-- 
 - ``2024`` ``Interspeech`` DreamVoice: Text-Guided Voice Conversion \| **Jiarui Hai\***, Karan Thakkar*, Helin Wang, Zengyi Qin, Mounya Elhilali \| [[paper]](https://arxiv.org/pdf/2406.16314) [[code]](https://github.com/myshell-ai/DreamVoice) [[page]](https://research.myshell.ai/dreamvoice)
-
 - ``2024`` ``Interspeech`` Noise-robust Speech Separation with Fast Generative Correction \| Helin Wang, Jesus Villalba, Laureano Moro-Velazquez, **Jiarui Hai**, Thomas Thebaud, Najim Dehak \| [[paper]](https://www.arxiv.org/abs/2406.07461)
-
 - ``2023`` ``ASRU`` Boosting Modality Representation with Pre-trained Models and Multi-task Training for Multimodal Sentiment Analysis \|  **Jiarui Hai\***, Yu-Jeh Liu\*, Mounya Elhilali \| [[paper]](https://ieeexplore.ieee.org/document/10389694)
 
 #### Music Technology
