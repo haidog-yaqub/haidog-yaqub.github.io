@@ -32,5 +32,5 @@
 
 # Music Activities
 - *2021.08*, Hosted a lecture about music production at [Modern Sky Studio](https://www.modernsky.com/home/)
-- *2021.05*, Worked in the production of [this rap song](https://www.youtube.com/watch?v=gJGmbaxkdaw) for the TV show HipHop Bank
+- *2021.05*, Worked in the production of [a rap song](https://www.youtube.com/watch?v=gJGmbaxkdaw) for the TV show HipHop Bank
 - *2021.04*, Top New Producer (1%), [BeatsHome Hip-hop Production Contest](https://weibo.com/7532921399/Kh6Ik53aI?type=repost), China
