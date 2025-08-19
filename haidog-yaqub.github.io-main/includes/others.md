@@ -29,7 +29,7 @@
   - Advisor: [Hailiang Chen](http://www.hlchen.com/)
 
 # Academic Services
-- Conference reviewer for ICASSP, Interspeech, SLT
+- Conference reviewer for ICASSP, Interspeech, WASPAA, ASRU, SLT
 - Workshop reviewer for ICLR 2025 Workshop DeLTa, NeurIPS 2024 Workshop Audio Imagenation
 - Journal reviewer for IJCV
 
