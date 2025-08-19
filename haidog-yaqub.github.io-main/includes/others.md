@@ -13,7 +13,7 @@
 
 # Experiences
 - 2025.05 - Present, Adobe, San Francisco, USA
-  - Research Intern | CAVA
+  - Research Intern \| CAVA
   - Mentor: Ke Chen, Rithesh Kumar, Zeyu Jin
 - *2024.05 - 2024.08*, Tencent Americas, Bellevue, USA
   - Research Intern \| AI lab
