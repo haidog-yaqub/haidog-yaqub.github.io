@@ -19,7 +19,7 @@
   - Research Intern \| AI lab
   - Mentor: [Yong Xu](https://scholar.google.com.hk/citations?user=nCmKPM4AAAAJ&hl=en), [Hao Zhang](https://scholar.google.com/citations?user=DmFX6JsAAAAJ&hl), and [Dong Yu](https://scholar.google.com/citations?user=tMY31_gAAAAJ&hl=en)
 - *2021.06 - 2022.01*, Kuaishou, Beijing, China
-  - Music Technology Intern \| AI Platform
+  - Algorithm Engineer Intern (Music Technology) \| AI Platform
   - Advisor: [Zhiyao Duan](https://hajim.rochester.edu/ece/sites/zduan/)
 - *2021.06 - 2021.09*, University of Notre Dame, Notre Dame, United States
   - Summer Research \| Department of Psychology
