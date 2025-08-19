@@ -7,7 +7,7 @@ Outside of academia, I am also a Music Producer, having worked on many hip-hop a
 For more details on my academic and professional journey, you can view my [CV](https://haidog-yaqub.github.io/docs/Jiarui_CV.pdf).
 
 I am open to collaborations in audio/speech signal processing and music technology. Feel free to reach out at: jhai2@jhu.edu -->
-I'm a PhD student in Electrical and Computer Engineering at Johns Hopkins University, advised by [Prof. Mounya Elhilali](https://engineering.jhu.edu/lcap/index.php?id=mounya), with an expected graduation in 2026. Prior to this, I earned two Bachelor's degrees and a Master's from Tsinghua University.
+I'm a PhD student in Electrical and Computer Engineering at Johns Hopkins University, advised by [Prof. Mounya Elhilali](https://engineering.jhu.edu/lcap/index.php?id=mounya), with an expected graduation in 2026. Prior to this, I earned my Bachelor's degrees and Master's from Tsinghua University.
 
 Outside academia, I'm also a music producer and independent artist.
 
@@ -23,14 +23,14 @@ I'm open to collaborations in audio and speech signal processing, as well as mus
     <li>General audio understanding and analysis</li>
   </ul>
 </div>
-
 <div class="highlight-block">
   <h3>Music Producer</h3>
   <ul>
     <li>Hip-hop/pop producer with 10M+ streams across platforms</li>
-    <li>Creator of music production tutorials on <a href="https://space.bilibili.com/182484522" target="_blank" rel="noopener noreferrer">Bilibili</a></li>
+    <li>Content Creator sharing music production tutorials on <a href="https://space.bilibili.com/182484522" target="_blank" rel="noopener noreferrer">Bilibili</a></li>
   </ul>
 </div>
+
 
 
 

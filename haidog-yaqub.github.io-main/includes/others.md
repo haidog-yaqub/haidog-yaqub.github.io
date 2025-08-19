@@ -1,7 +1,7 @@
 # Educations
 - *2022.08 - Present*, Johns Hopkins University, Baltimore, United States
     - Doctor of Philosophy \| Electrical and Computer Engineering
-    - Advisor: [Prof. Mounya Elhilali](https://engineering.jhu.edu/lcap/index.php?id=mounya)
+    - Advisor: [Mounya Elhilali](https://engineering.jhu.edu/lcap/index.php?id=mounya)
 
 - *2020.08 - 2022.06*, Tsinghua University, Beijing, China
     - Master of Engineering \| Civil Engineering
@@ -12,19 +12,22 @@
     - Bachelor of Science \| Business Analytics
 
 # Experiences
+- 2025.05 - Present, Adobe, San Francisco, USA
+  - Research Intern | CAVA
+  - Mentor: Ke Chen, Rithesh Kumar, Zeyu Jin
 - *2024.05 - 2024.08*, Tencent Americas, Bellevue, USA
   - Research Intern \| AI lab
-  - Mentor: [Dr. Yong Xu](https://scholar.google.com.hk/citations?user=nCmKPM4AAAAJ&hl=en), [Dr. Hao Zhang](https://scholar.google.com/citations?user=DmFX6JsAAAAJ&hl), and [Dr. Dong Yu](https://scholar.google.com/citations?user=tMY31_gAAAAJ&hl=en)
+  - Mentor: [Yong Xu](https://scholar.google.com.hk/citations?user=nCmKPM4AAAAJ&hl=en), [Hao Zhang](https://scholar.google.com/citations?user=DmFX6JsAAAAJ&hl), and [Dong Yu](https://scholar.google.com/citations?user=tMY31_gAAAAJ&hl=en)
 - *2021.06 - 2022.01*, Kuaishou, Beijing, China
   - Music Technology Intern \| AI Platform
-  - Advisor: [Prof. Zhiyao Duan](https://hajim.rochester.edu/ece/sites/zduan/)
+  - Advisor: [Zhiyao Duan](https://hajim.rochester.edu/ece/sites/zduan/)
 - *2021.06 - 2021.09*, University of Notre Dame, Notre Dame, United States
   - Summer Research \| Department of Psychology
-  - Advisor: [Prof. Zhiyong Zhang](https://bigdatalab.nd.edu/)
+  - Advisor: [Zhiyong Zhang](https://bigdatalab.nd.edu/)
 - *2019.06 - 2019.09*, University of Hong Kong, Hongkong, China
   - Summer Research \| Business School
-  - Advisor: [Prof. Hailiang Chen](http://www.hlchen.com/)
-  
+  - Advisor: [Hailiang Chen](http://www.hlchen.com/)
+
 # Academic Services
 - Conference reviewer for ICASSP, Interspeech, SLT
 - Workshop reviewer for ICLR 2025 Workshop DeLTa, NeurIPS 2024 Workshop Audio Imagenation
