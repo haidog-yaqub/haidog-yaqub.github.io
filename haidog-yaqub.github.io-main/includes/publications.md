@@ -14,12 +14,15 @@
 - ``2026`` ``ICASSP`` ``Challenge`` The Inaugural Music Source Restoration Challenge \| Yongyi Zang, **Jiarui Hai**, Wanying Ge, Helin Wang, Zheqi Dai, Yuki Mitsufuji, Qiuqiang Kong, Mark Plumbley \|  [[page]](https://msrchallenge.com/)
 - ``2025`` ``pre-print`` SoloSpeech: Enhancing Intelligibility and Quality in Target Speech Extraction through a Cascaded Generative Pipeline \| Helin Wang, **Jiarui Hai**, Dongchao Yang, Chen Chen, Kai Li, Junyi Peng, Thomas Thebaud, Laureano Moro Velazquez, Jesus Villalba, Najim Dehak \| [[paper]](https://arxiv.org/abs/2505.19314) [[page]](https://wanghelin1997.github.io/SoloSpeech-Demo/) [[code]](https://github.com/WangHelin1997/SoloSpeech) [[space]](https://huggingface.co/spaces/OpenSound/SoloSpeech) 
 - ``2025`` ``ICASSP`` SoloAudio: Target Sound Extraction with Language-oriented Audio Diffusion Transformer \| Helin Wang*, **Jiarui Hai\***, Yen-Ju Lu, Karan Thakkar, Mounya Elhilali, Najim Dehak \| [[paper]](https://www.arxiv.org/pdf/2409.08425) [[page]](https://wanghelin1997.github.io/SoloAudio-Demo/) [[code]](https://github.com/WangHelin1997/SoloAudio)
-- ``2024`` ``Interspeech``  ``Oral`` Noise-robust Speech Separation with Fast Generative Correction \| Helin Wang, Jesus Villalba, Laureano Moro-Velazquez, **Jiarui Hai**, Thomas Thebaud, Najim Dehak \| [[paper]](https://www.arxiv.org/abs/2406.07461)
 - ``2024`` ``ICASSP`` DPM-TSE: A Diffusion Probabilistic Model for Target Sound Extraction \|  **Jiarui Hai\***, Heilin Wang\*, Dongchao Yang, Karan Thakkar, Najim Dehak, Mounya Elhilali \| [[paper]](https://arxiv.org/pdf/2406.16314) [[page]](https://jhu-lcap.github.io/DPM-TSE/)  [[code]](https://github.com/haidog-yaqub/DPMTSE/tree/main)
 
-#### General Audio Understanding
-- ``2025`` ``WASPAA`` FlexSED: Towards Open-Vocabulary Sound Event Detection \| **Jiarui Hai**, Helin Wang, Weizhe Guo, Mounya Elhilali \| [TBD]
-- ``2025`` ``WASPAA`` SynSonic: Augmenting Sound Event Detection through Text-to-Audio Diffusion ControlNet and Effective Sample Filtering \| **Jiarui Hai**, Mounya Elhilali \| [TBD]
+#### Audio Understanding
+- ``2025`` ``WASPAA`` ``Oral`` FlexSED: Towards Open-Vocabulary Sound Event Detection \| **Jiarui Hai**, Helin Wang, Weizhe Guo, Mounya Elhilali \|  [[paper]](https://arxiv.org/abs/2509.18606)  [[code]](https://github.com/JHU-LCAP/FlexSED?tab=readme-ov-file)
+- ``2025`` ``WASPAA`` SynSonic: Augmenting Sound Event Detection through Text-to-Audio Diffusion ControlNet and Effective Sample Filtering \| **Jiarui Hai**, Mounya Elhilali \|  [[paper]](https://arxiv.org/abs/2509.18603) 
 - ``2024`` ``ICASSP`` Investigating Self-Supervised Deep Representations for EEG-based Auditory Attention Decoding \| Karan Thakkar, **Jiarui Hai**, Mounya Elhilali \| [[paper]](https://arxiv.org/abs/2311.00814) 
 - ``2023`` ``ASRU`` Boosting Modality Representation with Pre-trained Models and Multi-task Training for Multimodal Sentiment Analysis \|  **Jiarui Hai\***, Yu-Jeh Liu\*, Mounya Elhilali \| [[paper]](https://ieeexplore.ieee.org/document/10389694)
 - ``2022`` ``ICASSP`` Progressive Teacher-Student Training Framework for Music Tagging \| Rui Lu, Baigong Zheng, **Jiarui Hai**, Fei Tao, Zhiyao Duan, Ji Liu \| [[paper]](https://ieeexplore.ieee.org/document/9747342) 
+
+<!--
+- ``2024`` ``Interspeech``  ``Oral`` Noise-robust Speech Separation with Fast Generative Correction \| Helin Wang, Jesus Villalba, Laureano Moro-Velazquez, **Jiarui Hai**, Thomas Thebaud, Najim Dehak \| [[paper]](https://www.arxiv.org/abs/2406.07461)
+-->
