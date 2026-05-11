@@ -14,8 +14,9 @@
     </div>
 </div> -->
 
-{% assign _show = site.data.profile.show_seeking_positions %}
+{% assign _show = site.data.display.homepage.show_adv %}
 {% if _show == nil or _show == true %}
+<!--
 <div class="my-3 bg-white shadow-sm rounded-xl highlight-card">
   <h6 class="p-3 mb-0 border-bottom border-gray">
     <i class="fas fa-bullhorn"></i><span style="margin-left: 0.3em;">Seeking Full-Time Positions</span>
@@ -30,6 +31,27 @@
       audio, speech, or music technology, starting Fall 2026.
       
       Please feel free to contact me at <a href="mailto:jhai2@jhu.edu">jhai2@jhu.edu</a> if there is a potential fit.
+    </div>
+  </div>
+</div>
+-->
+
+<div class="my-3 bg-white shadow-sm rounded-xl highlight-card">
+  <h6 class="p-3 mb-0 border-bottom border-gray">
+    <i class="fas fa-bullhorn"></i><span style="margin-left: 0.3em;">OpenSound & Open Research</span>
+  </h6>
+
+  <div class="px-3 py-3">
+    <div class="my-1">
+      <i class="fas fa-music" style="margin-right: 0.2em;"></i>
+      <strong>OpenSound Ad & Open Research Collaboration:</strong>
+      We focus on <strong>audio research</strong>, especially interaction, model development, data, and benchmarks,
+      and welcome collaborators from academia and industry on audio, speech, and music projects.
+    </div>
+
+    <div class="my-1">
+      <i class="fab fa-linkedin" style="margin-right: 0.2em;"></i>
+      Contact: <a target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">LinkedIn</a>
     </div>
   </div>
 </div>
