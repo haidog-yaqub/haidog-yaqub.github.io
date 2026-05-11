@@ -1,0 +1,13 @@
+<div class="my-3 bg-white shadow-sm rounded-xl">
+  <h6 class="p-3 mb-0 border-bottom border-gray">
+    <i class="fas fa-user"></i>
+    <span style="margin-left: 0.3em;">About Me</span>
+  </h6>
+
+  <div class="px-3 py-3 text-profile-bio"
+       {% if site.data.profile.short_bio_text_justify %}
+       style="text-align: justify;"
+       {% endif %}>
+    {{ site.data.profile.short_bio }}
+  </div>
+</div>

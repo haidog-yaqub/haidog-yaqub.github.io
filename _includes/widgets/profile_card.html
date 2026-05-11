@@ -1,0 +1,132 @@
+{% assign p = include.profile_data | default: site.data.profile %}
+<div class="row">
+    <div class="col">
+        <div class="card border-0 mt-3 shadow-sm bg-white">
+            <div class="card-body pt-5">
+                <div class="profile-card-layout-outer{% if p.portrait_url %} profile-card-layout-outer--split-sm{% endif %}">
+                <div class="profile-card-layout{% unless p.portrait_url %} profile-card-layout--no-portrait{% endunless %}">
+                        {% if p.portrait_url %}
+                        <div class="profile-card-portrait">
+                            <div class="text-center mb-0 mb-lg-3">
+                            <img 
+                                src="{{ p.portrait_url | relative_url }}" 
+                                class="figure-img img-fluid img-thumbnail profile-portrait-img" 
+                                data-toggle="tooltip" 
+                                data-placement="top"
+                                title="{{ p.portrait_caption }}">
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    <div class="profile-card-main">
+                        <div class="profile-card-name d-flex w-100 mb-1">
+                            <div class="h2 mb-0">
+                                {{ p.primary_name }} <small>{{ p.secondary_name }}</small>
+                            </div>
+                        </div>
+                        <div class="profile-card-position text-profile-position mb-2 mb-lg-3">
+                            {% for position in p.positions %}
+                            {% if position.logo -%}
+                            <img src="{{ position.logo | relative_url }}" alt="Logo" class="inline-badge"/>
+                            {%- endif %}
+                            {{ position.name | replace: ', ', ',<wbr> ' }}<br/>
+                            {% endfor %}
+                        </div>
+                    <div class="profile-card-links icon-row d-flex flex-wrap" style="font-size: 1.2rem">
+                        {% if p.email %}
+                        <a class="mr-2 no-break email-icon"
+                        href="mailto:{{ p.email | encode_email }}"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="{{ p.email }}">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        {% endif %}
+
+                        {% if p.cv_link %}
+                            <a class="mr-2 no-break" target="_blank" href="{{ p.cv_link | relative_url }}">
+                                <i class="fas fa-file-alt"></i>
+                            </a>
+                        {% endif %}
+
+                        {% if p.gscholar %}
+                        {%- if p.gscholar contains 'scholar.google' -%}
+                        {%- assign gscholar_url = p.gscholar -%}
+                        {%- else -%}
+                        {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: p.gscholar -%}
+                        {%- endif -%}
+                        <a class="mr-2 no-break" target="_blank" href="{{ gscholar_url }}">
+                            <i class="fab fa-google-scholar"></i>
+                        </a>
+                        {% endif %}
+                        
+                        {% if p.github %}
+                        <a class="mr-2 no-break" target="_blank" href="https://github.com/{{ p.github }}">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        {% endif %}
+
+                        {% if p.wechat_qrcode %}
+                        <a class="mr-2 no-break" data-toggle="modal" data-target="#modal-wechat">
+                            <i class="fab fa-weixin"></i> WeChat
+                        </a>
+                        {% endif %}
+
+                        {% if p.twitter %}
+                        <a class="mr-2 no-break" target="_blank" href="https://twitter.com/{{ p.twitter }}">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                        {% endif %}
+
+                        {% if p.linkedin %}
+                        <a class="mr-2 no-break" target="_blank" href="https://www.linkedin.com/in/{{ p.linkedin }}">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        {% endif %}
+
+                        {% if p.youtube %}
+                        <a class="mr-2 no-break" target="_blank" href="https://www.youtube.com/{{ p.youtube }}">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        {% endif %}
+
+                        {% if p.soundcloud %}
+                        <a class="mr-2 no-break" target="_blank" href="{{ p.soundcloud }}">
+                            <i class="fab fa-soundcloud"></i>
+                        </a>
+                        {% endif %}
+
+
+                        {% if p.orcid %}
+                        <a class="mr-2 no-break" target="_blank" href="https://orcid.org/{{ p.orcid }}">
+                            <i class="fab fa-orcid"></i> ORCID
+                        </a>
+                        {% endif %}
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+
+{% if p.wechat_qrcode %}
+<div class="modal fade" id="modal-wechat" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <img src="{{ p.wechat_qrcode | relative_url }}" class="img-fluid">
+            </div>
+            {% if p.wechat_prompt %}
+            <div class="modal-body p-1">
+                {{ p.wechat_prompt }}
+            </div>
+            {% endif %}
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

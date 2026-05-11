@@ -1,0 +1,37 @@
+primary_name: "HigoBeatz"
+secondary_name: ""
+
+positions:
+  - name: Music Producer
+
+youtube: channel/UCEGud3VRCtkkaQxxMgBJ1LA
+
+soundcloud: https://soundcloud.com/higobeatz
+
+# Use a different portrait for music page if needed.
+portrait_url: /assets/images/photos/cartoon.jpeg
+
+# Music page can keep its own experience list.
+experience:
+
+  - name: Innersup Records
+    logo: /assets/images/badges/innersup.png
+    position: >-
+      Co-founder & Core Producer
+    date: 2021-2022
+    place: Beijing, China
+
+
+  - name: Tsinghua University
+    logo: /assets/images/badges/thu.png
+    position: >-
+      President, Hip-hop Association
+    date: 2020-2021
+    place: Beijing, China
+
+  - name: Tsinghua University
+    logo: /assets/images/badges/thu.png
+    position: >-
+      Head of Production, Hip-Hop Association
+    date: 2019-2020
+    place: Beijing, China

@@ -1,0 +1,49 @@
+{% assign tracks = site.data.music.tracks %}
+{% assign youtube_tracks = tracks | where: "type", "youtube" %}
+{% assign audio_tracks = tracks | where: "type", "audio" %}
+
+{% if youtube_tracks.size > 0 or audio_tracks.size > 0 %}
+<div class="mt-3 mb-0 p-0 bg-white shadow-sm rounded-xl">
+  {% if youtube_tracks.size > 0 %}
+  <div class="border-bottom border-gray p-3 mb-0">
+    <h6 class="mb-0 d-inline">
+      <i class="fab fa-youtube" style="color: #ff4d4d;"></i>
+      <span style="margin-left: 0.3em;">YouTube</span>
+    </h6>
+  </div>
+
+  {% for track in youtube_tracks %}
+  <div class="row no-gutters border-bottom border-gray">
+    <div class="col-12 p-3">
+      {% if track.title %}<h6 class="mb-1 font-weight-normal">{{ track.title }}</h6>{% endif %}
+      {% if track.artist %}<p class="small text-muted mb-2">{{ track.artist }}</p>{% endif %}
+      {% assign video_id = track.video_id | default: "" %}
+      {% if video_id == "" %}
+        {% if track.url contains 'youtu.be/' %}{% assign video_id = track.url | split: 'youtu.be/' | last | split: '?' | first %}
+        {% elsif track.url contains 'v=' %}{% assign video_id = track.url | split: 'v=' | last | split: '&' | first %}
+        {% elsif track.url contains 'embed/' %}{% assign video_id = track.url | split: 'embed/' | last | split: '?' | first %}
+        {% else %}{% assign video_id = track.url %}{% endif %}
+      {% endif %}
+      <div class="embed-responsive embed-responsive-16by9" style="max-width: 100%;">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ video_id }}?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% for track in audio_tracks %}
+  <div class="row no-gutters border-bottom border-gray">
+    <div class="col-12 p-3">
+      <h6 class="mb-1 font-weight-normal">{{ track.title }}</h6>
+      <p class="small text-muted mb-2">{{ track.artist }}</p>
+      <audio controls preload="metadata" class="w-100" style="height: 36px;">
+        <source src="{{ track.url | relative_url }}" type="audio/mpeg">
+        <source src="{{ track.url | relative_url }}" type="audio/wav">
+        <source src="{{ track.url | relative_url }}" type="audio/ogg">
+      </audio>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

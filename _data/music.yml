@@ -1,0 +1,27 @@
+# Music page
+intro:
+  title: "Music"
+  text: "Tracks, covers, and recordings."
+
+# 音乐经历：获奖、担任职务等
+experience:
+  - year: "2024"
+    award: "某某音乐比赛 一等奖"
+    role: "担任作曲 / 编曲"
+  - year: "2023"
+    award: "某某音乐节 最佳新人"
+    role: "担任主唱"
+  # - year: "2022"
+  #   award: "Award Name"
+  #   role: "Role / Position"
+
+# Music tracks - type: youtube | audio
+tracks:
+  - type: youtube
+    url: "https://www.youtube.com/watch?v=4O4IXxdzWn4"
+
+  # - title: "My Own Recording"
+  #   artist: "Your Name"
+  #   type: audio
+  #   url: "/uploads/my-song.mp3"
+  #   description: "Self-uploaded music - put .mp3 in uploads/ folder"

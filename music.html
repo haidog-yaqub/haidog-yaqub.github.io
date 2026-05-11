@@ -1,0 +1,27 @@
+---
+layout: default
+title: Music
+navbar_title: Music
+---
+
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-3">
+    {% include widgets/profile_card.html profile_data=site.data.music_profile %}
+
+    {% include widgets/experience_card.html profile_data=site.data.music_profile %}
+  </div>
+
+  <div class="col-12 col-lg-7">
+    <div class="my-3 bg-white shadow-sm rounded-xl highlight-card">
+      <h6 class="p-3 mb-0 border-bottom border-gray">
+        <i class="fas fa-hammer"></i><span style="margin-left: 0.3em;">WIP</span>
+      </h6>
+      <div class="px-3 py-3 text-profile-bio" style="line-height: 1.6;">
+        This page is a work in progress.
+      </div>
+    </div>
+
+    {% include widgets/music_card.html %}
+  </div>
+</div>
+

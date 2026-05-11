@@ -1,0 +1,88 @@
+---
+layout: default
+title: Bio
+navbar_title: Bio
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+---
+
+<!-- BIO SECTION STYLE -->
+<style>
+  .timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 30px;
+    border-left: 2px solid #dee2e6;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: #6c757d;
+    border-radius: 50%;
+  }
+
+  .timeline-item h5 {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-item .badge {
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+  }
+
+  .timeline-date {
+    color: #868e96;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+</style>
+
+<div class="container mt-4">
+  <h2 class="mb-4">Biography</h2>
+
+  <div class="timeline">
+
+    <!-- LATEST ITEM FIRST -->
+    <div class="timeline-item">
+      <div class="timeline-date">2025.07 – Present</div>
+      <h5>Research Assistant, Yonsei University</h5>
+      <p class="mb-1 text-muted">Department of Biomedical Informatics</p>
+      <span class="badge badge-success">Medical AI</span>
+      <span class="badge badge-primary">Multimodal Learning</span>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024.06 – 2024.08</div>
+      <h5>Visiting Researcher, Carnegie Mellon University</h5>
+      <p class="mb-1 text-muted">Intensive AI Education Program</p>
+      <span class="badge badge-dark">Deep Learning</span>
+      <span class="badge badge-info">Studio Project</span>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2023 – Present</div>
+      <h5>M.S. in Digital Analytics, Yonsei University</h5>
+      <p class="mb-1 text-muted">Graduate School of Information</p>
+      <span class="badge badge-warning">Thesis: Contrastive Learning in Medical Imaging</span>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2019 – 2023</div>
+      <h5>B.S. in Civil & Environmental Engineering, Yonsei University</h5>
+      <p class="mb-1 text-muted">Graduated with Honors</p>
+      <span class="badge badge-secondary">Smart Construction</span>
+    </div>
+
+  </div>
+</div>

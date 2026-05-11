@@ -1,0 +1,296 @@
+<style>
+  .tag-badge {
+    display: inline-block;
+    padding: 0.35em 0.75em;
+    font-size: 0.8rem;
+    border-radius: 999px;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    background-color: #f8f9fa;
+    color: black;
+    /* color: #343a40; */
+  }
+
+  .tag-badge-bio {
+    display: inline-block;
+    padding: 0.3em 0.75em;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 999px;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    background-color: #ff796d;
+    color: #f8f9fa;
+    /* color: #343a40; */
+  }
+
+  .tag-bio {
+    color: #ff6f61;
+    font-weight: 500;
+  }
+
+  .award-badge {
+    display: inline-block;
+    padding: 0.35em 0.75em;
+    font-size: 0.8rem;
+    border-radius: 999px;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    background-color: #FAFAD2;
+    color: #343a40;
+  }
+</style>
+
+{% assign item = include.item %}
+{%- comment -%}
+  cover_large → 仅 md+ 宽屏；cover_small → 仅窄屏；cover → 宽窄都用（宽屏在无 large 时用 cover，窄屏在无 small 时用 cover）。
+  仅有 cover_large、无 cover_small、也无 cover → 窄屏不显示封面图。
+{%- endcomment -%}
+{% assign pub_wide_rel = '' %}
+{% assign pub_wide_ext = '' %}
+{% assign pub_narrow_rel = '' %}
+{% assign pub_narrow_ext = '' %}
+{% assign pub_cover_both_rel = '' %}
+{% assign pub_cover_both_ext = '' %}
+{% if item.cover %}
+  {% assign _cr = item.cover | strip %}
+  {% assign _cp = _cr %}
+  {% unless _cr contains '://' %}
+    {% assign _c0 = _cr | slice: 0, 1 %}
+    {% if _c0 != '/' %}
+      {% assign _cp = _cr | prepend: '/' %}
+    {% endif %}
+  {% endunless %}
+  {% assign pub_cover_both_rel = _cp | relative_url %}
+  {% assign pub_cover_both_ext = _cr | split: '.' | last | downcase %}
+{% endif %}
+{% if item.cover_large %}
+  {% assign _cr = item.cover_large | strip %}
+  {% assign _cp = _cr %}
+  {% unless _cr contains '://' %}
+    {% assign _c0 = _cr | slice: 0, 1 %}
+    {% if _c0 != '/' %}
+      {% assign _cp = _cr | prepend: '/' %}
+    {% endif %}
+  {% endunless %}
+  {% assign pub_wide_rel = _cp | relative_url %}
+  {% assign pub_wide_ext = _cr | split: '.' | last | downcase %}
+{% elsif pub_cover_both_rel != '' %}
+  {% assign pub_wide_rel = pub_cover_both_rel %}
+  {% assign pub_wide_ext = pub_cover_both_ext %}
+{% endif %}
+{% if item.cover_small %}
+  {% assign _cr = item.cover_small | strip %}
+  {% assign _cp = _cr %}
+  {% unless _cr contains '://' %}
+    {% assign _c0 = _cr | slice: 0, 1 %}
+    {% if _c0 != '/' %}
+      {% assign _cp = _cr | prepend: '/' %}
+    {% endif %}
+  {% endunless %}
+  {% assign pub_narrow_rel = _cp | relative_url %}
+  {% assign pub_narrow_ext = _cr | split: '.' | last | downcase %}
+{% elsif pub_cover_both_rel != '' %}
+  {% assign pub_narrow_rel = pub_cover_both_rel %}
+  {% assign pub_narrow_ext = pub_cover_both_ext %}
+{% endif %}
+{% assign pub_cover_size = 'large' %}
+{% if pub_wide_rel != '' or pub_narrow_rel != '' %}
+  {% if item.cover_size %}
+    {% assign _cov_sz = item.cover_size | strip | downcase %}
+    {% if _cov_sz == 'small' or _cov_sz == 'sm' or _cov_sz == 's' %}
+      {% assign pub_cover_size = 'small' %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+<div class="publication-item-inner">
+{% if item.bibtex %}
+<div class="bibtex-source d-none" data-has-bibtex="true">{{ item.bibtex }}</div>
+{% else %}
+<div class="bibtex-source d-none" data-has-bibtex="false" data-title="{{ item.title | xml_escape }}" data-authors="{{ item.authors | join: ' and ' | xml_escape }}" data-pub="{{ item.pub | xml_escape }}" data-year="{{ item.date | date: '%Y' }}"></div>
+{% endif %}
+<div class="d-none d-md-block">
+    <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
+        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3 d-flex align-items-center">
+            {%- if pub_wide_rel != '' -%}
+            <div class="publication-cover-wrap w-100 {% if pub_cover_size == 'small' %}publication-cover-wrap--sm{% else %}publication-cover-wrap--lg{% endif %}">
+            {%- if pub_wide_ext == 'gif' -%}
+            <img src="{{ pub_wide_rel }}" alt="{{ item.title }}" class="rounded-sm publication-cover-thumb {% if pub_cover_size != 'small' %}w-100{% endif %}" decoding="async">
+            {%- else -%}
+            <img data-src="{{ pub_wide_rel }}" alt="{{ item.title }}" class="lazy rounded-sm publication-cover-thumb {% if pub_cover_size != 'small' %}w-100{% endif %}" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+            {%- endif -%}
+            {%- unless pub_cover_size == 'small' -%}
+            <div class="publication-cover-preview" aria-hidden="true">
+                <img src="{{ pub_wide_rel }}" alt="" loading="lazy" decoding="async">
+            </div>
+            {%- endunless -%}
+            </div>
+            {%- else -%}
+            <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
+            {%- endif -%}
+        </div>
+        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+            <h6 class="mt-0 mb-1">{{ item.title }}</h6>
+            <p class="small pb-0 mb-1 lh-125 text-muted publication-secondary-actions">
+                <a data-toggle="collapse" href="#abstract-{{ item.title | slugify }}" role="button" aria-expanded="false" aria-controls="abstract-{{ item.title | slugify }}">
+                    [TL;DR]
+                </a>
+                <a href="#" class="bibtex-copy" role="button">[BibTeX]</a>
+            </p>
+            <div class="collapse" id="abstract-{{ item.title | slugify }}">
+                <p class="small text-muted mb-1">{{ item.tldr | default: item.abstract }}</p>
+            </div>
+            <p class="mt-0 mb-0 small publication-authors">{% include widgets/author_list.html authors=item.authors %}</p>
+            <p class="mt-0 mb-0 small publication-venue-line">
+                {% if item.pub_last %}<span class="publication-venue-highlight">{{ item.pub_last }}</span>{% endif %}
+                {{item.pub_pre}} {{ item.pub }} {{ item.pub_post }} {{ item.pub_date }}{% if page.navbar_title != 'Research' and item.date %} | {{ item.date | date: '%Y' }}{% endif %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span>
+            </p>
+            <!-- <p class="mt-0 mb-1 small text-muted">{{ item.abstract }}</p> -->
+
+            {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
+            <p class="small pb-0 mb-1 lh-125 publication-primary-links">
+                {% if item.links %}
+                    {% for link_name in preferred_link_order %}
+                        {% assign link_value = item.links[link_name] %}
+                        {% if link_value %}
+                            {% if link_value.url %}
+                            <a target="{{ link_value.target | default: '_blank' }}" href="{{ link_value.url }}">[{{ link_name }}]</a>
+                            {% else %}
+                            <a target="_blank" href="{{ link_value }}">[{{ link_name }}]</a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    {% for link in item.links %}
+                        {% unless preferred_link_order contains link[0] %}
+                            {% if link[1].url %}
+                            <a target="{{ link[1].target | default: '_blank' }}" href="{{ link[1].url }}">[{{ link[0] }}]</a>
+                            {% else %}
+                            <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+                            {% endif %}
+                        {% endunless %}
+                    {% endfor %}
+                {% endif %}
+            </p>
+
+            <!-- Read More Button -->
+            <!-- <p class="mt-1 mb-1 small">
+                <a class="text-primary" data-toggle="collapse" href="#abstract-{{ item.title | slugify }}" role="button" aria-expanded="false" aria-controls="abstract-{{ item.title | slugify }}">
+                    Read more
+                </a>
+            </p> -->
+
+            <!-- TAG BADGES -->
+            <!-- {% if item.tags %}
+            <p class="mt-0 mb-0 small">
+                {% for tag in item.tags %}
+                    {% assign color = "secondary" %}
+                    {% if tag == "medical imaging" %}
+                        {% assign color = "success" %}
+                    {% elsif tag == "continual learning" %}
+                        {% assign color = "warning" %}
+                    {% elsif tag == "few-shot learning" %}
+                        {% assign color = "info" %}
+                    {% elsif tag == "federated learning" %}
+                        {% assign color = "primary" %}
+                    {% elsif tag == "multimodal" %}
+                        {% assign color = "danger" %}
+                    {% endif %}
+                    <span class="badge badge-{{ color }} mr-1">{{ tag }}</span>
+                {% endfor %}
+            </p>
+            {% endif %} -->
+            <!-- Random Color -->
+            <!-- Tag display is temporarily hidden; tags are still used for filtering via filter-item classes. -->
+            <!--
+            {% if item.tags %}
+            <p class="mt-0 mb-0">
+                {% for tag in item.tags %}
+                    <span class="tag-badge mr-1" style="margin-top: 1em;">{{ tag }}</span>
+                {% endfor %}
+            </p>
+            {% endif %}
+            -->
+            <!-- {% if item.tags %}
+            <p class="mt-0 mb-0">
+                {% assign colors = "light" | split: "," %}
+                {% for tag in item.tags %}
+                    {% assign color_index = forloop.index0 | modulo: colors.size %}
+                    {% assign color = colors[color_index] %}
+                    <span class="badge badge-{{ color }} mr-1">{{ tag }}</span>
+                {% endfor %}
+            </p>
+            {% endif %} -->
+
+        </div>
+    </div>
+</div>
+
+<div class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %}">
+    <div class="w-100 {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %} {% if pub_narrow_rel != '' %}publication-mobile-cover-bg {% if pub_cover_size == 'small' %}publication-mobile-cover-bg--sm{% endif %}{% endif %}"{% unless pub_narrow_rel != '' %} style="background-color: #fff;"{% endunless %}>
+        {%- if pub_narrow_rel != '' -%}
+        {%- if pub_cover_size == 'small' -%}
+        <div class="publication-mobile-cover-strip" aria-hidden="true">
+        {%- if pub_narrow_ext == 'gif' -%}
+        <img src="{{ pub_narrow_rel }}" alt="" class="publication-mobile-cover-strip__img" decoding="async">
+        {%- else -%}
+        <img data-src="{{ pub_narrow_rel }}" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" alt="" class="publication-mobile-cover-strip__img lazy" loading="lazy" decoding="async">
+        {%- endif -%}
+        </div>
+        {%- else -%}
+        {%- if pub_narrow_ext == 'gif' -%}
+        <img src="{{ pub_narrow_rel }}" alt="" class="publication-mobile-cover-bg__image" decoding="async" aria-hidden="true">
+        {%- else -%}
+        <img data-src="{{ pub_narrow_rel }}" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" alt="" class="publication-mobile-cover-bg__image lazy" loading="lazy" decoding="async" aria-hidden="true">
+        {%- endif -%}
+        <div class="publication-mobile-cover-bg__scrim" aria-hidden="true"></div>
+        {%- endif -%}
+        {%- endif -%}
+        <div class="d-flex align-items-start flex-column py-3 px-4">
+            <div class="mb-auto"></div>
+            <div>
+                <h6 class="mt-0 mb-1">{{ item.title }}</h6>
+                <p class="small pb-0 mb-1 lh-125 text-muted publication-secondary-actions">
+                    <a data-toggle="collapse" href="#abstract-mobile-{{ item.title | slugify }}" role="button" aria-expanded="false" aria-controls="abstract-mobile-{{ item.title | slugify }}">
+                        [TL;DR]
+                    </a>
+                    <a href="#" class="bibtex-copy" role="button">[BibTeX]</a>
+                </p>
+                <div class="collapse" id="abstract-mobile-{{ item.title | slugify }}">
+                    <p class="small text-muted mb-1">{{ item.tldr | default: item.abstract }}</p>
+                </div>
+                <p class="mt-0 mb-0 small publication-authors">{% include widgets/author_list.html authors=item.authors %}</p>
+                <p class="mt-0 mb-0 small publication-venue-line">
+                    {% if item.pub_last %}<span class="publication-venue-highlight">{{ item.pub_last }}</span>{% endif %}
+                    {{item.pub_pre}}{{ item.pub }}{{ item.pub_post }} {{ item.pub_date }}{% if page.navbar_title != 'Research' and item.date %} | {{ item.date | date: '%Y' }}{% endif %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span>
+                </p>
+
+                {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
+                <p class="small pb-0 mb-1 lh-125 publication-primary-links">
+                    {% if item.links %}
+                        {% for link_name in preferred_link_order %}
+                            {% assign link_value = item.links[link_name] %}
+                            {% if link_value %}
+                                {% if link_value.url %}
+                                <a target="{{ link_value.target | default: '_blank' }}" href="{{ link_value.url }}">[{{ link_name }}]</a>
+                                {% else %}
+                                <a target="_blank" href="{{ link_value }}">[{{ link_name }}]</a>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                        {% for link in item.links %}
+                            {% unless preferred_link_order contains link[0] %}
+                                {% if link[1].url %}
+                                <a target="{{ link[1].target | default: '_blank' }}" href="{{ link[1].url }}">[{{ link[0] }}]</a>
+                                {% else %}
+                                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+                                {% endif %}
+                            {% endunless %}
+                        {% endfor %}
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
