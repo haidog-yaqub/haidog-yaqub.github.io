@@ -50,7 +50,7 @@ education:
   position: >- 
     PhD Candidate @ ECE & DSAI
   description:
-    Advised by Prof. Mounya Elhilali
+    Advised by Prof. <a href="https://engineering.jhu.edu/faculty/mounya-elhilali/" target="_blank">Mounya Elhilali</a>
   date: Aug. 2022 - Present
   place: Baltimore, MD
 
@@ -73,13 +73,14 @@ experience:
   position: >-
     ML Research Intern
   date: Apr 2026 - present
+  place: USA
 
 - name: Adobe | CAVA
   logo: /assets/images/badges/adobe.png
   position: >- 
     Research Scientist Intern
   date: May 2025 - Feb. 2026
-  place: San Francisco, CA
+  place: San Francisco, CA, USA
 
 - name: Tencent | AI Lab
   logo: /assets/images/badges/tencent.png
@@ -88,7 +89,7 @@ experience:
   # description:
   #   Advised by Prof. Yu Rang Park
   date: May 2024 - Sep. 2025
-  place: Bellevue, WA
+  place: Bellevue, WA, USA
 
 - name: Kuaishou | AI Platform
   logo: /assets/images/badges/kuaishou.png
