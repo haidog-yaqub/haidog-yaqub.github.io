@@ -8,13 +8,15 @@ navbar_title: Home
   <div class="col-12 col-lg-3">
     {% include widgets/profile_card.html %}
 
-    {% if site.data.display.homepage.show_education %}
-      {% include widgets/education_card.html %}
-    {% endif %}
+    <div class="d-none d-lg-block">
+      {% if site.data.display.homepage.show_education %}
+        {% include widgets/education_card.html %}
+      {% endif %}
 
-    {% if site.data.display.homepage.show_experience %}
-      {% include widgets/experience_card.html %}
-    {% endif %}
+      {% if site.data.display.homepage.show_experience %}
+        {% include widgets/experience_card.html %}
+      {% endif %}
+    </div>
 
   </div>
 
@@ -43,5 +45,17 @@ navbar_title: Home
          title='<i class="fas fa-search"></i><span style="margin-left: 0.3em;">Research Highlights</span>' %}
     {% endif %}
 
+  </div>
+</div>
+
+<div class="row justify-content-center d-lg-none">
+  <div class="col-12 col-lg-3">
+    {% if site.data.display.homepage.show_education %}
+      {% include widgets/education_card.html %}
+    {% endif %}
+
+    {% if site.data.display.homepage.show_experience %}
+      {% include widgets/experience_card.html %}
+    {% endif %}
   </div>
 </div>

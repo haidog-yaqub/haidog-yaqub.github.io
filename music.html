@@ -8,7 +8,9 @@ navbar_title: Music
   <div class="col-12 col-lg-3">
     {% include widgets/profile_card.html profile_data=site.data.music_profile %}
 
-    {% include widgets/experience_card.html profile_data=site.data.music_profile %}
+    <div class="d-none d-lg-block">
+      {% include widgets/experience_card.html profile_data=site.data.music_profile %}
+    </div>
   </div>
 
   <div class="col-12 col-lg-7">
@@ -22,6 +24,12 @@ navbar_title: Music
     </div>
 
     {% include widgets/music_card.html %}
+  </div>
+</div>
+
+<div class="row justify-content-center d-lg-none">
+  <div class="col-12 col-lg-3">
+    {% include widgets/experience_card.html profile_data=site.data.music_profile %}
   </div>
 </div>
 
