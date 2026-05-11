@@ -13,6 +13,11 @@ body {
     --motion-base: 280ms;
     --motion-slow: 480ms;
     --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* Publication list: hover cover preview size (read by assets/js/common.js) */
+    --pub-cover-preview-max-rem:28;
+    --pub-cover-preview-min-px: 80;
+    --pub-cover-preview-margin-px: 24;
 }
 
 h1, h2, h3, h4, h5, h6,

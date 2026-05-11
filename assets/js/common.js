@@ -89,11 +89,26 @@ $(function () {
         var appendTimer = null;
         var openHoverTimer = null;
         var closeHoverTimer = null;
-        var margin = 24;
-        var maxSideRem = 32;
-        var hoverOpenDelay = 16;
-        var wrapLeaveCloseDelay = 220;
-        var previewLeaveCloseDelay = 60;
+
+        function getCoverPreviewLayout() {
+            var root = document.documentElement;
+            var cs = window.getComputedStyle(root);
+            function parseVar(name, fallback) {
+                var v = cs.getPropertyValue(name).trim();
+                if (!v) return fallback;
+                var n = parseFloat(v);
+                return isNaN(n) ? fallback : n;
+            }
+            return {
+                maxSideRem: parseVar('--pub-cover-preview-max-rem', 32),
+                margin: parseVar('--pub-cover-preview-margin-px', 24),
+                minSide: parseVar('--pub-cover-preview-min-px', 80)
+            };
+        }
+
+        var hoverOpenDelay = 400;
+        var wrapLeaveCloseDelay = 100;
+        var previewLeaveCloseDelay = 50;
 
         function isCoverPreviewDesktop() {
             return !window.matchMedia('(max-width: 767.98px)').matches;
@@ -141,11 +156,12 @@ $(function () {
         }
 
         function positionCoverPreview($p) {
+            var L = getCoverPreviewLayout();
             var rootRem = parseFloat(window.getComputedStyle(document.documentElement).fontSize) || 16;
-            var maxSide = maxSideRem * rootRem;
-            var vw = window.innerWidth - margin * 2;
-            var vh = window.innerHeight - margin * 2;
-            var side = Math.max(80, Math.floor(Math.min(maxSide, vw, vh)));
+            var maxSide = L.maxSideRem * rootRem;
+            var vw = window.innerWidth - L.margin * 2;
+            var vh = window.innerHeight - L.margin * 2;
+            var side = Math.max(L.minSide, Math.floor(Math.min(maxSide, vw, vh)));
             var $wrap = $p.data('ownerWrap');
             var centerX = window.innerWidth / 2;
             if ($wrap && $wrap.length) {
