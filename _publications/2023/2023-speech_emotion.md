@@ -1,6 +1,6 @@
 ---
 title:          "Boosting Modality Representation with Pre-trained Models and Multi-task Training for Multimodal Sentiment Analysis"
-date:           2023-08-01
+date:           2023-07-01
 selected:       false
 type:           publication
 tags:           ["audio understanding"]
@@ -14,7 +14,7 @@ abstract: >-
   Developed a machine learning-based fake image detection pipeline that leverages pixel-level statistics, texture patterns, and edge information, achieving higher accuracy with lower memory usage than CNN-based deep learning approaches.
 tldr: >-
   Multi-task training with pre-trained modality encoders to learn stronger multimodal representations for sentiment analysis.
-cover:          /assets/images/covers/boost.png
+cover_large:          /assets/images/covers/boost.png
 authors:
   - Jiarui Hai*
   - Yu-Jeh Liu*

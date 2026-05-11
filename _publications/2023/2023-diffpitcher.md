@@ -14,7 +14,7 @@ abstract: >-
   Developed a machine learning-based fake image detection pipeline that leverages pixel-level statistics, texture patterns, and edge information, achieving higher accuracy with lower memory usage than CNN-based deep learning approaches.
 tldr: >-
   A diffusion-based method for singing voice pitch correction that adjusts pitch while preserving timbre and expression.
-cover:          /assets/images/covers/diffpitcher.png
+cover_large:          /assets/images/covers/diffpitcher.png
 authors:
   - Jiarui Hai
   - Mounya Elhilali

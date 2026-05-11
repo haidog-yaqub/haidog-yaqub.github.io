@@ -11,34 +11,24 @@
 
 A GitHub Pages (Jekyll) template for personal academic website. Click [here](https://luost.me/academic-homepage/) to see the demo.
 
-## User Community
+## Original Source
 
-[🏡](https://luost.me/)
-[:star:](https://cch1999.github.io/)
-[:star:](https://kyrrego.github.io/)
-[:star:](https://ced3-han.github.io/)
-[:star:](https://lihengchen.com/)
-[:star:](https://hpwang-whu.github.io/)
-[:star:](https://zhang-yingyi.github.io/)
-[:star:](https://wby24.github.io/)
-[:star:](https://pengfeixu.com/)
-[:star:](https://boqiuphd.github.io/)
-[:star:](https://www.huabing.li/)
-[:star:](https://xiecuiying.github.io/)
-[:star:](https://hannyang.github.io/)
-[:star:](https://king-play.github.io/)
-[🤖](https://andrewcwlee.github.io)
-[:star:](https://laiyao1.github.io)
-[🌜](https://tmsultan.github.io)
-[🚀](https://zaxguo.github.io)
-[:gemini:](https://hongyang-du.github.io)
-[🇻‍🇳](https://thuanz123.github.io)
-[🧬](https://gdalba.github.io/)
-[🇭🇰](https://yhhan.com/)
-[🌔](https://chen-huaneng.github.io/academic)
+This site is originally based on [`luost26/academic-homepage`](https://github.com/luost26/academic-homepage).
 
-:hugs: Feel free to tell us if you are using this template for your website by creating an issue [here](https://github.com/luost26/academic-homepage/issues/new?assignees=&labels=&projects=&template=user-report.md&title=I+am+using+this+template%21).
+## My Website
 
+- Live page: [https://haidog-yaqub.github.io](https://haidog-yaqub.github.io)
+
+## Notes on My Customizations
+
+Compared with the original template, this fork adds custom updates for my own site, including:
+
+- publication cover behavior improvements (desktop/mobile handling, large/small cover support)
+- research card usability tweaks (TL;DR field, filtering updates, lazy-load refresh after filtering)
+- navigation and page-level UI adjustments (layout spacing, optional cards/sections)
+- music page customization (profile links, WIP notice, content visibility controls)
+
+These project-specific changes are intentionally kept in this repo and may differ from upstream defaults.
 
 ## Need Help?
 
