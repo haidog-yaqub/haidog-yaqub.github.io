@@ -166,11 +166,11 @@ div.lazy {
 
 a {
     transition: color var(--motion-fast) var(--motion-ease), opacity var(--motion-fast) var(--motion-ease);
-    font-weight: 450;
+    font-weight: 500 !important;
 }
 
 a:hover {
-    font-weight: 400;
+    font-weight: 500 !important;
     text-shadow: 0 0 0 currentColor, 0.015em 0 0 currentColor;
 }
 
