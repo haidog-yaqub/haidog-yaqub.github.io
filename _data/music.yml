@@ -23,5 +23,5 @@ tracks:
   # - title: "My Own Recording"
   #   artist: "Your Name"
   #   type: audio
-  #   url: "/uploads/my-song.mp3"
-  #   description: "Self-uploaded music - put .mp3 in uploads/ folder"
+  #   url: "/docs/my-song.mp3"
+  #   description: "Self-uploaded music - put .mp3 in docs/ folder"

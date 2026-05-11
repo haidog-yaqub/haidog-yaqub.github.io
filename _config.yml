@@ -17,6 +17,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 # Build settings
 markdown: kramdown
+destination: docs
 plugins:
   - jekyll-email-protect
 
