@@ -15,7 +15,7 @@ body {
     --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 
     /* Publication list: hover cover preview size (read by assets/js/common.js) */
-    --pub-cover-preview-max-rem:28;
+    --pub-cover-preview-max-rem:30;
     --pub-cover-preview-min-px: 80;
     --pub-cover-preview-margin-px: 24;
 }
