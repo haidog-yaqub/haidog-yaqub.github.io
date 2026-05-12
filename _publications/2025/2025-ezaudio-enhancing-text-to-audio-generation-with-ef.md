@@ -20,7 +20,7 @@ authors:
   - Mounya Elhilali
   - Dong Yu
 
-cover_large: /assets/images/covers/ezaudio.png
+cover_large: /assets/images/covers/ezaudio.gif
 
 links:
   Paper: https://arxiv.org/pdf/2409.10819
