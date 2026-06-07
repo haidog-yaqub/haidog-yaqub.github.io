@@ -57,7 +57,7 @@ education:
 - name: Tsinghua University
   logo: /assets/images/badges/thu.png
   position: Master of Engineering
-  date: Aug. 2020 – Jun. 2020
+  date: Aug. 2020 – Jun. 2022
   place: Beijing, China
 
 - name: Tsinghua University
@@ -72,7 +72,7 @@ experience:
   logo: /assets/images/badges/apple.svg
   position: >-
     ML Research Intern
-  date: Apr 2026 - present
+  date: Apr 2026 - Present
   place: USA
 
 - name: Adobe | CAVA
@@ -88,7 +88,7 @@ experience:
     Research Scientist Intern
   # description:
   #   Advised by Prof. Yu Rang Park
-  date: May 2024 - Sep. 2025
+  date: May 2024 - Sep. 2024
   place: Bellevue, WA, USA
 
 - name: Kuaishou | AI Platform
@@ -97,7 +97,7 @@ experience:
     Music Technology Intern
   # description:
     # Korean Government Fellowship
-  date: Aug. 2024 - Feb. 2025
+  date: Aug. 2021 - Feb. 2022
   place: Beijing, China
 
 
