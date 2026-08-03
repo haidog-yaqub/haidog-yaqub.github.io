@@ -3,7 +3,7 @@ title:          "SoloSpeech: Enhancing Intelligibility and Quality in Target Spe
 date:           2026-01-01
 selected:       false
 type:           publication
-tags:           ["audio seperation", "speech synthesis"]
+tags:           ["speech & singing", "generative models"]
 pub:            "IEEE Transactions on Audio, Speech and Language Processing (TASLP)"
 abstract: >-
   

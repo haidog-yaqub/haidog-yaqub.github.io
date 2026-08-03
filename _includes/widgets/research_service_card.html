@@ -1,0 +1,51 @@
+{% assign p = include.profile_data | default: site.data.profile %}
+{% if p.research_service and p.research_service.size > 0 %}
+<div class="mt-3 mb-0 bg-white shadow-sm rounded-xl">
+  <h6 class="p-3 mb-0 border-bottom border-gray">
+    <i class="fas fa-university"></i><span style="margin-left: 0.3em;">Service and Teaching</span>
+  </h6>
+  <div class="px-3 pt-2 pb-2">
+    {% for item in p.research_service %}
+    <div class="my-1{% if forloop.last %} mb-0{% endif %}">
+      {% if item.role %}
+      <div class="font-weight-bold text-muted">{{ item.role }}</div>
+      {% endif %}
+
+      {% if item.entries %}
+        {% for entry in item.entries %}
+        <div class="d-flex{% unless forloop.last %} mb-1{% endunless %}">
+          <div>
+            {% if entry.name %}
+              {% if entry.url %}
+              <a href="{{ entry.url }}" target="_blank" rel="noopener">{{ entry.name }}</a>
+              {% else %}
+              {{ entry.name }}
+              {% endif %}
+            {% endif %}
+            {% if entry.description %}<div class="text-muted">{{ entry.description }}</div>{% endif %}
+          </div>
+          {% if entry.date %}
+          <div class="text-muted no-break ml-auto pl-2"><em>{{ entry.date }}</em></div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      {% elsif item.venues %}
+      <div>{{ item.venues }}</div>
+      {% elsif item.items %}
+      <div>{{ item.items | join: ', ' }}</div>
+      {% elsif item.name %}
+      <div class="d-flex">
+        <div>
+          {{ item.name }}
+          {% if item.description %}<div class="text-muted">{{ item.description }}</div>{% endif %}
+        </div>
+        {% if item.date %}
+        <div class="text-muted no-break ml-auto pl-2"><em>{{ item.date }}</em></div>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

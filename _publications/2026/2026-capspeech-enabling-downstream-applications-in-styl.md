@@ -3,7 +3,7 @@ title:          "CapSpeech: Enabling Downstream Applications in Style-Captioned 
 date:           2026-03-01
 selected:       true
 type:           publication
-tags:           ["speech synthesis"]
+tags:           ["speech & singing", "generative models"]
 pub:            "IEEE Transactions on Audio, Speech and Language Processing (TASLP)"
 pub_last:       '<span class="text-em"><i class="fas fa-database mr-1"></i>Dataset</span>'
 abstract: >-

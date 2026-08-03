@@ -1,0 +1,116 @@
+{% assign p = include.profile_data | default: site.data.profile %}
+<div class="mt-3 mb-0 bg-white shadow-sm rounded-xl">
+  <h6 class="p-3 mb-0 border-bottom border-gray">
+    <i class="fas fa-address-card"></i><span style="margin-left: 0.3em;">Contact</span>
+  </h6>
+  <div class="px-3 pt-2 pb-2">
+    <div class="profile-card-links icon-row profile-card-links--contact">
+      {% if p.email %}
+      <a class="profile-link profile-link--email no-break"
+         href="mailto:{{ p.email | encode_email }}"
+         aria-label="Email {{ p.email }}">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span class="profile-link-label">Email</span>
+      </a>
+      {% endif %}
+
+      {% if p.cv_link %}
+      <a class="profile-link profile-link--cv no-break" target="_blank" rel="noopener" href="{{ p.cv_link | relative_url }}"
+         aria-label="Resume">
+        <i class="fas fa-file-alt" aria-hidden="true"></i>
+        <span class="profile-link-label">Resume</span>
+      </a>
+      {% endif %}
+
+      {% if p.gscholar %}
+      {%- if p.gscholar contains 'scholar.google' -%}
+      {%- assign gscholar_url = p.gscholar -%}
+      {%- else -%}
+      {%- assign gscholar_id = p.gscholar | split: '&' | first -%}
+      {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: gscholar_id -%}
+      {%- endif -%}
+      <a class="profile-link no-break" target="_blank" rel="noopener" href="{{ gscholar_url }}"
+         aria-label="Google Scholar">
+        <i class="fab fa-google-scholar" aria-hidden="true"></i>
+        <span class="profile-link-label">Scholar</span>
+      </a>
+      {% endif %}
+
+      {% if p.github %}
+      <a class="profile-link no-break" target="_blank" rel="noopener" href="https://github.com/{{ p.github }}"
+         aria-label="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+        <span class="profile-link-label">GitHub</span>
+      </a>
+      {% endif %}
+
+      {% if p.wechat_qrcode %}
+      <a class="profile-link no-break" href="#" data-toggle="modal" data-target="#modal-wechat"
+         aria-label="WeChat" role="button">
+        <i class="fab fa-weixin" aria-hidden="true"></i>
+        <span class="profile-link-label">WeChat</span>
+      </a>
+      {% endif %}
+
+      {% if p.twitter %}
+      <a class="profile-link no-break" target="_blank" rel="noopener" href="https://twitter.com/{{ p.twitter }}"
+         aria-label="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+        <span class="profile-link-label">Twitter</span>
+      </a>
+      {% endif %}
+
+      {% if p.linkedin %}
+      <a class="profile-link no-break" target="_blank" rel="noopener" href="https://www.linkedin.com/in/{{ p.linkedin }}"
+         aria-label="LinkedIn">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+        <span class="profile-link-label">LinkedIn</span>
+      </a>
+      {% endif %}
+
+      {% if p.youtube %}
+      <a class="profile-link no-break" target="_blank" rel="noopener" href="https://www.youtube.com/{{ p.youtube }}"
+         aria-label="YouTube">
+        <i class="fab fa-youtube" aria-hidden="true"></i>
+        <span class="profile-link-label">YouTube</span>
+      </a>
+      {% endif %}
+
+      {% if p.soundcloud %}
+      <a class="profile-link no-break" target="_blank" rel="noopener" href="{{ p.soundcloud }}"
+         aria-label="SoundCloud">
+        <i class="fab fa-soundcloud" aria-hidden="true"></i>
+        <span class="profile-link-label">SoundCloud</span>
+      </a>
+      {% endif %}
+
+      {% if p.orcid %}
+      <a class="profile-link no-break" target="_blank" rel="noopener" href="https://orcid.org/{{ p.orcid }}"
+         aria-label="ORCID">
+        <i class="fab fa-orcid" aria-hidden="true"></i>
+        <span class="profile-link-label">ORCID</span>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% if p.wechat_qrcode %}
+<div class="modal fade" id="modal-wechat" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="{{ p.wechat_qrcode | relative_url }}" class="img-fluid" alt="WeChat QR code">
+      </div>
+      {% if p.wechat_prompt %}
+      <div class="modal-body p-1">
+        {{ p.wechat_prompt }}
+      </div>
+      {% endif %}
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,43 @@
+{% assign p = include.profile_data | default: site.data.profile %}
+{% if p.open_source and p.open_source.size > 0 %}
+<div class="mt-3 mb-0 bg-white shadow-sm rounded-xl">
+  <h6 class="p-3 mb-0 border-bottom border-gray">
+    <i class="fas fa-code-branch"></i><span style="margin-left: 0.3em;">Open-source Resources</span>
+  </h6>
+  <div class="px-3 pt-2 pb-2">
+    {% for section in p.open_source %}
+    <div class="my-1{% if forloop.last %} mb-0{% endif %}">
+      {% if section.category %}
+      <div class="font-weight-bold text-muted">{{ section.category }}</div>
+      {% endif %}
+      {% for item in section.items %}
+      {% assign github_repo = '' %}
+      {% if item.url contains 'github.com/' %}
+        {% assign _gh = item.url | split: 'github.com/' | last | split: '?' | first | split: '#' | first %}
+        {% assign _gh_parts = _gh | split: '/' %}
+        {% if _gh_parts.size >= 2 %}
+          {% assign github_repo = _gh_parts[0] | append: '/' | append: _gh_parts[1] %}
+        {% endif %}
+      {% endif %}
+      <div class="d-flex align-items-center{% unless forloop.last %} mb-1{% endunless %}">
+        <i class="{% if item.icon %}{{ item.icon }}{% elsif item.url contains 'huggingface.co' %}fas fa-robot{% elsif item.url contains 'github.com' %}fab fa-github{% else %}fas fa-database{% endif %} mr-2 text-muted" aria-hidden="true"></i>
+        <div class="flex-grow-1">
+          {% if item.url %}
+          <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.name }}</a>
+          {% else %}
+          {{ item.name }}
+          {% endif %}
+        </div>
+        {% if github_repo != '' %}
+        <span class="open-source-stars text-muted ml-2" data-github-repo="{{ github_repo }}" hidden>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <span class="open-source-stars-count"></span>
+        </span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

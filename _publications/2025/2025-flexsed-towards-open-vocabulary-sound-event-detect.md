@@ -3,7 +3,7 @@ title:          "FlexSED: Towards Open-Vocabulary Sound Event Detection"
 date:           2025-08-01
 selected:       true
 type:           publication
-tags:           ["audio understanding"]
+tags:           ["general audio", "understanding models"]
 pub:            "IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)"
 abstract: >-
 

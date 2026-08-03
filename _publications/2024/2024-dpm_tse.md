@@ -3,7 +3,7 @@ title:          "DPM-TSE: A Diffusion Probabilistic Model for Target Sound Extra
 date:           2024-08-01
 selected:       false
 type:           publication
-tags:           ["audio seperation", "audio generation"]
+tags:           ["general audio", "generative models"]
 pub:            "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'

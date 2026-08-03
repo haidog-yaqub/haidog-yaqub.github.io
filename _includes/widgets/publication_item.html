@@ -143,7 +143,7 @@
             <p class="mt-0 mb-0 small publication-authors">{% include widgets/author_list.html authors=item.authors %}</p>
             <p class="mt-0 mb-0 small publication-venue-line">
                 {% if item.pub_last %}<span class="publication-venue-highlight">{{ item.pub_last }}</span>{% endif %}
-                {{item.pub_pre}} {{ item.pub }} {{ item.pub_post }} {{ item.pub_date }}{% if page.navbar_title != 'Research' and item.date %} | {{ item.date | date: '%Y' }}{% endif %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span>
+                {{item.pub_pre}} {{ item.pub }} {{ item.pub_post }} {{ item.pub_date }}{% if item.date %} | {{ item.date | date: '%Y' }}{% endif %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span>
             </p>
             <!-- <p class="mt-0 mb-1 small text-muted">{{ item.abstract }}</p> -->
 
@@ -261,7 +261,7 @@
                 <p class="mt-0 mb-0 small publication-authors">{% include widgets/author_list.html authors=item.authors %}</p>
                 <p class="mt-0 mb-0 small publication-venue-line">
                     {% if item.pub_last %}<span class="publication-venue-highlight">{{ item.pub_last }}</span>{% endif %}
-                    {{item.pub_pre}}{{ item.pub }}{{ item.pub_post }} {{ item.pub_date }}{% if page.navbar_title != 'Research' and item.date %} | {{ item.date | date: '%Y' }}{% endif %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span>
+                    {{item.pub_pre}}{{ item.pub }}{{ item.pub_post }} {{ item.pub_date }}{% if item.date %} | {{ item.date | date: '%Y' }}{% endif %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span>
                 </p>
 
                 {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}

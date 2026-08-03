@@ -7,6 +7,7 @@ navbar_title: Home
 <div class="row justify-content-center">
   <div class="col-12 col-lg-3">
     {% include widgets/profile_card.html %}
+    {% include widgets/contact_card.html %}
 
     <div class="d-none d-lg-block">
       {% if site.data.display.homepage.show_education %}
@@ -34,7 +35,9 @@ navbar_title: Home
     {% if site.data.display.homepage.show_news %}
       {% assign count_news = site.news | size %}
       {% if count_news > 0 %}
-        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
+        {% include widgets/news_card.html
+           limit=site.data.display.homepage.num_news
+           visible=site.data.display.homepage.num_news_visible %}
       {% endif %}
     {% endif %}
 

@@ -3,7 +3,7 @@ title:          "Summary of The Inaugural Music Source Restoration Challenge"
 date:           2026-02-01
 selected:       false
 type:           publication
-tags:           ["audio seperation", "music technology"]
+tags:           ["general audio", "music technology"]
 pub:            "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
 pub_last:       '<span class="text-em"><i class="fas fa-trophy mr-1"></i>Challenge</span>'
 abstract: >-
@@ -31,4 +31,5 @@ cover_large: /assets/images/covers/music_res.png
 
 links:
   Homepage: https://msrchallenge.com/
+  Paper: https://arxiv.org/abs/2601.04343
 ---

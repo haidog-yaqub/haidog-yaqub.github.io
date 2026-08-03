@@ -10,7 +10,7 @@ positions:
 
 email: "jhai@jhu.edu"
 cv_link: https://haidog-yaqub.github.io/docs/Jiarui_CV.pdf
-gscholar: q6zeG8sAAAAJ&hl  # This is an example, replace it with your own Google Scholar ID
+gscholar: q6zeG8sAAAAJ  # Google Scholar user ID
 github: haidog-yaqub
 # youtube: channel/UCEGud3VRCtkkaQxxMgBJ1LA
 # twitter: your_twitter_id  # Do not include the '@' symbol
@@ -108,3 +108,49 @@ experience:
 #   date: 2021
 # - name: A quick brown fox jumps over the lazy dog and runs away award
 #   date: 2021
+
+# Shown on the Research page (Open-source Resources card).
+# Groups: Datasets / Code / Foundation Models
+open_source:
+- category: Datasets
+  items:
+  - name: CapSpeech
+    url: https://huggingface.co/datasets/OpenSound/CapSpeech
+    icon: fas fa-database
+  - name: DreamVoice
+    url: https://huggingface.co/datasets/Higobeatz/DreamVoiceDB
+    icon: fas fa-database
+- category: Code
+  items:
+  - name: MeanFlow (PyTorch)
+    url: https://github.com/haidog-yaqub/MeanFlow
+  - name: FlexSED
+    url: https://github.com/JHU-LCAP/FlexSED
+  - name: SoloAudio
+    url: https://github.com/WangHelin1997/SoloAudio
+  - name: SoloSpeech
+    url: https://github.com/WangHelin1997/SoloSpeech
+- category: Foundation Models
+  items:
+  - name: CapSpeech
+    url: https://huggingface.co/OpenSound/CapSpeech-models
+  - name: EzAudio
+    url: https://huggingface.co/OpenSound/EzAudio
+
+# Shown on the Research page (Service and Teaching card).
+# Sections can use `venues` / `items` (lists) or `entries` (name + date).
+research_service:
+- role: Conference Reviewer
+  venues: ICASSP, Interspeech, ASUR, SLT, WASPAA
+- role: Journal Reviewer
+  venues: TASLP, IJCV
+- role: Challenge Organizer
+  entries:
+    - name: ICASSP 2026 | The Inaugural Music Source Restoration Challenge
+      url: https://msrchallenge.com/
+- role: Teaching Assistant
+  entries:
+    - name: Audio Signal Processing - 525.655
+      date: Fall 2025
+    - name: Audio Signal Processing - 525.655
+      date: Fall 2024
