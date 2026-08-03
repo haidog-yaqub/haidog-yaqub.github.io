@@ -4,11 +4,11 @@
   <h6 class="p-3 mb-0 border-bottom border-gray">
     <i class="fas fa-code-branch"></i><span style="margin-left: 0.3em;">Open-source Resources</span>
   </h6>
-  <div class="px-3 pt-2 pb-2">
+  <div class="px-3 pt-2 pb-2 research-side-card-body">
     {% for section in p.open_source %}
     <div class="open-source-section my-1{% if forloop.last %} mb-0{% endif %}">
       {% if section.category %}
-      <div class="font-weight-bold text-muted">{{ section.category }}</div>
+      <div class="font-weight-bold text-muted research-side-card-label">{{ section.category }}</div>
       {% endif %}
       {% for item in section.items %}
       {% assign github_repo = '' %}
