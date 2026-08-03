@@ -3,7 +3,7 @@ title:          "EzAudio: Enhancing Text-to-Audio Generation with Efficient Diff
 date:           2025-03-01
 selected:       true
 type:           publication
-tags:           ["general audio", "generative models"]
+tags:           ["audio", "generation"]
 pub:            "Interspeech"
 abstract: >-
 

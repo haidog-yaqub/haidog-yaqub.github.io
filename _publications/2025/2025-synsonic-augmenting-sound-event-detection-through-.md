@@ -3,7 +3,7 @@ title:          "SynSonic: Augmenting Sound Event Detection through Text-to-Audi
 date:           2025-02-01
 selected:       false
 type:           publication
-tags:           ["general audio", "generative models", "understanding models"]
+tags:           ["audio", "generation", "understanding"]
 pub:            "IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)"
 abstract: >-
 

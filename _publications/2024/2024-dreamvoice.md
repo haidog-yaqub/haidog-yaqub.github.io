@@ -3,7 +3,7 @@ title:          "DreamVoice: Text-Guided Voice Conversion"
 date:           2024-08-01
 selected:       false
 type:           publication
-tags:           ["speech & singing", "generative models"]
+tags:           ["voice", "generation"]
 pub:            "Interspeech"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'

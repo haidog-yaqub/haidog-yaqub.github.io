@@ -3,7 +3,7 @@ title:          "Diff-Pitcher: Diffusion-based Singing Voice Pitch Correction"
 date:           2023-08-01
 selected:       true
 type:           publication
-tags:           ["speech & singing", "music technology", "generative models"]
+tags:           ["voice", "music", "generation"]
 pub:            "IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'

@@ -3,7 +3,7 @@ title:          "Boosting Modality Representation with Pre-trained Models and Mu
 date:           2023-07-01
 selected:       false
 type:           publication
-tags:           ["speech & singing", "understanding models"]
+tags:           ["voice", "understanding"]
 pub:            "IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'

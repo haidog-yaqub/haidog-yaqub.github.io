@@ -3,7 +3,7 @@ title:          "SoloAudio: Target Sound Extraction with Language-Oriented Audio
 date:           2025-01-01
 selected:       false
 type:           publication
-tags:           ["general audio", "generative models"]
+tags:           ["audio", "generation"]
 pub:            "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
 abstract: >-
 
