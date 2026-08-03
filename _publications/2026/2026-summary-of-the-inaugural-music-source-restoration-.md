@@ -3,7 +3,7 @@ title:          "Summary of The Inaugural Music Source Restoration Challenge"
 date:           2026-02-01
 selected:       false
 type:           publication
-tags:           ["general audio", "music technology"]
+tags:           ["general audio", "music technology", "understanding models"]
 pub:            "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
 pub_last:       '<span class="text-em"><i class="fas fa-trophy mr-1"></i>Challenge</span>'
 abstract: >-
