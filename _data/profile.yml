@@ -144,7 +144,7 @@ open_source:
 # Sections can use `venues` / `items` (lists) or `entries` (name + date).
 research_service:
 - role: Conference Reviewer
-  venues: ICASSP, Interspeech, ASUR, SLT, WASPAA
+  venues: ICASSP, Interspeech, ASRU, SLT, WASPAA
 - role: Journal Reviewer
   venues: TASLP, IJCV
 - role: Challenge Organizer
@@ -153,7 +153,9 @@ research_service:
       url: https://msrchallenge.com/
 - role: Teaching Assistant
   entries:
-    - name: Audio Signal Processing - 525.655
+    - name: Audio Signal Processing
+      description: EN.520.445/645
       date: Fall 2025
-    - name: Audio Signal Processing - 525.655
+    - name: Audio Signal Processing
+      description: EN.520.445/645
       date: Fall 2024
