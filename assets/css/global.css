@@ -673,11 +673,14 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .about-page-link-kicker {
-    display: inline;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
     font-weight: inherit;
     color: #1a4fb3 !important;
     margin-right: 0.25em;
     text-decoration: none !important;
+    cursor: pointer;
 }
 
 a.about-page-link-kicker:hover,
@@ -699,10 +702,13 @@ a.about-page-link-kicker:focus-visible {
 
 .about-page-link-kicker strong {
     font-weight: 700;
+    color: inherit !important;
 }
 
 .about-page-link-kicker i {
-    margin-right: 0.3em;
+    margin-right: 0;
+    color: inherit !important;
+    pointer-events: none;
 }
 
 .about-page-link-desc {

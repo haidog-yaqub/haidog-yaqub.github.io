@@ -24,16 +24,18 @@ linkedin: jiarui-hai-297663141
 
 short_bio_text_justify: false
 about_sections:
-  - label: As a researcher
+  - before: "My "
+    label: Research
     icon: fas fa-flask
     url: /research
-    text: >-
-      I am pursuing my Ph.D. at Johns Hopkins University, where I build AI systems for audio, speech, and music. My work bridges language and audio, enabling machines to understand, reason about, and generate sound. I also develop open-source projects and datasets that advance the broader audio and speech research community.
-  - label: As a musician
+    after: >-
+      focuses on AI for audio, speech, and music. As a Ph.D. student at Johns Hopkins University, I develop systems that enable machines to understand, reason about, and generate sound. I also contribute open-source projects and datasets to the broader audio and speech research community.
+  - before: "Outside of academia, I make "
+    label: Music
     icon: fas fa-music
     url: /music
-    text: >-
-      I am an active music producer with a deep interest in the intersection of AI and music. I enjoy exploring how new technologies expand the creative process and unlock new possibilities for music creation and production.
+    after: >-
+      as an active producer with a deep interest in the intersection of AI and music. I enjoy exploring how emerging technologies expand the creative process and unlock new possibilities for music creation and production.
 
 portrait_url: /assets/images/photos/icon.jpg
 # portrait_caption: >-
