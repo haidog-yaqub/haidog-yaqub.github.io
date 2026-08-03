@@ -12,13 +12,16 @@ tracks:
 # Put your files in: assets/music/beats/
 # Optional cover image per beat: cover: /assets/music/covers/name.png
 beats:
-  - title: "Major Spark – Melodic Trap (feat. Shelly)"
+  - title: "Major Spark (feat. Shelly)"
+    genre: "Melodic, Emo"
     url: /assets/music/beats/major-spark.mp3
     cover: /assets/music/covers/major-spark.jpg
-  - title: "Feng Shui · Chinese Trap"
+  - title: "Feng Shui"
+    genre: "Chinese, Trap"
     url: /assets/music/beats/feng-shui.mp3
     cover: /assets/music/covers/feng-shui.jpg
-  - title: "Ring · Epic Trap"
+  - title: "Ring"
+    genre: "Epic, Experimental"
     url: /assets/music/beats/ring.mp3
     cover: /assets/music/covers/ring.jpg
 
@@ -26,13 +29,17 @@ beats:
 # Put your files in: assets/music/midi/
 # Then list them here with title / url.
 midi_kits:
-  - title: "Tomography · 151 F♯min"
+  - title: "Tomography"
+    genre: "Pluggnb"
     url: /assets/music/midi/tomography_151_Fsmin.mid
-  - title: "Shy · 168 Amin"
+  - title: "Shy"
+    genre: "Pluggnb"
     url: /assets/music/midi/shy_168_Amin.mid
-  - title: "Radio · 151 F♯min"
+  - title: "Radio"
+    genre: "Lo-fi"
     url: /assets/music/midi/radio_151_Fsmin.mid
-  - title: "Shatter · 158 Amin"
+  - title: "Shatter"
+    genre: "Emo"
     url: /assets/music/midi/shatter_158_Amin.mid
 
 # Music production tutorials (Chinese for now; English later)

@@ -66,9 +66,13 @@
             data-midi-track
             data-index="{{ forloop.index0 }}"
             data-title="{{ kit.title | escape }}"
-            data-url="{{ kit.url | relative_url }}">
+            data-url="{{ kit.url | relative_url }}"
+            {% if kit.genre %}data-genre="{{ kit.genre | escape }}"{% endif %}>
             <span class="split-player-track-index">{{ forloop.index }}</span>
             <span class="split-player-track-title">{{ kit.title }}</span>
+            {% if kit.genre %}
+            <span class="split-player-track-genre text-muted">{{ kit.genre }}</span>
+            {% endif %}
           </button>
           <a class="split-player-track-download" href="{{ kit.url | relative_url }}" download aria-label="Download {{ kit.title | escape }}">
             <i class="fas fa-download" aria-hidden="true"></i>

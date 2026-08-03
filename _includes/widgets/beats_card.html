@@ -63,9 +63,13 @@
           data-index="{{ forloop.index0 }}"
           data-title="{{ beat.title | escape }}"
           data-url="{{ beat.url | relative_url }}"
+          {% if beat.genre %}data-genre="{{ beat.genre | escape }}"{% endif %}
           {% if beat.cover %}data-cover="{{ beat.cover | relative_url }}"{% endif %}>
           <span class="split-player-track-index">{{ forloop.index }}</span>
           <span class="split-player-track-title">{{ beat.title }}</span>
+          {% if beat.genre %}
+          <span class="split-player-track-genre text-muted">{{ beat.genre }}</span>
+          {% endif %}
         </button>
         {% endfor %}
       </div>
