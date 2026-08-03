@@ -740,15 +740,14 @@ a.about-page-link-kicker:focus-visible {
     cursor: default;
 }
 
-.about-page-link-kicker strong {
-    font-weight: 700;
-    color: inherit !important;
-}
-
 .about-page-link-kicker i {
     margin-right: 0;
     color: inherit !important;
     pointer-events: none;
+}
+
+.text-link-accent {
+    color: #1a4fb3;
 }
 
 .about-page-link-desc {
