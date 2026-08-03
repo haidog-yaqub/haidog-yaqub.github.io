@@ -4,18 +4,20 @@
     <div class="px-3 pt-3 pb-2">
         {% if p.experience %}
             {% for item in p.experience %}
-            <li class="media mb-2">
+            <li class="media experience-item{% unless forloop.last %} mb-2{% endunless %}">
                 <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 16px; margin-top: 3px" class="mr-1">
                 <div class="media-body">
-                    <div class="d-flex">
-                        <div>{{ item.name }}</div>
-                        <div class="small mt-auto ml-auto no-break"><em>{{ item.date }}</em></div>
+                    <div class="experience-item-row">
+                        <div class="experience-item-main">{{ item.name }}</div>
+                        <div class="experience-item-aside card-meta"><em>{{ item.date }}</em></div>
                     </div>
-                    <div class="small d-flex">
-                        <div>{{ item.position }}</div>
-                        <div class="mt-auto ml-auto no-break"><em>{{ item.place }}</em></div>
+                    <div class="experience-item-row experience-item-detail card-meta">
+                        <div class="experience-item-main">{{ item.position }}</div>
+                        <div class="experience-item-aside"><em>{{ item.place }}</em></div>
                     </div>
-                    <div class="small">{{ item.description }}</div>
+                    {% if item.description %}
+                    <div class="card-meta experience-item-detail">{{ item.description }}</div>
+                    {% endif %}
                 </div>
             </li>
             {% endfor %}

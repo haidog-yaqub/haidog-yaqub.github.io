@@ -138,7 +138,7 @@
     scrubbing = false;
     playToken += 1;
     // Bust stale browser cache of previously mislabeled M4A-as-MP3 files.
-    audio.src = url + (url.indexOf("?") >= 0 ? "&" : "?") + "v=2";
+    audio.src = url + (url.indexOf("?") >= 0 ? "&" : "?") + "v=3";
     audio.load();
     setProgress(0);
     currentEl.textContent = "0:00";
