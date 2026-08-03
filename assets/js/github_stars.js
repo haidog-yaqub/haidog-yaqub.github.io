@@ -1,9 +1,10 @@
 (function () {
-  const elements = Array.from(document.querySelectorAll("[data-github-repo]"));
-  if (!elements.length) return;
+  const items = Array.from(document.querySelectorAll(".open-source-item[data-github-repo]"));
+  if (!items.length) return;
 
-  const repos = [...new Set(elements.map((el) => el.getAttribute("data-github-repo")).filter(Boolean))];
+  const repos = [...new Set(items.map((el) => el.getAttribute("data-github-repo")).filter(Boolean))];
   const cacheTtlMs = 60 * 60 * 1000;
+  const starsByRepo = {};
 
   function formatCount(n) {
     const count = Number(n) || 0;
@@ -15,32 +16,51 @@
   }
 
   function render(repo, stars) {
-    document.querySelectorAll(`[data-github-repo="${repo}"]`).forEach((el) => {
+    starsByRepo[repo] = Number(stars) || 0;
+    document.querySelectorAll(`.open-source-item[data-github-repo="${repo}"]`).forEach((el) => {
+      const badge = el.querySelector(".open-source-stars");
       const countEl = el.querySelector(".open-source-stars-count");
-      if (!countEl) return;
+      if (!badge || !countEl) return;
       countEl.textContent = formatCount(stars);
-      el.hidden = false;
+      badge.hidden = false;
     });
   }
 
-  const uncached = [];
-  repos.forEach((repo) => {
-    const cacheKey = `githubStars:${repo}`;
-    const cached = localStorage.getItem(cacheKey);
-    if (cached) {
-      try {
-        const { stars, timestamp } = JSON.parse(cached);
-        if (Date.now() - timestamp < cacheTtlMs) {
-          render(repo, stars);
-          return;
-        }
-      } catch (_) {}
-    }
-    uncached.push(repo);
-  });
+  function sortSections() {
+    document.querySelectorAll(".open-source-section").forEach((section) => {
+      const rows = Array.from(section.querySelectorAll(".open-source-item"));
+      if (rows.length < 2) return;
 
-  uncached.forEach((repo) => {
-    fetch(`https://api.github.com/repos/${repo}`)
+      rows.sort((a, b) => {
+        const aRepo = a.getAttribute("data-github-repo");
+        const bRepo = b.getAttribute("data-github-repo");
+        const aStars = aRepo && starsByRepo[aRepo] != null ? starsByRepo[aRepo] : -1;
+        const bStars = bRepo && starsByRepo[bRepo] != null ? starsByRepo[bRepo] : -1;
+        return bStars - aStars;
+      });
+
+      rows.forEach((row) => section.appendChild(row));
+    });
+  }
+
+  function readCache(repo) {
+    const cached = localStorage.getItem(`githubStars:${repo}`);
+    if (!cached) return null;
+    try {
+      const { stars, timestamp } = JSON.parse(cached);
+      if (Date.now() - timestamp < cacheTtlMs) return stars;
+    } catch (_) {}
+    return null;
+  }
+
+  const fetches = repos.map((repo) => {
+    const cachedStars = readCache(repo);
+    if (cachedStars != null) {
+      render(repo, cachedStars);
+      return Promise.resolve();
+    }
+
+    return fetch(`https://api.github.com/repos/${repo}`)
       .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
       .then((data) => {
         const stars = data.stargazers_count || 0;
@@ -51,7 +71,10 @@
         render(repo, stars);
       })
       .catch(() => {
-        // Keep the star badge hidden if the request fails.
+        // Leave badge hidden; treat as 0 for sorting.
+        starsByRepo[repo] = 0;
       });
   });
+
+  Promise.all(fetches).then(sortSections);
 })();

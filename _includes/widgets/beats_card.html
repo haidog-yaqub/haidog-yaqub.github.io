@@ -1,0 +1,77 @@
+{% assign beats = site.data.music.beats %}
+<div class="mb-0 bg-white shadow-sm rounded-xl music-media-card">
+  <h6 class="p-3 mb-0 border-bottom border-gray">
+    <i class="fas fa-drum"></i><span style="margin-left: 0.3em;">Beats & Songs</span>
+  </h6>
+
+  {% if beats and beats.size > 0 %}
+  <div class="beats-player split-player" data-beats-player>
+    <audio data-beats-audio preload="auto"></audio>
+
+    <div class="split-player-layout p-3">
+      <div class="split-player-main">
+        <div class="split-player-cover" data-beats-cover>
+          <img data-beats-cover-img alt="" hidden>
+          <div class="split-player-cover-fallback" data-beats-cover-fallback aria-hidden="true"></div>
+        </div>
+
+        <div class="split-player-now">
+          <div class="split-player-title" data-beats-title></div>
+        </div>
+
+        <div class="split-player-controls">
+          <button type="button" class="split-player-btn" data-beats-prev aria-label="Previous">
+            <i class="fas fa-step-backward" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="split-player-btn split-player-btn--play" data-beats-play aria-label="Play">
+            <i class="fas fa-play" data-beats-play-icon aria-hidden="true"></i>
+          </button>
+          <button type="button" class="split-player-btn" data-beats-next aria-label="Next">
+            <i class="fas fa-step-forward" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="split-player-progress">
+          <div
+            class="split-player-seek"
+            data-beats-seek
+            role="slider"
+            tabindex="0"
+            aria-label="Seek"
+            aria-valuemin="0"
+            aria-valuemax="1000"
+            aria-valuenow="0">
+            <div class="split-player-seek-track">
+              <div class="split-player-seek-fill" data-beats-seek-fill></div>
+              <div class="split-player-seek-thumb" data-beats-seek-thumb></div>
+            </div>
+          </div>
+          <div class="split-player-time small text-muted">
+            <span data-beats-current>0:00</span>
+            <span data-beats-duration>0:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-player-list" role="list">
+        {% for beat in beats %}
+        <button
+          type="button"
+          class="split-player-track{% if forloop.first %} is-active{% endif %}"
+          role="listitem"
+          data-beats-track
+          data-index="{{ forloop.index0 }}"
+          data-title="{{ beat.title | escape }}"
+          data-url="{{ beat.url | relative_url }}"
+          {% if beat.cover %}data-cover="{{ beat.cover | relative_url }}"{% endif %}>
+          <span class="split-player-track-index">{{ forloop.index }}</span>
+          <span class="split-player-track-title">{{ beat.title }}</span>
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="px-3 py-3 text-muted small">Beats coming soon.</div>
+  {% endif %}
+</div>

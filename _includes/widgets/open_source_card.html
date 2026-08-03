@@ -6,7 +6,7 @@
   </h6>
   <div class="px-3 pt-2 pb-2">
     {% for section in p.open_source %}
-    <div class="my-1{% if forloop.last %} mb-0{% endif %}">
+    <div class="open-source-section my-1{% if forloop.last %} mb-0{% endif %}">
       {% if section.category %}
       <div class="font-weight-bold text-muted">{{ section.category }}</div>
       {% endif %}
@@ -19,7 +19,7 @@
           {% assign github_repo = _gh_parts[0] | append: '/' | append: _gh_parts[1] %}
         {% endif %}
       {% endif %}
-      <div class="d-flex align-items-center{% unless forloop.last %} mb-1{% endunless %}">
+      <div class="open-source-item d-flex align-items-center"{% if github_repo != '' %} data-github-repo="{{ github_repo }}"{% endif %}>
         <i class="{% if item.icon %}{{ item.icon }}{% elsif item.url contains 'huggingface.co' %}fas fa-robot{% elsif item.url contains 'github.com' %}fab fa-github{% else %}fas fa-database{% endif %} mr-2 text-muted" aria-hidden="true"></i>
         <div class="flex-grow-1">
           {% if item.url %}
@@ -29,7 +29,7 @@
           {% endif %}
         </div>
         {% if github_repo != '' %}
-        <span class="open-source-stars text-muted ml-2" data-github-repo="{{ github_repo }}" hidden>
+        <span class="open-source-stars text-muted ml-2" hidden>
           <i class="fas fa-star" aria-hidden="true"></i>
           <span class="open-source-stars-count"></span>
         </span>

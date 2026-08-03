@@ -8,6 +8,27 @@
        {% if site.data.profile.short_bio_text_justify %}
        style="text-align: justify;"
        {% endif %}>
+    {% if site.data.profile.about_sections %}
+    <div class="about-page-links">
+      {% for section in site.data.profile.about_sections %}
+      <p class="about-page-item{% if forloop.last %} mb-0{% endif %}">
+        {% if section.url %}
+        <a class="about-page-link-kicker" href="{{ section.url | relative_url }}">
+          {% if section.icon %}<i class="{{ section.icon }}" aria-hidden="true"></i>{% endif %}
+          <strong>{{ section.label }},</strong>
+        </a>
+        {% else %}
+        <span class="about-page-link-kicker about-page-link-kicker--plain">
+          {% if section.icon %}<i class="{{ section.icon }}" aria-hidden="true"></i>{% endif %}
+          <strong>{{ section.label }},</strong>
+        </span>
+        {% endif %}
+        <span class="about-page-link-desc">{{ section.text }}</span>
+      </p>
+      {% endfor %}
+    </div>
+    {% elsif site.data.profile.short_bio %}
     {{ site.data.profile.short_bio }}
+    {% endif %}
   </div>
 </div>

@@ -2,6 +2,7 @@
 layout: default
 title: Music
 navbar_title: Music
+body_class: page-music
 ---
 
 <div class="row justify-content-center">
@@ -15,16 +16,22 @@ navbar_title: Music
   </div>
 
   <div class="col-12 col-lg-7">
-    <div class="my-3 bg-white shadow-sm rounded-xl highlight-card">
-      <h6 class="p-3 mb-0 border-bottom border-gray">
-        <i class="fas fa-hammer"></i><span style="margin-left: 0.3em;">WIP</span>
-      </h6>
-      <div class="px-3 py-3 text-profile-bio" style="line-height: 1.6;">
-        This page is a work in progress.
+    {% include widgets/music_about_card.html profile_data=site.data.music_profile %}
+
+    <div class="row music-players-row mt-3">
+      <div class="col-12 col-md-6">
+        {% include widgets/beats_card.html %}
+      </div>
+      <div class="col-12 col-md-6">
+        {% include widgets/midi_kits_card.html %}
       </div>
     </div>
 
-    {% include widgets/music_card.html %}
+    <div class="row mt-3">
+      <div class="col-12">
+        {% include widgets/tutorials_card.html %}
+      </div>
+    </div>
   </div>
 </div>
 
@@ -34,3 +41,11 @@ navbar_title: Music
   </div>
 </div>
 
+{% if site.data.music.beats and site.data.music.beats.size > 0 %}
+<script src="{{ '/assets/js/beats_player.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+{% endif %}
+
+{% if site.data.music.midi_kits and site.data.music.midi_kits.size > 0 %}
+<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
+<script src="{{ '/assets/js/midi_kits_player.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+{% endif %}

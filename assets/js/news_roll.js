@@ -33,6 +33,9 @@
   function boot() {
     var nodes = document.querySelectorAll('.news-scroll');
     for (var i = 0; i < nodes.length; i++) applyNewsScroll(nodes[i]);
+    if (typeof window.refreshAlwaysScrollbars === 'function') {
+      window.refreshAlwaysScrollbars();
+    }
   }
 
   if (document.readyState === 'loading') {

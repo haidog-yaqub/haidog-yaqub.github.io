@@ -23,16 +23,17 @@ linkedin: jiarui-hai-297663141
 # Toggle the "Seeking Full-Time Positions" highlight card on Home page.
 
 short_bio_text_justify: false
-short_bio: >-
-  <div class="my-1">
-    <p>
-      I am a fourth-year PhD student at Johns Hopkins University, where my research focuses on
-      audio and speech signal processing, with an emphasis on diffusion-based generative models
-      and multimodal audio–language understanding.
-    </p>
-    <p class="mb-0">
-    I am also an active music producer and am always exploring research projects that unlocks new possibilities in audio and music production. 
-     </div>
+about_sections:
+  - label: As a researcher
+    icon: fas fa-flask
+    url: /research
+    text: >-
+      I am pursuing my Ph.D. at Johns Hopkins University, where I build AI systems for audio, speech, and music. My work bridges language and audio, enabling machines to understand, reason about, and generate sound. I also develop open-source projects and datasets that advance the broader audio and speech research community.
+  - label: As a musician
+    icon: fas fa-music
+    url: /music
+    text: >-
+      I am an active music producer with a deep interest in the intersection of AI and music. I enjoy exploring how new technologies expand the creative process and unlock new possibilities for music creation and production.
 
 portrait_url: /assets/images/photos/icon.jpg
 # portrait_caption: >-
@@ -110,7 +111,7 @@ experience:
 #   date: 2021
 
 # Shown on the Research page (Open-source Resources card).
-# Groups: Datasets / Code / Foundation Models
+# Groups: Datasets / Repositories / Foundation Models
 open_source:
 - category: Datasets
   items:
@@ -120,7 +121,7 @@ open_source:
   - name: DreamVoice
     url: https://huggingface.co/datasets/Higobeatz/DreamVoiceDB
     icon: fas fa-database
-- category: Code
+- category: Repositories
   items:
   - name: MeanFlow (PyTorch)
     url: https://github.com/haidog-yaqub/MeanFlow
@@ -133,9 +134,11 @@ open_source:
 - category: Foundation Models
   items:
   - name: CapSpeech
-    url: https://huggingface.co/OpenSound/CapSpeech-models
+    url: https://github.com/WangHelin1997/CapSpeech
   - name: EzAudio
-    url: https://huggingface.co/OpenSound/EzAudio
+    url: https://github.com/haidog-yaqub/EzAudio
+  - name: ALM2Vec
+    url: https://github.com/caml-labs/ALM2Vec
 
 # Shown on the Research page (Service and Teaching card).
 # Sections can use `venues` / `items` (lists) or `entries` (name + date).

@@ -1,25 +1,11 @@
-{% assign intro = site.data.music.intro %}
+{% assign p = include.profile_data | default: site.data.music_profile %}
 <div class="my-3 bg-white shadow-sm rounded-xl">
   <h6 class="p-3 mb-0 border-bottom border-gray">
-    <i class="fas fa-music"></i>
-    <span style="margin-left: 0.3em;">{% if intro %}{{ intro.title | default: "Music" }}{% else %}Music{% endif %}</span>
+    <i class="fas fa-user"></i>
+    <span style="margin-left: 0.3em;">About Me</span>
   </h6>
 
   <div class="px-3 py-3 text-profile-bio" style="line-height: 1.6;">
-    {% if intro %}{{ intro.text | default: "Tracks, covers, and recordings." }}{% else %}Tracks, covers, and recordings.{% endif %}
+    {{ p.short_bio }}
   </div>
-
-  {% if site.data.music.experience and site.data.music.experience.size > 0 %}
-  <div class="px-3 pt-2 pb-3 border-top border-gray">
-    {% for item in site.data.music.experience %}
-    <div class="media mb-2">
-      <span class="badge badge-pill mr-2 align-self-start" style="background: linear-gradient(135deg, #ff6b9d, #c44dff); color: white;">{{ item.year }}</span>
-      <div class="media-body">
-        <div class="small font-weight-bold">{{ item.award }}</div>
-        {% if item.role %}<div class="small text-muted">{{ item.role }}</div>{% endif %}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
 </div>

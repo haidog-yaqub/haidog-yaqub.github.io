@@ -69,7 +69,7 @@
 
     </style>
 </head>
-<body class="bg-light" {{ page.body_attr }}>
+<body class="{% if page.body_class %}{{ page.body_class }}{% else %}bg-light{% endif %}" {{ page.body_attr }}>
     {% include navbar.html %}
     <!-- <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-fluid{% endif %}"> -->
     <div id="page-shell" class="container" style="max-width: 1700px;">
@@ -99,6 +99,7 @@
         });
     </script>
     <script src="{{ '/assets/js/common.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ '/assets/js/always_scrollbar.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/assets/js/news_roll.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/assets/js/github_stars.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/assets/js/bubble_visual_hash.js' | relative_url }}"></script>

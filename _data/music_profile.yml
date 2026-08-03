@@ -8,8 +8,20 @@ youtube: channel/UCEGud3VRCtkkaQxxMgBJ1LA
 
 soundcloud: https://soundcloud.com/higobeatz
 
+bilibili: https://space.bilibili.com/182484522
+
 # Use a different portrait for music page if needed.
 portrait_url: /assets/images/photos/cartoon.jpeg
+
+short_bio: >-
+  <div class="my-1">
+    <p>
+      I'm <strong>HigoBeatz</strong>, a music producer. I mainly create trap and melodic beats, MIDI loops, and sound design resources, and I also make production tutorials to help other producers improve their craft.
+    </p>
+    <p class="mb-0">
+      My music has reached over 5 million plays across Chinese social media, and I've collaborated with and earned production credits alongside major Chinese rap artists. I'm a co-founder of Innersup Records, and I previously founded and led the music production team for Tsinghua University's Hip-hop Association.
+    </p>
+  </div>
 
 # Music page can keep its own experience list.
 experience:

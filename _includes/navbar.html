@@ -241,18 +241,16 @@
 
       nextLayer.textContent = names[idx];
       applyLayerFont(nextLayer, names[idx]);
-      nextLayer.classList.remove('is-active');
       activeLayer.classList.remove('is-active');
-
       activeLayer.classList.add('is-exiting');
+      nextLayer.classList.add('is-active');
 
-      // Apple-style transition: fade out current, then softly fade in next.
+      // Apple-style transition: fade out current while next fades in.
       setTimeout(function () {
-        nextLayer.classList.add('is-active');
         activeLayer.classList.remove('is-exiting');
         activeLayerIndex = nextLayerIndex;
         isAnimating = false;
-      }, 300);
+      }, 560);
     }
 
     setInterval(rotateName, 3600);

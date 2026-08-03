@@ -1,0 +1,57 @@
+{% assign tutorials = site.data.music.tutorials %}
+{% assign collection_title = tutorials.collection.title | default: "Tutorials" %}
+{% assign collection_note = tutorials.note | default: "Only Chinese Tutorials available now" %}
+<div class="mb-0 bg-white shadow-sm rounded-xl music-media-card">
+  <h6 class="p-3 mb-0 border-bottom border-gray">
+    <i class="fas fa-graduation-cap"></i><span style="margin-left: 0.3em;">Music Production Tutorials</span>
+  </h6>
+  <div class="px-3 py-3">
+    {% if tutorials.items and tutorials.items.size > 0 %}
+    <details class="music-tutorial-toggle">
+      <summary class="music-tutorial-toggle-summary">
+        <span class="music-tutorial-toggle-label">
+          <i class="fab fa-bilibili mr-1" aria-hidden="true"></i>
+          <span>
+            {{ collection_title }}
+            <span class="small text-muted font-weight-normal">({{ collection_note }})</span>
+          </span>
+        </span>
+        <i class="fas fa-chevron-down music-tutorial-toggle-chevron" aria-hidden="true"></i>
+      </summary>
+      <div class="music-tutorial-list mt-2 pt-2 border-top border-gray">
+        {% for item in tutorials.items %}
+        <div class="d-flex align-items-start my-1{% if forloop.last %} mb-0{% endif %}">
+          <i class="fas fa-play-circle mt-1 mr-2 text-muted" aria-hidden="true"></i>
+          <div>
+            {% if item.url %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+            {% else %}
+            {{ item.title }}
+            {% endif %}
+            {% if item.lang == "en" %}
+            <span class="small text-muted ml-1">· EN</span>
+            {% elsif item.lang == "zh" %}
+            <span class="small text-muted ml-1">· 中文</span>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+        {% if tutorials.collection.url %}
+        <div class="mt-2 pt-2 border-top border-gray">
+          <a class="small" href="{{ tutorials.collection.url }}" target="_blank" rel="noopener">
+            <i class="fab fa-bilibili mr-1" aria-hidden="true"></i>Open full collection on Bilibili
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    </details>
+    {% elsif tutorials.collection %}
+    <div class="music-tutorial-collection">
+      <a href="{{ tutorials.collection.url }}" target="_blank" rel="noopener">
+        <i class="fab fa-bilibili mr-1" aria-hidden="true"></i>{{ collection_title }}
+      </a>
+      <div class="small text-muted mt-1">({{ collection_note }})</div>
+    </div>
+    {% endif %}
+  </div>
+</div>

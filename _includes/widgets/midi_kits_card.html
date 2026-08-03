@@ -1,0 +1,84 @@
+{% assign kits = site.data.music.midi_kits %}
+<div class="mb-0 bg-white shadow-sm rounded-xl music-media-card">
+  <h6 class="p-3 mb-0 border-bottom border-gray">
+    <i class="fas fa-sliders-h"></i><span style="margin-left: 0.3em;">MIDI Loops</span>
+  </h6>
+
+  {% if kits and kits.size > 0 %}
+  <div class="split-player" data-midi-player-panel>
+    <div class="split-player-layout p-3">
+      <div class="split-player-main">
+        <div class="split-player-cover music-midi-cover">
+          <midi-visualizer type="piano-roll" id="midi-kit-visualizer" class="music-midi-visualizer"></midi-visualizer>
+        </div>
+
+        <div class="split-player-now">
+          <div class="split-player-title" data-midi-title></div>
+        </div>
+
+        <div class="split-player-controls">
+          <button type="button" class="split-player-btn" data-midi-prev aria-label="Previous">
+            <i class="fas fa-step-backward" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="split-player-btn split-player-btn--play" data-midi-play aria-label="Play">
+            <i class="fas fa-play" data-midi-play-icon aria-hidden="true"></i>
+          </button>
+          <button type="button" class="split-player-btn" data-midi-next aria-label="Next">
+            <i class="fas fa-step-forward" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="split-player-progress">
+          <div
+            class="split-player-seek"
+            data-midi-seek
+            role="slider"
+            tabindex="0"
+            aria-label="Seek"
+            aria-valuemin="0"
+            aria-valuemax="1000"
+            aria-valuenow="0">
+            <div class="split-player-seek-track">
+              <div class="split-player-seek-fill" data-midi-seek-fill></div>
+              <div class="split-player-seek-thumb" data-midi-seek-thumb></div>
+            </div>
+          </div>
+          <div class="split-player-time small text-muted">
+            <span data-midi-current>0:00</span>
+            <span data-midi-duration>0:00</span>
+          </div>
+        </div>
+
+        <midi-player
+          sound-font
+          visualizer="#midi-kit-visualizer"
+          class="music-midi-player music-midi-player--engine"
+          data-midi-el>
+        </midi-player>
+      </div>
+
+      <div class="split-player-list" role="list">
+        {% for kit in kits %}
+        <div class="split-player-track-row{% if forloop.first %} is-active{% endif %}" role="listitem">
+          <button
+            type="button"
+            class="split-player-track"
+            data-midi-track
+            data-index="{{ forloop.index0 }}"
+            data-title="{{ kit.title | escape }}"
+            data-url="{{ kit.url | relative_url }}">
+            <span class="split-player-track-index">{{ forloop.index }}</span>
+            <span class="split-player-track-title">{{ kit.title }}</span>
+          </button>
+          <a class="split-player-track-download" href="{{ kit.url | relative_url }}" download aria-label="Download {{ kit.title | escape }}">
+            <i class="fas fa-download" aria-hidden="true"></i>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="px-3 py-3 text-muted small">MIDI loops coming soon.</div>
+  {% endif %}
+</div>

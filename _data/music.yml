@@ -3,25 +3,54 @@ intro:
   title: "Music"
   text: "Tracks, covers, and recordings."
 
-# 音乐经历：获奖、担任职务等
-experience:
-  - year: "2024"
-    award: "某某音乐比赛 一等奖"
-    role: "担任作曲 / 编曲"
-  - year: "2023"
-    award: "某某音乐节 最佳新人"
-    role: "担任主唱"
-  # - year: "2022"
-  #   award: "Award Name"
-  #   role: "Role / Position"
-
-# Music tracks - type: youtube | audio
+# Existing YouTube / audio embeds (legacy music_card)
 tracks:
   - type: youtube
     url: "https://www.youtube.com/watch?v=4O4IXxdzWn4"
 
-  # - title: "My Own Recording"
-  #   artist: "Your Name"
-  #   type: audio
-  #   url: "/_site/my-song.mp3"
-  #   description: "Self-uploaded music - put .mp3 in _site/ folder"
+# Beats — MP3 playlist.
+# Put your files in: assets/music/beats/
+# Optional cover image per beat: cover: /assets/music/covers/name.png
+beats:
+  - title: "Major Spark – Melodic Trap (feat. Shelly)"
+    url: /assets/music/beats/major-spark.mp3
+    cover: /assets/music/covers/major-spark.jpg
+  - title: "Feng Shui · Chinese Trap"
+    url: /assets/music/beats/feng-shui.mp3
+    cover: /assets/music/covers/feng-shui.jpg
+  - title: "Ring · Epic Trap"
+    url: /assets/music/beats/ring.mp3
+    cover: /assets/music/covers/ring.jpg
+
+# MIDI kits — MIDI playlist.
+# Put your files in: assets/music/midi/
+# Then list them here with title / url.
+midi_kits:
+  - title: "Tomography · 151 F♯min"
+    url: /assets/music/midi/tomography_151_Fsmin.mid
+  - title: "Shy · 168 Amin"
+    url: /assets/music/midi/shy_168_Amin.mid
+  - title: "Radio · 151 F♯min"
+    url: /assets/music/midi/radio_151_Fsmin.mid
+  - title: "Shatter · 158 Amin"
+    url: /assets/music/midi/shatter_158_Amin.mid
+
+# Music production tutorials (Chinese for now; English later)
+tutorials:
+  note: "Only Chinese Tutorials available now"
+  collection:
+    title: "Higo · 编曲基础教程"
+    url: "https://space.bilibili.com/182484522/favlist?fid=1006565722&ftype=create"
+  items:
+    - title: "【扒谱】The Kid LAROI & Justin Bieber - Stay（MIDI+FLP）"
+      url: https://www.bilibili.com/video/BV1bM4y1K7SU
+      lang: zh
+    - title: "【FL中文教程】如何使用FL混音（人声篇）"
+      url: https://www.bilibili.com/video/BV18K4y1Y7Q4
+      lang: zh
+    - title: "【Hiphop编曲干货】制作人必备的五个808技巧"
+      url: https://www.bilibili.com/video/BV1u54y1d7HS
+      lang: zh
+    - title: "【FL中文教程】如何使用FL混音（伴奏篇）"
+      url: https://www.bilibili.com/video/BV1Fi4y1V71L
+      lang: zh
