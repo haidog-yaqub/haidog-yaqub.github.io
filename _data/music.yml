@@ -20,7 +20,7 @@ beats:
     genre: "Chinese, Trap"
     url: /assets/music/beats/feng-shui.mp3
     cover: /assets/music/covers/feng-shui.jpg
-  - title: "Ring"
+  - title: "One Ring"
     genre: "Epic, Experimental"
     url: /assets/music/beats/ring.mp3
     cover: /assets/music/covers/ring.jpg
@@ -29,16 +29,16 @@ beats:
 # Put your files in: assets/music/midi/
 # Then list them here with title / url.
 midi_kits:
-  - title: "Tomography"
+  - title: "Velvet"
     genre: "Pluggnb"
     url: /assets/music/midi/tomography_151_Fsmin.mid
-  - title: "Shy"
+  - title: "Soft Gaze"
     genre: "Pluggnb"
     url: /assets/music/midi/shy_168_Amin.mid
-  - title: "Radio"
+  - title: "Night FM"
     genre: "Lo-fi"
     url: /assets/music/midi/radio_151_Fsmin.mid
-  - title: "Shatter"
+  - title: "Glass Heart"
     genre: "Emo"
     url: /assets/music/midi/shatter_158_Amin.mid
 
