@@ -800,6 +800,10 @@ a.about-page-link-kicker:focus-visible {
     gap: 0.5rem;
 }
 
+.news-scroll-item + .news-scroll-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .news-item-title {
     flex: 1 1 auto;
     min-width: 0;
@@ -816,7 +820,7 @@ a.about-page-link-kicker:focus-visible {
 .news-item-date {
     margin-left: auto;
     flex: 0 0 auto;
-    align-self: flex-end;
+    align-self: flex-start;
 }
 
 .news-scroll {
@@ -1516,10 +1520,10 @@ a:hover {
 @media (max-width: 767.98px) {
     .news-item-row {
         display: block;
-        margin-top: 0.3rem !important;
-        margin-bottom: 0.3rem !important;
-        padding-top: 0.12rem !important;
-        padding-bottom: 0.12rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0.55rem !important;
+        padding-bottom: 0.55rem !important;
     }
 
     .news-item-title {
@@ -1535,7 +1539,8 @@ a:hover {
     .news-item-title-mobile .news-item-inline-date {
         position: absolute;
         right: 0;
-        bottom: 0;
+        top: 0;
+        bottom: auto;
         color: rgba(0, 0, 0, 0.55);
     }
 
