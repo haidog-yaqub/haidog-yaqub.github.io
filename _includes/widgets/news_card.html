@@ -1,5 +1,5 @@
 {% assign news_items = site.news | sort: "date" | reverse | slice: 0, include.limit -%}
-{% assign news_visible = include.visible | default: 4 -%}
+{% assign news_visible = include.visible | default: 5 -%}
 {% assign news_count = news_items | size -%}
 
 <div class="my-3 bg-white shadow-sm rounded-xl">

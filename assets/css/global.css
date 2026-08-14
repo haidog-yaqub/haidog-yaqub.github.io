@@ -146,6 +146,14 @@ h1, h2, h3, h4, h5, h6,
     line-height: 1.45;
 }
 
+.research-side-card-body a {
+    color: #2a4f95;
+}
+
+.research-side-card-body a:hover {
+    color: #1f3e75;
+}
+
 .research-side-card-label {
     font-size: var(--fs-base); /* 0.9rem — e.g. Conference Reviewer */
     line-height: 1.35;

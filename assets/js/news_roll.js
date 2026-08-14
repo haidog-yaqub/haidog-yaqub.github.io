@@ -1,18 +1,23 @@
 // News list: fixed viewport (~N rows) with manual scroll.
 (function () {
-  function rowOuterHeight(el) {
-    if (!el) return 0;
-    var style = window.getComputedStyle(el);
-    var mt = parseFloat(style.marginTop) || 0;
-    var mb = parseFloat(style.marginBottom) || 0;
-    return el.getBoundingClientRect().height + mt + mb;
+  function viewportHeightForRows(root, items, visible) {
+    var first = items[0];
+    var last = items[visible - 1];
+    if (!first || !last) return 0;
+
+    var rootRect = root.getBoundingClientRect();
+    var lastRect = last.getBoundingClientRect();
+    var cs = window.getComputedStyle(root);
+    var padBottom = parseFloat(cs.paddingBottom) || 0;
+    var lastMb = parseFloat(window.getComputedStyle(last).marginBottom) || 0;
+    return Math.ceil(lastRect.bottom - rootRect.top + lastMb + padBottom);
   }
 
   function applyNewsScroll(root) {
     if (!root || root.getAttribute('data-static') === 'true') return;
 
     var items = root.querySelectorAll('.news-scroll-item');
-    var visible = parseInt(root.getAttribute('data-visible'), 10) || 4;
+    var visible = parseInt(root.getAttribute('data-visible'), 10) || 5;
     if (items.length <= visible) {
       root.style.maxHeight = '';
       root.style.height = '';
@@ -20,10 +25,7 @@
       return;
     }
 
-    var height = 0;
-    for (var i = 0; i < visible; i++) {
-      height += rowOuterHeight(items[i]);
-    }
+    var height = viewportHeightForRows(root, items, visible);
     if (!height) return;
 
     root.style.height = height + 'px';

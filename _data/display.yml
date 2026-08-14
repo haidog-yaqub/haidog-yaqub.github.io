@@ -5,7 +5,7 @@ homepage:
   show_news: true
   show_selected_publications: true
   num_news: 20
-  num_news_visible: 4
+  num_news_visible: 5
 
 research:
   show_open_source: true
