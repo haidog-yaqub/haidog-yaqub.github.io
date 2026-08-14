@@ -730,6 +730,15 @@ a.about-page-link-kicker:focus {
     outline: none;
 }
 
+a.about-page-link-kicker--music {
+    color: #5b2fc0 !important;
+}
+
+a.about-page-link-kicker--music:hover,
+a.about-page-link-kicker--music:focus {
+    color: #4520a0 !important;
+}
+
 a.about-page-link-kicker:focus-visible {
     box-shadow: 0 0 0 2px rgba(26, 79, 179, 0.28);
     border-radius: 0.25rem;
