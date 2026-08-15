@@ -5,7 +5,7 @@ navbar_name: "Jiarui Hai"
 positions:
 # - logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
 #   name: Position 1 with logo
-- name: Researcher in Audio, Speech, and Music
+- name: Making machines understand and&nbsp;generate&nbsp;sound
 
 
 email: "jhai@jhu.edu"
@@ -24,18 +24,18 @@ linkedin: jiarui-hai-297663141
 
 short_bio_text_justify: false
 about_sections:
+  - before: "I am a Ph.D. student at Johns Hopkins University, fortunate to be advised by Prof. <a href=\"https://engineering.jhu.edu/faculty/mounya-elhilali/\" target=\"_blank\" rel=\"noopener\">Mounya Elhilali</a>."
   - before: "My "
     label: Research
     icon: fas fa-flask
     url: /research
-    after: >-
-      focuses on AI for audio, speech, and music. As a Ph.D. student at Johns Hopkins University, I develop systems that enable machines to understand, reason about, and generate sound. I also contribute open-source projects and datasets to the broader audio and speech research community.
+    after: " focuses on AI for understanding and generating sound. My work spans topics such as controllable generation, voice design, source separation, and detection. I enjoy bringing research to life through interactive demos, open-source tools, and datasets for the broader audio and machine learning community."
   - before: "Outside of academia, I make "
     label: Music
     icon: fas fa-music
     url: /music
     after: >-
-      as an active producer with a deep interest in the intersection of AI and music. I enjoy exploring how emerging technologies expand the creative process and unlock new possibilities for music creation and production.
+      , mostly hip-hop and hyperpop. My productions have received over 10 million plays across Chinese social media platforms. Making music also gives me a different perspective on my research: I care about not only what audio models can do, but also how people can actually create with them.
 
 portrait_url: /assets/images/photos/icon.jpg
 # portrait_caption: >-
