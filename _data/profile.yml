@@ -34,8 +34,7 @@ about_sections:
     label: Music
     icon: fas fa-music
     url: /music
-    after: >-
-      , mostly hip-hop and hyperpop. My productions have received over 10 million plays across Chinese social media platforms. Making music also gives me a different perspective on my research: I care about not only what audio models can do, but also how people can actually create with them.
+    after: " as a producer, mostly hip-hop and hyperpop. This experience shapes how I approach audio research, giving me a creator's perspective on what makes audio tools expressive, controllable, and genuinely useful in the creative process."
 
 portrait_url: /assets/images/photos/icon.jpg
 # portrait_caption: >-
