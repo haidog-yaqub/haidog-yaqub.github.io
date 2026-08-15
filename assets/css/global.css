@@ -23,6 +23,9 @@ body {
     /* display = base × 1.1⁴ ≈ 1.32 — profile name */
     --fs-display: calc(var(--fs-title) * var(--fs-ratio) * var(--fs-ratio) * var(--fs-ratio));
 
+    --color-link: #1a4fb3;
+    --color-link-hover: #163d8f;
+
     /* Publication list: hover cover preview size (read by assets/js/common.js) */
     --pub-cover-preview-max-rem:30;
     --pub-cover-preview-min-px: 80;
@@ -147,11 +150,11 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .research-side-card-body a {
-    color: #2a4f95;
+    color: var(--color-link);
 }
 
 .research-side-card-body a:hover {
-    color: #1f3e75;
+    color: var(--color-link-hover);
 }
 
 .research-side-card-label {
@@ -887,7 +890,7 @@ a:hover {
     display: inline-block;
     margin-right: 0.35rem;
     margin-bottom: 0.2rem;
-    color: #2a4f95;
+    color: var(--color-link);
     font-weight: 400;
 }
 
@@ -943,7 +946,7 @@ a:hover {
 
 .publication-secondary-actions a:hover,
 .publication-primary-links a:hover {
-    color: #1f3e75;
+    color: var(--color-link-hover);
     font-weight: 400;
 }
 

@@ -55,7 +55,7 @@ education:
   description:
     Advised by Prof. <a href="https://engineering.jhu.edu/faculty/mounya-elhilali/" target="_blank">Mounya Elhilali</a>
   date: Aug. 2022 - Present
-  place: Baltimore, MD
+  place: MD, USA
 
 - name: Tsinghua University
   logo: /assets/images/badges/thu.png
@@ -83,7 +83,7 @@ experience:
   position: >- 
     Research Scientist Intern
   date: May 2025 - Feb. 2026
-  place: San Francisco, CA, USA
+  place: CA, USA
 
 - name: Tencent | AI Lab
   logo: /assets/images/badges/tencent.png
@@ -92,7 +92,7 @@ experience:
   # description:
   #   Advised by Prof. Yu Rang Park
   date: May 2024 - Sep. 2024
-  place: Bellevue, WA, USA
+  place: WA, USA
 
 - name: Kuaishou | AI Platform
   logo: /assets/images/badges/kuaishou.png
