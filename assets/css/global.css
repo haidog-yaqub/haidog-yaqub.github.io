@@ -177,17 +177,6 @@ h1, h2, h3, h4, h5, h6,
     color: var(--color-link-hover);
 }
 
-.open-source-item a {
-    color: #3d4654 !important;
-    text-decoration: none !important;
-}
-
-.open-source-item a:hover,
-.open-source-item a:focus {
-    color: var(--color-link) !important;
-    text-decoration: underline !important;
-}
-
 .research-side-card-label {
     font-size: var(--fs-base); /* 0.9rem — e.g. Conference Reviewer */
     line-height: 1.35;
