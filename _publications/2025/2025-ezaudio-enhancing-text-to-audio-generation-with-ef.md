@@ -4,6 +4,7 @@ date:           2025-03-01
 selected:       true
 type:           publication
 tags:           ["audio", "generation"]
+keywords:       ["Audio Generation"]
 pub:            "Interspeech"
 abstract: >-
 
@@ -20,7 +21,7 @@ authors:
   - Mounya Elhilali
   - Dong Yu
 
-cover_large: /assets/images/covers/ezaudio.gif
+cover_large: /assets/images/covers/ezgif_wide.gif
 
 links:
   Paper: https://arxiv.org/pdf/2409.10819

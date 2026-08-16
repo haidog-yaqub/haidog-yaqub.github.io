@@ -4,7 +4,8 @@ date:           2023-08-01
 selected:       true
 type:           publication
 tags:           ["voice", "music", "generation"]
-pub:            "IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)"
+keywords:       ["Voice Design"]
+pub:            "WASPAA"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_last:       '<span class="text-em"><i class="fas fa-microphone mr-1"></i>Oral</span>'
@@ -14,7 +15,7 @@ abstract: >-
   Developed a machine learning-based fake image detection pipeline that leverages pixel-level statistics, texture patterns, and edge information, achieving higher accuracy with lower memory usage than CNN-based deep learning approaches.
 tldr: >-
   A diffusion-based method for singing voice pitch correction that adjusts pitch while preserving timbre and expression.
-cover_large:          /assets/images/covers/diffpitcher.png
+cover_large:          /assets/images/covers/diffpitcher_wide.webp
 authors:
   - Jiarui Hai
   - Mounya Elhilali

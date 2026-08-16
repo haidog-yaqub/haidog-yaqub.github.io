@@ -4,12 +4,13 @@ date:           2025-02-01
 selected:       false
 type:           publication
 tags:           ["audio", "generation", "understanding"]
-pub:            "IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)"
+keywords:       ["Audio Generation"]
+pub:            "WASPAA"
 abstract: >-
 
 tldr: >-
   A text-to-audio diffusion ControlNet augmentation pipeline with sample filtering to improve sound event detection.
-cover_large: /assets/images/covers/synsonic.png
+cover_large: /assets/images/covers/synsonic_wide.jpg
   
 authors:
   - Jiarui Hai
@@ -23,4 +24,5 @@ bibtex: |
   }
 links:
   Paper: https://arxiv.org/abs/2509.18603
+  Live Demo: https://huggingface.co/spaces/OpenSound/EzAudio-ControlNet
 ---

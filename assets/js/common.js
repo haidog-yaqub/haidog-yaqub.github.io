@@ -83,240 +83,75 @@ $(function () {
         }
     });
 
-    // Publication cover: hover preview + jelly in/out. Reparent to body (avoids .filter-item transform).
-    // Horizontal center = title column only (.col-md-9, excludes cover); vertical = viewport center.
+    // Publication cover: click to open centered lightbox.
     (function () {
-        var appendTimer = null;
-        var openHoverTimer = null;
-        var closeHoverTimer = null;
+        var $box = null;
 
-        function getCoverPreviewLayout() {
-            var root = document.documentElement;
-            var cs = window.getComputedStyle(root);
-            function parseVar(name, fallback) {
-                var v = cs.getPropertyValue(name).trim();
-                if (!v) return fallback;
-                var n = parseFloat(v);
-                return isNaN(n) ? fallback : n;
+        function ensureLightbox() {
+            if ($box && $box.length) {
+                return $box;
             }
-            return {
-                maxSideRem: parseVar('--pub-cover-preview-max-rem', 32),
-                margin: parseVar('--pub-cover-preview-margin-px', 24),
-                minSide: parseVar('--pub-cover-preview-min-px', 80)
-            };
-        }
-
-        var hoverOpenDelay = 400;
-        var wrapLeaveCloseDelay = 100;
-        var previewLeaveCloseDelay = 50;
-
-        function isCoverPreviewDesktop() {
-            return !window.matchMedia('(max-width: 767.98px)').matches;
-        }
-
-        function clearOpenHoverTimer() {
-            if (openHoverTimer) {
-                clearTimeout(openHoverTimer);
-                openHoverTimer = null;
-            }
-        }
-
-        function clearCloseHoverTimer() {
-            if (closeHoverTimer) {
-                clearTimeout(closeHoverTimer);
-                closeHoverTimer = null;
-            }
-        }
-
-        function unbindPreviewHoverBridge($preview) {
-            $preview.off('mouseenter.coverPreviewBridge mouseleave.coverPreviewBridge');
-        }
-
-        function scheduleClosePreview($wrap, $preview, delay) {
-            clearCloseHoverTimer();
-            closeHoverTimer = setTimeout(function () {
-                closeHoverTimer = null;
-                closeCoverPreview($wrap, $preview);
-            }, delay);
-        }
-
-        function cancelScheduledClose() {
-            clearCloseHoverTimer();
-        }
-
-        function bindPreviewHoverBridge($wrap, $preview) {
-            unbindPreviewHoverBridge($preview);
-            $preview
-                .on('mouseenter.coverPreviewBridge', function () {
-                    cancelScheduledClose();
-                })
-                .on('mouseleave.coverPreviewBridge', function () {
-                    scheduleClosePreview($wrap, $preview, previewLeaveCloseDelay);
-                });
-        }
-
-        function positionCoverPreview($p) {
-            var L = getCoverPreviewLayout();
-            var rootRem = parseFloat(window.getComputedStyle(document.documentElement).fontSize) || 16;
-            var maxSide = L.maxSideRem * rootRem;
-            var vw = window.innerWidth - L.margin * 2;
-            var vh = window.innerHeight - L.margin * 2;
-            var side = Math.max(L.minSide, Math.floor(Math.min(maxSide, vw, vh)));
-            var $wrap = $p.data('ownerWrap');
-            var centerX = window.innerWidth / 2;
-            if ($wrap && $wrap.length) {
-                var $row = $wrap.closest('.row');
-                var $titleCol = $row.children('.col-md-9').first();
-                if ($titleCol.length && $titleCol[0]) {
-                    var tr = $titleCol[0].getBoundingClientRect();
-                    centerX = tr.left + tr.width / 2;
-                } else {
-                    var $box = $wrap.closest('.bg-white.shadow-sm.rounded-xl');
-                    if ($box.length && $box[0]) {
-                        var br = $box[0].getBoundingClientRect();
-                        centerX = br.left + br.width / 2;
-                    }
-                }
-            }
-            var centerY = window.innerHeight / 2;
-            $p.css({
-                width: side + 'px',
-                height: side + 'px',
-                left: Math.round(centerX) + 'px',
-                top: Math.round(centerY) + 'px'
-            });
-        }
-
-        function unbindCloseListeners() {
-            $(document).off('click.coverPreviewBackdrop');
-            $(document).off('keydown.coverPreviewEsc');
-        }
-
-        function forceCloseAll() {
-            clearTimeout(appendTimer);
-            appendTimer = null;
-            clearOpenHoverTimer();
-            clearCloseHoverTimer();
-            unbindCloseListeners();
-            $('.publication-cover-preview').each(function () {
-                var $preview = $(this);
-                $preview.off('animationend.coverPreview');
-                unbindPreviewHoverBridge($preview);
-                if ($preview.hasClass('is-open') || $preview.hasClass('is-closing')) {
-                    var $wrap = $preview.data('ownerWrap');
-                    $preview.removeClass('is-open is-closing');
-                    $preview.removeData('ownerWrap');
-                    if ($wrap && $wrap.length) {
-                        $wrap.removeData('coverPreviewEl');
-                        $wrap.append($preview);
-                    }
+            $box = $(
+                '<div class="pub-cover-lightbox" hidden>' +
+                    '<div class="pub-cover-lightbox-frame">' +
+                        '<button type="button" class="pub-cover-lightbox-close" aria-label="Close">' +
+                            '<i class="fas fa-times" aria-hidden="true"></i>' +
+                        '</button>' +
+                        '<img alt="">' +
+                    '</div>' +
+                '</div>'
+            );
+            $('body').append($box);
+            $box.on('click', function (e) {
+                if (e.target === $box[0]) {
+                    closeLightbox();
                 }
             });
+            $box.find('.pub-cover-lightbox-close').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeLightbox();
+            });
+            return $box;
         }
 
-        function closeCoverPreview($wrap, $preview) {
-            if (!$preview || !$preview.length) {
+        function openLightbox(src, alt) {
+            var $lb = ensureLightbox();
+            $lb.find('img').attr({ src: src, alt: alt || '' });
+            $lb.removeAttr('hidden').addClass('is-open');
+            $('body').addClass('pub-cover-lightbox-open');
+        }
+
+        function closeLightbox() {
+            if (!$box) {
                 return;
             }
-            if (!$preview.hasClass('is-open') || $preview.hasClass('is-closing')) {
-                return;
-            }
-            unbindPreviewHoverBridge($preview);
-            unbindCloseListeners();
-            $preview.removeClass('is-open');
-            $preview.addClass('is-closing');
-
-            function onAnimEnd(e) {
-                var ev = e.originalEvent || e;
-                var name = ev.animationName || '';
-                if (name.indexOf('pub-cover-preview-jelly-out') === -1 && name.indexOf('pub-cover-preview-fade-out') === -1) {
-                    return;
-                }
-                $preview.off('animationend.coverPreview', onAnimEnd);
-                $preview.removeClass('is-closing');
-                $preview.removeData('ownerWrap');
-                if ($wrap && $wrap.length) {
-                    $wrap.removeData('coverPreviewEl');
-                    $wrap.append($preview);
-                }
-            }
-
-            $preview.on('animationend.coverPreview', onAnimEnd);
-        }
-
-        function bindCloseListeners($wrap, $preview) {
-            $(document).on('click.coverPreviewBackdrop', function (e) {
-                if ($(e.target).closest('.publication-cover-preview').length) {
-                    return;
-                }
-                if ($wrap && $wrap.length && $(e.target).closest($wrap).length) {
-                    return;
-                }
-                closeCoverPreview($wrap, $preview);
-            });
-            $(document).on('keydown.coverPreviewEsc', function (e) {
-                if (e.key !== 'Escape') {
-                    return;
-                }
-                closeCoverPreview($wrap, $preview);
-            });
-        }
-
-        function openCoverPreview($wrap, $preview) {
-            forceCloseAll();
-            $('body').append($preview);
-            $preview.data('ownerWrap', $wrap);
-            $wrap.data('coverPreviewEl', $preview);
-            positionCoverPreview($preview);
-            window.requestAnimationFrame(function () {
-                $preview.removeClass('is-closing');
-                $preview.addClass('is-open');
-            });
+            $box.addClass('is-closing');
+            $box.removeClass('is-open');
+            $('body').removeClass('pub-cover-lightbox-open');
             window.setTimeout(function () {
-                bindCloseListeners($wrap, $preview);
-                bindPreviewHoverBridge($wrap, $preview);
-            }, 0);
+                if ($box) {
+                    $box.attr('hidden', true).removeClass('is-closing');
+                    $box.find('img').attr('src', '');
+                }
+            }, 180);
         }
 
-        $(document).on('mouseenter', '.publication-cover-wrap:not(.publication-cover-wrap--sm)', function () {
-            if (!isCoverPreviewDesktop()) {
-                return;
-            }
+        $(document).on('click', '.publication-cover-wrap:not(.publication-cover-wrap--sm)', function (e) {
+            e.preventDefault();
             var $wrap = $(this);
-            var $p = $wrap.data('coverPreviewEl') || $wrap.children('.publication-cover-preview').first();
-            if (!$p.length) {
+            var $img = $wrap.find('.publication-cover-thumb').first();
+            var src = $img.attr('data-src') || $img.attr('src');
+            if (!src) {
                 return;
             }
-            $wrap.data('coverPreviewEl', $p);
-            clearOpenHoverTimer();
-            openHoverTimer = setTimeout(function () {
-                openHoverTimer = null;
-                if (!$wrap.is(':hover')) {
-                    return;
-                }
-                if ($p.hasClass('is-open') || $p.hasClass('is-closing')) {
-                    return;
-                }
-                openCoverPreview($wrap, $p);
-            }, hoverOpenDelay);
+            openLightbox(src, $img.attr('alt'));
         });
 
-        $(document).on('mouseleave', '.publication-cover-wrap:not(.publication-cover-wrap--sm)', function () {
-            if (!isCoverPreviewDesktop()) {
-                return;
+        $(document).on('keydown.coverLightbox', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
             }
-            var $wrap = $(this);
-            var $p = $wrap.data('coverPreviewEl') || $wrap.children('.publication-cover-preview').first();
-            clearOpenHoverTimer();
-            if ($p.hasClass('is-open')) {
-                scheduleClosePreview($wrap, $p, wrapLeaveCloseDelay);
-            }
-        });
-
-        $(window).on('resize.coverPreview scroll.coverPreview', function () {
-            $('.publication-cover-preview.is-open, .publication-cover-preview.is-closing').each(function () {
-                positionCoverPreview($(this));
-            });
         });
     })();
 })

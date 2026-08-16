@@ -2,14 +2,43 @@
 layout: default
 title : Research
 navbar_title: Research
+body_class: page-research bg-light
 permalink: /research/
 ---
 
 <style>
   .research-topic-filters {
+    --filter-sticky-nudge: -1.5px; /* 正数往下，负数往上 */
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
+    position: sticky;
+    top: calc(var(--navbar-height, 5rem) + var(--filter-sticky-nudge));
+    z-index: 2;
+    background: #fff;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: background 0.25s ease, box-shadow 0.25s ease, z-index 0s;
+  }
+
+  /* 未吸顶：论文悬停（含第一篇顶阴影）盖过筛选条 */
+  .papers-card > .filter-item:hover {
+    z-index: 20;
+  }
+
+  .research-topic-filters.is-stuck {
+    z-index: 40;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
+  }
+
+  /* 吸顶后筛选条压在论文之上，避免标题从毛玻璃里透出来 */
+  .papers-card:has(.research-topic-filters.is-stuck) > .filter-item,
+  .papers-card:has(.research-topic-filters.is-stuck) > .filter-item:hover {
+    z-index: 0;
   }
 
   .research-topic-filters-label {
@@ -22,7 +51,7 @@ permalink: /research/
     font-size: var(--fs-md);
     font-weight: 700;
     letter-spacing: 0.01em;
-    color: #6c757d;
+    color: #5d6780;
   }
 
   .research-topic-filters-label i {
@@ -47,53 +76,70 @@ permalink: /research/
     min-width: 0;
   }
 
-  .tag-filter {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35em;
-    padding: 0.4em 0.85em;
-    font-size: var(--fs-sm);
-    font-weight: 600;
-    border-radius: 999px;
-    margin: 0;
-    cursor: pointer;
-    background-color: #e9ecef;
-    color: #495057;
-    transition: all 0.2s;
-  }
+  @media (min-width: 992px) {
+    .research-topic-filters {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.65rem 1.75rem;
+      padding-top: 0.85rem;
+      padding-bottom: 0.85rem;
+    }
 
-  .tag-filter i {
-    font-size: 0.92em;
-    line-height: 1;
-    opacity: 0.92;
-  }
+    .research-topic-row {
+      flex: 0 0 auto;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
 
-  .tag-filter.active {
-    background-color: #343a40;
-    color: #fff;
-  }
+    .research-topic-row + .research-topic-row {
+      margin-left: 0.35rem;
+      padding-left: 1.5rem;
+      border-left: 1px solid rgba(var(--color-link-rgb), 0.14);
+    }
 
-  .tag-filter.active i {
-    opacity: 1;
+    .research-topic-filters-label {
+      min-width: 0;
+      font-size: var(--fs-sm);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .research-topic-chips {
+      flex: 0 0 auto;
+      width: auto;
+    }
   }
 
   @media (max-width: 991.98px) {
     .research-topic-filters {
-      gap: 0.55rem;
-      padding-top: 0.55rem;
-      padding-bottom: 0.55rem;
+      gap: 0;
+      padding-top: 0.65rem;
+      padding-bottom: 0.65rem;
     }
 
     .research-topic-row {
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.3rem;
+      gap: 0.35rem;
+    }
+
+    .research-topic-row + .research-topic-row {
+      margin-top: 0.55rem;
+      padding-top: 0.55rem;
+      border-top: 1px solid rgba(var(--color-link-rgb), 0.14);
     }
 
     .research-topic-filters-label {
       min-width: 0;
+      font-size: var(--fs-sm);
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
     }
 
     .research-topic-filters-label i {
@@ -102,7 +148,8 @@ permalink: /research/
     }
 
     .research-topic-chips {
-      width: 100%;
+      flex: 0 0 auto;
+      width: auto;
       gap: 0.35rem 0.4rem;
     }
 
@@ -222,4 +269,23 @@ permalink: /research/
       window.requestAnimationFrame(() => window.__refreshLazy());
     }
   }
+
+  (function watchFilterSticky() {
+    const el = document.querySelector('.research-topic-filters');
+    const nav = document.querySelector('.navbar-custom');
+    if (!el) return;
+
+    const update = () => {
+      if (nav) {
+        document.documentElement.style.setProperty('--navbar-height', nav.offsetHeight + 'px');
+      }
+      const top = el.getBoundingClientRect().top;
+      const stuckAt = parseFloat(getComputedStyle(el).top) || 80;
+      el.classList.toggle('is-stuck', top <= stuckAt + 1);
+    };
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
 </script>

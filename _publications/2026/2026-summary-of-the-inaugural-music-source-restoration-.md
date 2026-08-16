@@ -4,7 +4,8 @@ date:           2026-02-01
 selected:       false
 type:           publication
 tags:           ["music", "understanding"]
-pub:            "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+keywords:       ["Sound Separation", "Dataset"]
+pub:            "ICASSP"
 pub_last:       '<span class="text-em"><i class="fas fa-trophy mr-1"></i>Challenge</span>'
 abstract: >-
   
@@ -18,7 +19,7 @@ authors:
   - Zheqi Dai
   - Helin Wang
   - Yuki Mitsufuji
-  - Mark D Plumbley
+  - Mark D. Plumbley
 bibtex: |
   @article{zang2026summary,
     title = {Summary of The Inaugural Music Source Restoration Challenge},
@@ -27,7 +28,7 @@ bibtex: |
     year = {2026}
   }
 
-cover_large: /assets/images/covers/music_res.png
+cover_large: /assets/images/covers/msr.gif
 
 links:
   Homepage: https://msrchallenge.com/

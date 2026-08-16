@@ -4,7 +4,8 @@ date:           2023-07-01
 selected:       false
 type:           publication
 tags:           ["voice", "understanding"]
-pub:            "IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)"
+keywords:       []
+pub:            "ASRU"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 # pub_last:       '<span class="text-em"><i class="fas fa-microphone mr-1"></i>Oral Presentation</span>'
@@ -14,7 +15,7 @@ abstract: >-
   Developed a machine learning-based fake image detection pipeline that leverages pixel-level statistics, texture patterns, and edge information, achieving higher accuracy with lower memory usage than CNN-based deep learning approaches.
 tldr: >-
   Multi-task training with pre-trained modality encoders to learn stronger multimodal representations for sentiment analysis.
-cover_large:          /assets/images/covers/boost.png
+cover_large:          /assets/images/covers/boost.jpg
 authors:
   - Jiarui Hai*
   - Yu-Jeh Liu*

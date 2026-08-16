@@ -1,0 +1,21 @@
+{%- if include.keywords -%}
+{%- for kw in include.keywords -%}
+  {%- case kw -%}
+    {%- when "Voice Design" -%}
+      {%- assign kw_icon = "fas fa-sliders" -%}
+    {%- when "Audio Generation" -%}
+      {%- assign kw_icon = "fas fa-wand-magic-sparkles" -%}
+    {%- when "Sound Separation" -%}
+      {%- assign kw_icon = "fas fa-object-ungroup" -%}
+    {%- when "Sound Seperation" -%}
+      {%- assign kw_icon = "fas fa-object-ungroup" -%}
+    {%- when "Audio Understanding" -%}
+      {%- assign kw_icon = "fas fa-magnifying-glass" -%}
+    {%- when "Dataset" -%}
+      {%- assign kw_icon = "fas fa-database" -%}
+    {%- else -%}
+      {%- assign kw_icon = "fas fa-tag" -%}
+  {%- endcase -%}
+<span class="publication-keyword"><i class="{{ kw_icon }}" aria-hidden="true"></i>{{ kw }}</span>
+{%- endfor -%}
+{%- endif -%}

@@ -4,7 +4,8 @@ date:           2026-01-01
 selected:       false
 type:           publication
 tags:           ["voice", "generation"]
-pub:            "IEEE Transactions on Audio, Speech and Language Processing (TASLP)"
+keywords:       ["Sound Separation"]
+pub:            "TASLP"
 abstract: >-
   
 tldr: >-
@@ -28,7 +29,7 @@ bibtex: |
     year = {2026}
   }
 
-cover_large: /assets/images/covers/solospeech.png
+cover_large: /assets/images/covers/solospeech.gif
 
 links:
   Paper: https://arxiv.org/abs/2505.19314

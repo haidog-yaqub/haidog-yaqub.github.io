@@ -4,8 +4,8 @@ date:           2026-03-01
 selected:       true
 type:           publication
 tags:           ["voice", "generation"]
-pub:            "IEEE Transactions on Audio, Speech and Language Processing (TASLP)"
-pub_last:       '<span class="text-em"><i class="fas fa-database mr-1"></i>Dataset</span>'
+keywords:       ["Voice Design", "Dataset"]
+pub:            "TASLP"
 abstract: >-
   
 tldr: >-
