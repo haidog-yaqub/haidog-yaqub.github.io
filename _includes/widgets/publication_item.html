@@ -70,7 +70,7 @@
 <div class="bibtex-source d-none" data-has-bibtex="false" data-title="{{ item.title | xml_escape }}" data-authors="{{ item.authors | join: ' and ' | xml_escape }}" data-pub="{{ item.pub | xml_escape }}" data-year="{{ item.date | date: '%Y' }}"></div>
 {% endif %}
 <div class="d-none d-md-block">
-    <div class="row no-gutters align-items-center {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
+    <div class="row no-gutters align-items-start {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
         {%- if pub_cover_rel != '' -%}
         <div class="col-md-4 col-xl-3 mb-md-0 p-md-3">
             <div class="publication-cover-wrap w-100">
@@ -92,13 +92,9 @@
                 {% if item.pub_last %}<span class="publication-venue-highlight">{{ item.pub_last }}</span>{% endif %}
                 <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span>
             </p>
-            <div class="collapse" id="abstract-{{ pub_slug }}">
-                <p class="publication-tldr-body">{{ item.tldr | default: item.abstract }}</p>
-            </div>
-
             {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
             <p class="publication-chip-row publication-primary-links">
-                <a data-toggle="collapse" href="#abstract-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-{{ pub_slug }}">TL;DR</a>
+                <a class="publication-tldr-toggle" href="#abstract-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-{{ pub_slug }}">TL;DR</a>
                 {% if item.links %}
                     {% for link_name in preferred_link_order %}
                         {% assign link_value = item.links[link_name] %}
@@ -122,6 +118,11 @@
                 {% endif %}
                 <a href="#" class="bibtex-copy d-none" role="button">[BibTeX]</a>
             </p>
+            <div class="publication-tldr" id="abstract-{{ pub_slug }}">
+                <div class="publication-tldr-clip">
+                    <p class="publication-tldr-body">{{ item.tldr | default: item.abstract }}</p>
+                </div>
+            </div>
 
             <!-- Read More Button -->
             <!-- <p class="mt-1 mb-1 small">
@@ -188,13 +189,10 @@
                     {% if item.pub_last %}<span class="publication-venue-highlight">{{ item.pub_last }}</span>{% endif %}
                     <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span>
                 </p>
-                <div class="collapse" id="abstract-mobile-{{ pub_slug }}">
-                    <p class="publication-tldr-body">{{ item.tldr | default: item.abstract }}</p>
-                </div>
 
                 {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
                 <p class="publication-chip-row publication-primary-links">
-                    <a data-toggle="collapse" href="#abstract-mobile-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-mobile-{{ pub_slug }}">TL;DR</a>
+                    <a class="publication-tldr-toggle" href="#abstract-mobile-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-mobile-{{ pub_slug }}">TL;DR</a>
                     {% if item.links %}
                         {% for link_name in preferred_link_order %}
                             {% assign link_value = item.links[link_name] %}
@@ -218,6 +216,11 @@
                     {% endif %}
                     <a href="#" class="bibtex-copy d-none" role="button">[BibTeX]</a>
                 </p>
+                <div class="publication-tldr" id="abstract-mobile-{{ pub_slug }}">
+                    <div class="publication-tldr-clip">
+                        <p class="publication-tldr-body">{{ item.tldr | default: item.abstract }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

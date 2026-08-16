@@ -89,6 +89,19 @@ $(function () {
         }
     });
 
+    $(document).on('click', '.publication-tldr-toggle', function (e) {
+        e.preventDefault();
+        var $btn = $(this);
+        var target = $btn.attr('href');
+        var $panel = target ? $(target) : $();
+        if (!$panel.length) {
+            return;
+        }
+        var open = !$panel.hasClass('is-open');
+        $panel.toggleClass('is-open', open);
+        $btn.attr('aria-expanded', open);
+    });
+
     $(document).on('click', '.research-highlight-authors-toggle', function (e) {
         e.preventDefault();
         e.stopPropagation();

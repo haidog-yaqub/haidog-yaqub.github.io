@@ -48,12 +48,9 @@
       {{ item.pub_pre }}{{ item.pub }}{{ item.pub_post }}{% if item.pub_date %} {{ item.pub_date }}{% endif %}{% if item.date %}, {{ item.date | date: '%Y' }}{% endif %}
       {% if item.pub_last %}<span class="publication-venue-highlight">{{ item.pub_last }}</span>{% endif %}
     </p>
-    <div class="collapse" id="hl-abstract-{{ hl_slug }}">
-      <p class="publication-tldr-body">{{ item.tldr | default: item.abstract }}</p>
-    </div>
     {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
     <p class="publication-chip-row publication-primary-links">
-      <a data-toggle="collapse" href="#hl-abstract-{{ hl_slug }}" role="button" aria-expanded="false" aria-controls="hl-abstract-{{ hl_slug }}">TL;DR</a>
+      <a class="publication-tldr-toggle" href="#hl-abstract-{{ hl_slug }}" role="button" aria-expanded="false" aria-controls="hl-abstract-{{ hl_slug }}">TL;DR</a>
       {% if item.links %}
         {% for link_name in preferred_link_order %}
           {% assign link_value = item.links[link_name] %}
@@ -76,5 +73,10 @@
         {% endfor %}
       {% endif %}
     </p>
+    <div class="publication-tldr" id="hl-abstract-{{ hl_slug }}">
+      <div class="publication-tldr-clip">
+        <p class="publication-tldr-body">{{ item.tldr | default: item.abstract }}</p>
+      </div>
+    </div>
   </div>
 </article>
