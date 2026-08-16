@@ -98,7 +98,8 @@
                 {% if item.links %}
                     {% for link_name in preferred_link_order %}
                         {% assign link_value = item.links[link_name] %}
-                        {% if link_value %}
+                        {% if link_name == 'Code' and item.links.Homepage %}
+                        {% elsif link_value %}
                             {% if link_value.url %}
                             <a target="{{ link_value.target | default: '_blank' }}" href="{{ link_value.url }}">{{ link_name }}</a>
                             {% else %}
@@ -196,7 +197,8 @@
                     {% if item.links %}
                         {% for link_name in preferred_link_order %}
                             {% assign link_value = item.links[link_name] %}
-                            {% if link_value %}
+                            {% if link_name == 'Code' and item.links.Homepage %}
+                            {% elsif link_value %}
                                 {% if link_value.url %}
                                 <a target="{{ link_value.target | default: '_blank' }}" href="{{ link_value.url }}">{{ link_name }}</a>
                                 {% else %}
