@@ -1,0 +1,80 @@
+{% assign item = include.item %}
+{% assign hl_cover_rel = '' %}
+{% assign hl_cover_ext = '' %}
+{% if item.cover_large %}
+  {% assign _cr = item.cover_large | strip %}
+{% elsif item.cover %}
+  {% assign _cr = item.cover | strip %}
+{% else %}
+  {% assign _cr = '' %}
+{% endif %}
+{% if _cr != '' %}
+  {% assign _cp = _cr %}
+  {% unless _cr contains '://' %}
+    {% assign _c0 = _cr | slice: 0, 1 %}
+    {% if _c0 != '/' %}
+      {% assign _cp = _cr | prepend: '/' %}
+    {% endif %}
+  {% endunless %}
+  {% assign hl_cover_rel = _cp | relative_url %}
+  {% assign hl_cover_ext = _cr | split: '.' | last | downcase %}
+{% endif %}
+<article class="research-highlight-tile publication-item-inner">
+  <div class="research-highlight-cover">
+    {%- if hl_cover_rel != '' -%}
+      {%- if hl_cover_ext == 'gif' -%}
+      <img src="{{ hl_cover_rel }}" alt="{{ item.title }}" decoding="async">
+      {%- else -%}
+      <img data-src="{{ hl_cover_rel }}" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" alt="{{ item.title }}" class="lazy" loading="lazy" decoding="async">
+      {%- endif -%}
+    {%- else -%}
+      <svg class="bubble-visual-hash lazy w-100" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
+    {%- endif -%}
+  </div>
+  <div class="research-highlight-body">
+    {% assign hl_slug = item.title | slugify %}
+    <h6 class="mt-0">{{ item.title }}</h6>
+    <p class="publication-authors{% if item.authors.size > 6 %} research-highlight-authors{% endif %}">
+      {%- if item.authors.size > 6 -%}
+        {%- assign hl_authors_preview = item.authors | slice: 0, 6 -%}
+        <span class="research-highlight-authors-short">{% include widgets/author_list.html authors=hl_authors_preview %}</span>
+        <span class="research-highlight-authors-full" hidden>{% include widgets/author_list.html authors=item.authors %}</span>
+        <button type="button" class="research-highlight-authors-toggle" aria-expanded="false" aria-label="Show all authors">et&nbsp;al.<i class="fas fa-angle-down" aria-hidden="true"></i></button>
+      {%- else -%}
+        {% include widgets/author_list.html authors=item.authors %}
+      {%- endif -%}
+    </p>
+    <p class="publication-venue-line">
+      {{ item.pub_pre }}{{ item.pub }}{{ item.pub_post }}{% if item.pub_date %} {{ item.pub_date }}{% endif %}{% if item.date %}, {{ item.date | date: '%Y' }}{% endif %}
+      {% if item.pub_last %}<span class="publication-venue-highlight">{{ item.pub_last }}</span>{% endif %}
+    </p>
+    {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
+    <p class="publication-chip-row publication-primary-links">
+      <a data-toggle="collapse" href="#hl-abstract-{{ hl_slug }}" role="button" aria-expanded="false" aria-controls="hl-abstract-{{ hl_slug }}">TL;DR</a>
+      {% if item.links %}
+        {% for link_name in preferred_link_order %}
+          {% assign link_value = item.links[link_name] %}
+          {% if link_value %}
+            {% if link_value.url %}
+            <a target="{{ link_value.target | default: '_blank' }}" href="{{ link_value.url }}">{{ link_name }}</a>
+            {% else %}
+            <a target="_blank" href="{{ link_value }}">{{ link_name }}</a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% for link in item.links %}
+          {% unless preferred_link_order contains link[0] %}
+            {% if link[1].url %}
+            <a target="{{ link[1].target | default: '_blank' }}" href="{{ link[1].url }}">{{ link[0] }}</a>
+            {% else %}
+            <a target="_blank" href="{{ link[1] }}">{{ link[0] }}</a>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </p>
+    <div class="collapse" id="hl-abstract-{{ hl_slug }}">
+      <p class="publication-tldr-body mb-1">{{ item.tldr | default: item.abstract }}</p>
+    </div>
+  </div>
+</article>

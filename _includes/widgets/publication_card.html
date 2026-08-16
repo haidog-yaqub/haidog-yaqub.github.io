@@ -1,5 +1,5 @@
 {% assign publications = include.publications %}
-<div class="mt-3 mb-0 p-0 bg-white shadow-sm rounded-xl">
+<div class="mt-3 mb-0 p-0 bg-white shadow-sm rounded-xl research-highlights-card">
   <div class="border-bottom border-gray p-3 mb-0 d-flex justify-content-between align-items-center position-relative">
     <div class="position-absolute pr-3 text-right w-100" style="left: 0; bottom: 0; transform: translateY(0%); user-select: text;">
       <small class="research-meta-tone">
@@ -8,22 +8,18 @@
     </div>
     <div>
       <h6 class="mb-0 d-inline">
-        <!-- {% if include.title %}{{ include.title }}{% else %}<i class="fas fa-star"></i> Selected Recent Publications{% endif %} -->
-        <!-- <a href="{{ 'research' | relative_url }}">(view all <i class="fas fa-angle-double-right"></i>)</a> -->
          <i class="fas fa-star"></i><span style="margin-left: 0.3em;">Research Highlights</span>
       </h6>
     </div>
-
-
   </div>
 
-  {% for item in publications limit:include.limit %}
-    <div class="filter-item{% unless forloop.first %} border-top border-gray{% endunless %}{% if forloop.last %} border-bottom border-gray{% endif %}">
-      {% include widgets/publication_item.html item=item hide_bottom_border=true first=false last=false %}
-    </div>
-  {% endfor %}
+  <div class="research-highlights-grid">
+    {% for item in publications limit:include.limit %}
+      {% include widgets/publication_highlight_item.html item=item %}
+    {% endfor %}
+  </div>
 
-  <h6 class="d-block p-3 mt-0 mb-0 text-right font-weight-normal">
+  <h6 class="d-block p-3 mt-0 mb-0 text-right font-weight-normal border-top border-gray">
     <a href="{{ 'research' | relative_url }}">More Projects <i class="fas fa-angle-double-right"></i></a>
   </h6>
 </div>

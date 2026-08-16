@@ -34,6 +34,12 @@ $(function () {
         }
     };
 
+    $(document).on('shown.bs.collapse', '.publication-cover-collapse', function () {
+        if (window.__refreshLazy) {
+            window.__refreshLazy();
+        }
+    });
+
     $('[data-toggle="tooltip"]').tooltip()
 
     var $grid = $('.grid').masonry({
@@ -83,7 +89,21 @@ $(function () {
         }
     });
 
-    // Publication cover: click to open centered lightbox.
+    $(document).on('click', '.research-highlight-authors-toggle', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $btn = $(this);
+        var $row = $btn.closest('.research-highlight-authors');
+        var expanded = !$row.hasClass('is-expanded');
+        $row.toggleClass('is-expanded', expanded);
+        $row.find('.research-highlight-authors-short').toggle(!expanded);
+        $row.find('.research-highlight-authors-full').prop('hidden', !expanded);
+        $btn.attr('aria-expanded', expanded);
+        $btn.attr('aria-label', expanded ? 'Hide authors' : 'Show all authors');
+        $btn.html(expanded
+            ? 'et&nbsp;al.<i class="fas fa-angle-up" aria-hidden="true"></i>'
+            : 'et&nbsp;al.<i class="fas fa-angle-down" aria-hidden="true"></i>');
+    });
     (function () {
         var $box = null;
 

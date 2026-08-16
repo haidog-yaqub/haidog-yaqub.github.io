@@ -35,10 +35,14 @@ permalink: /research/
     box-shadow: var(--glass-shadow);
   }
 
-  /* 吸顶后筛选条压在论文之上，避免标题从毛玻璃里透出来 */
-  .papers-card:has(.research-topic-filters.is-stuck) > .filter-item,
-  .papers-card:has(.research-topic-filters.is-stuck) > .filter-item:hover {
+  /* 吸顶后筛选条压住论文；悬停只投下阴影，避免向上的光晕糊进毛玻璃 */
+  .papers-card:has(.research-topic-filters.is-stuck) > .filter-item {
     z-index: 0;
+  }
+
+  .papers-card:has(.research-topic-filters.is-stuck) > .filter-item:hover {
+    z-index: 1;
+    box-shadow: 0 0.55rem 1.2rem rgba(20, 30, 50, 0.12) !important;
   }
 
   .research-topic-filters-label {

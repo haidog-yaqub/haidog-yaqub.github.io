@@ -43,30 +43,16 @@
 
 {% assign item = include.item %}
 {% assign pub_slug = item.title | slugify %}
-{%- comment -%}
-  cover_large → 仅 md+ 宽屏；cover_small → 仅窄屏；cover → 宽窄都用（宽屏在无 large 时用 cover，窄屏在无 small 时用 cover）。
-  仅有 cover_large、无 cover_small、也无 cover → 窄屏不显示封面图。
-{%- endcomment -%}
-{% assign pub_wide_rel = '' %}
-{% assign pub_wide_ext = '' %}
-{% assign pub_narrow_rel = '' %}
-{% assign pub_narrow_ext = '' %}
-{% assign pub_cover_both_rel = '' %}
-{% assign pub_cover_both_ext = '' %}
-{% if item.cover %}
-  {% assign _cr = item.cover | strip %}
-  {% assign _cp = _cr %}
-  {% unless _cr contains '://' %}
-    {% assign _c0 = _cr | slice: 0, 1 %}
-    {% if _c0 != '/' %}
-      {% assign _cp = _cr | prepend: '/' %}
-    {% endif %}
-  {% endunless %}
-  {% assign pub_cover_both_rel = _cp | relative_url %}
-  {% assign pub_cover_both_ext = _cr | split: '.' | last | downcase %}
-{% endif %}
+{% assign pub_cover_rel = '' %}
+{% assign pub_cover_ext = '' %}
 {% if item.cover_large %}
   {% assign _cr = item.cover_large | strip %}
+{% elsif item.cover %}
+  {% assign _cr = item.cover | strip %}
+{% else %}
+  {% assign _cr = '' %}
+{% endif %}
+{% if _cr != '' %}
   {% assign _cp = _cr %}
   {% unless _cr contains '://' %}
     {% assign _c0 = _cr | slice: 0, 1 %}
@@ -74,35 +60,8 @@
       {% assign _cp = _cr | prepend: '/' %}
     {% endif %}
   {% endunless %}
-  {% assign pub_wide_rel = _cp | relative_url %}
-  {% assign pub_wide_ext = _cr | split: '.' | last | downcase %}
-{% elsif pub_cover_both_rel != '' %}
-  {% assign pub_wide_rel = pub_cover_both_rel %}
-  {% assign pub_wide_ext = pub_cover_both_ext %}
-{% endif %}
-{% if item.cover_small %}
-  {% assign _cr = item.cover_small | strip %}
-  {% assign _cp = _cr %}
-  {% unless _cr contains '://' %}
-    {% assign _c0 = _cr | slice: 0, 1 %}
-    {% if _c0 != '/' %}
-      {% assign _cp = _cr | prepend: '/' %}
-    {% endif %}
-  {% endunless %}
-  {% assign pub_narrow_rel = _cp | relative_url %}
-  {% assign pub_narrow_ext = _cr | split: '.' | last | downcase %}
-{% elsif pub_cover_both_rel != '' %}
-  {% assign pub_narrow_rel = pub_cover_both_rel %}
-  {% assign pub_narrow_ext = pub_cover_both_ext %}
-{% endif %}
-{% assign pub_cover_size = 'large' %}
-{% if pub_wide_rel != '' or pub_narrow_rel != '' %}
-  {% if item.cover_size %}
-    {% assign _cov_sz = item.cover_size | strip | downcase %}
-    {% if _cov_sz == 'small' or _cov_sz == 'sm' or _cov_sz == 's' %}
-      {% assign pub_cover_size = 'small' %}
-    {% endif %}
-  {% endif %}
+  {% assign pub_cover_rel = _cp | relative_url %}
+  {% assign pub_cover_ext = _cr | split: '.' | last | downcase %}
 {% endif %}
 <div class="publication-item-inner">
 {% if item.bibtex %}
@@ -111,32 +70,22 @@
 <div class="bibtex-source d-none" data-has-bibtex="false" data-title="{{ item.title | xml_escape }}" data-authors="{{ item.authors | join: ' and ' | xml_escape }}" data-pub="{{ item.pub | xml_escape }}" data-year="{{ item.date | date: '%Y' }}"></div>
 {% endif %}
 <div class="d-none d-md-block">
-    <div class="row no-gutters align-items-start {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
-        <div class="col-md-4 mb-md-0 p-md-3">
-            {%- if pub_wide_rel != '' -%}
-            <div class="publication-cover-wrap w-100 {% if pub_cover_size == 'small' %}publication-cover-wrap--sm{% else %}publication-cover-wrap--lg{% endif %}">
-            {%- if pub_wide_ext == 'gif' -%}
-            <img src="{{ pub_wide_rel }}" alt="{{ item.title }}" class="rounded-sm publication-cover-thumb {% if pub_cover_size != 'small' %}w-100{% endif %}" decoding="async">
+    <div class="row no-gutters align-items-center {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
+        {%- if pub_cover_rel != '' -%}
+        <div class="col-md-4 col-xl-3 mb-md-0 p-md-3">
+            <div class="publication-cover-wrap w-100">
+            {%- if pub_cover_ext == 'gif' -%}
+            <img src="{{ pub_cover_rel }}" alt="{{ item.title }}" class="w-100 rounded-sm publication-cover-thumb" decoding="async">
             {%- else -%}
-            <img data-src="{{ pub_wide_rel }}" alt="{{ item.title }}" class="lazy rounded-sm publication-cover-thumb {% if pub_cover_size != 'small' %}w-100{% endif %}" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+            <img data-src="{{ pub_cover_rel }}" alt="{{ item.title }}" class="lazy w-100 rounded-sm publication-cover-thumb" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" loading="lazy" decoding="async">
             {%- endif -%}
             </div>
-            {%- else -%}
-            <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
-            {%- endif -%}
         </div>
-        <div class="col-md-8 p-3 pl-md-0 publication-item-copy">
+        <div class="col-md-8 col-xl-9 p-3 pl-md-0 publication-item-copy">
+        {%- else -%}
+        <div class="col-12 p-3 publication-item-copy">
+        {%- endif -%}
             <h6 class="mt-0">{{ item.title }}</h6>
-            <p class="publication-chip-row publication-secondary-actions">
-                <a data-toggle="collapse" href="#abstract-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-{{ pub_slug }}">
-                    TL;DR
-                </a>
-                {% include widgets/publication_keywords.html keywords=item.keywords %}
-                <a href="#" class="bibtex-copy d-none" role="button">[BibTeX]</a>
-            </p>
-            <div class="collapse" id="abstract-{{ pub_slug }}">
-                <p class="publication-tldr-body mb-1">{{ item.tldr | default: item.abstract }}</p>
-            </div>
             <p class="publication-authors">{% include widgets/author_list.html authors=item.authors %}</p>
             <p class="publication-venue-line">
                 {{item.pub_pre}}{{ item.pub }}{{ item.pub_post }}{% if item.pub_date %} {{ item.pub_date }}{% endif %}{% if item.date %}, {{ item.date | date: '%Y' }}{% endif %}
@@ -146,6 +95,7 @@
 
             {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
             <p class="publication-chip-row publication-primary-links">
+                <a data-toggle="collapse" href="#abstract-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-{{ pub_slug }}">TL;DR</a>
                 {% if item.links %}
                     {% for link_name in preferred_link_order %}
                         {% assign link_value = item.links[link_name] %}
@@ -167,7 +117,11 @@
                         {% endunless %}
                     {% endfor %}
                 {% endif %}
+                <a href="#" class="bibtex-copy d-none" role="button">[BibTeX]</a>
             </p>
+            <div class="collapse" id="abstract-{{ pub_slug }}">
+                <p class="publication-tldr-body mb-1">{{ item.tldr | default: item.abstract }}</p>
+            </div>
 
             <!-- Read More Button -->
             <!-- <p class="mt-1 mb-1 small">
@@ -223,39 +177,11 @@
 </div>
 
 <div class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %}">
-    <div class="w-100 {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %} {% if pub_narrow_rel != '' %}publication-mobile-cover-bg {% if pub_cover_size == 'small' %}publication-mobile-cover-bg--sm{% endif %}{% endif %}"{% unless pub_narrow_rel != '' %} style="background-color: #fff;"{% endunless %}>
-        {%- if pub_narrow_rel != '' -%}
-        {%- if pub_cover_size == 'small' -%}
-        <div class="publication-mobile-cover-strip" aria-hidden="true">
-        {%- if pub_narrow_ext == 'gif' -%}
-        <img src="{{ pub_narrow_rel }}" alt="" class="publication-mobile-cover-strip__img" decoding="async">
-        {%- else -%}
-        <img data-src="{{ pub_narrow_rel }}" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" alt="" class="publication-mobile-cover-strip__img lazy" loading="lazy" decoding="async">
-        {%- endif -%}
-        </div>
-        {%- else -%}
-        {%- if pub_narrow_ext == 'gif' -%}
-        <img src="{{ pub_narrow_rel }}" alt="" class="publication-mobile-cover-bg__image" decoding="async" aria-hidden="true">
-        {%- else -%}
-        <img data-src="{{ pub_narrow_rel }}" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" alt="" class="publication-mobile-cover-bg__image lazy" loading="lazy" decoding="async" aria-hidden="true">
-        {%- endif -%}
-        <div class="publication-mobile-cover-bg__scrim" aria-hidden="true"></div>
-        {%- endif -%}
-        {%- endif -%}
+    <div class="w-100 {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %}" style="background-color: #fff;">
         <div class="d-flex align-items-start flex-column py-3 px-4">
             <div class="mb-auto"></div>
             <div>
                 <h6 class="mt-0">{{ item.title }}</h6>
-                <p class="publication-chip-row publication-secondary-actions">
-                    <a data-toggle="collapse" href="#abstract-mobile-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-mobile-{{ pub_slug }}">
-                        TL;DR
-                    </a>
-                    {% include widgets/publication_keywords.html keywords=item.keywords %}
-                    <a href="#" class="bibtex-copy d-none" role="button">[BibTeX]</a>
-                </p>
-                <div class="collapse" id="abstract-mobile-{{ pub_slug }}">
-                    <p class="publication-tldr-body mb-1">{{ item.tldr | default: item.abstract }}</p>
-                </div>
                 <p class="publication-authors">{% include widgets/author_list.html authors=item.authors %}</p>
                 <p class="publication-venue-line">
                     {{item.pub_pre}}{{ item.pub }}{{ item.pub_post }}{% if item.pub_date %} {{ item.pub_date }}{% endif %}{% if item.date %}, {{ item.date | date: '%Y' }}{% endif %}
@@ -265,6 +191,7 @@
 
                 {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
                 <p class="publication-chip-row publication-primary-links">
+                    <a data-toggle="collapse" href="#abstract-mobile-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-mobile-{{ pub_slug }}">TL;DR</a>
                     {% if item.links %}
                         {% for link_name in preferred_link_order %}
                             {% assign link_value = item.links[link_name] %}
@@ -286,7 +213,11 @@
                             {% endunless %}
                         {% endfor %}
                     {% endif %}
+                    <a href="#" class="bibtex-copy d-none" role="button">[BibTeX]</a>
                 </p>
+                <div class="collapse" id="abstract-mobile-{{ pub_slug }}">
+                    <p class="publication-tldr-body mb-1">{{ item.tldr | default: item.abstract }}</p>
+                </div>
             </div>
         </div>
     </div>

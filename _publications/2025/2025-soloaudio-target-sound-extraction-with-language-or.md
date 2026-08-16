@@ -10,7 +10,7 @@ abstract: >-
 
 tldr: >-
   A language-conditioned audio diffusion transformer for target sound extraction from mixtures.
-cover_large: /assets/images/covers/soloaudio.png
+cover_large: /assets/images/covers/soloaudio.gif
 
 authors:
   - Helin Wang*

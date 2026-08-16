@@ -12,7 +12,7 @@ tldr: >-
   An open-vocabulary sound event detection approach that generalizes to unseen classes via flexible text-conditioned modeling.
 pub_last:       '<span class="text-em"><i class="fas fa-star mr-1"></i>Spotlight</span>'
 
-cover_large: /assets/images/covers/flexsed.gif
+cover_large: /assets/images/covers/flexsed.jpg
 
 authors:
   - Jiarui Hai
