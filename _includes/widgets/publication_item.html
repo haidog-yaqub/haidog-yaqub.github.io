@@ -94,25 +94,25 @@
             </p>
             {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
             <p class="publication-chip-row publication-primary-links">
-                <a class="publication-tldr-toggle" href="#abstract-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-{{ pub_slug }}">TL;DR</a>
+                <a class="publication-tldr-toggle" href="#abstract-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-{{ pub_slug }}">[TL;DR]</a>
                 {% if item.links %}
                     {% for link_name in preferred_link_order %}
                         {% assign link_value = item.links[link_name] %}
                         {% if link_name == 'Code' and item.links.Homepage %}
                         {% elsif link_value %}
                             {% if link_value.url %}
-                            <a target="{{ link_value.target | default: '_blank' }}" href="{{ link_value.url }}">{{ link_name }}</a>
+                            <a target="{{ link_value.target | default: '_blank' }}" href="{{ link_value.url }}">[{{ link_name }}]</a>
                             {% else %}
-                            <a target="_blank" href="{{ link_value }}">{{ link_name }}</a>
+                            <a target="_blank" href="{{ link_value }}">[{{ link_name }}]</a>
                             {% endif %}
                         {% endif %}
                     {% endfor %}
                     {% for link in item.links %}
                         {% unless preferred_link_order contains link[0] %}
                             {% if link[1].url %}
-                            <a target="{{ link[1].target | default: '_blank' }}" href="{{ link[1].url }}">{{ link[0] }}</a>
+                            <a target="{{ link[1].target | default: '_blank' }}" href="{{ link[1].url }}">[{{ link[0] }}]</a>
                             {% else %}
-                            <a target="_blank" href="{{ link[1] }}">{{ link[0] }}</a>
+                            <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
                             {% endif %}
                         {% endunless %}
                     {% endfor %}
@@ -193,25 +193,25 @@
 
                 {% assign preferred_link_order = "Paper|Code|Homepage|Live Demo" | split: "|" %}
                 <p class="publication-chip-row publication-primary-links">
-                    <a class="publication-tldr-toggle" href="#abstract-mobile-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-mobile-{{ pub_slug }}">TL;DR</a>
+                    <a class="publication-tldr-toggle" href="#abstract-mobile-{{ pub_slug }}" role="button" aria-expanded="false" aria-controls="abstract-mobile-{{ pub_slug }}">[TL;DR]</a>
                     {% if item.links %}
                         {% for link_name in preferred_link_order %}
                             {% assign link_value = item.links[link_name] %}
                             {% if link_name == 'Code' and item.links.Homepage %}
                             {% elsif link_value %}
                                 {% if link_value.url %}
-                                <a target="{{ link_value.target | default: '_blank' }}" href="{{ link_value.url }}">{{ link_name }}</a>
+                                <a target="{{ link_value.target | default: '_blank' }}" href="{{ link_value.url }}">[{{ link_name }}]</a>
                                 {% else %}
-                                <a target="_blank" href="{{ link_value }}">{{ link_name }}</a>
+                                <a target="_blank" href="{{ link_value }}">[{{ link_name }}]</a>
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
                         {% for link in item.links %}
                             {% unless preferred_link_order contains link[0] %}
                                 {% if link[1].url %}
-                                <a target="{{ link[1].target | default: '_blank' }}" href="{{ link[1].url }}">{{ link[0] }}</a>
+                                <a target="{{ link[1].target | default: '_blank' }}" href="{{ link[1].url }}">[{{ link[0] }}]</a>
                                 {% else %}
-                                <a target="_blank" href="{{ link[1] }}">{{ link[0] }}</a>
+                                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
                                 {% endif %}
                             {% endunless %}
                         {% endfor %}

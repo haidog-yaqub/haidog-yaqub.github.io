@@ -49,7 +49,7 @@ body {
     --pub-cover-preview-min-px: 80;
     --pub-cover-preview-margin-px: 24;
     --fs-pub-title: 0.9rem; /* paper titles */
-    --fs-pub-md: var(--fs-sm); /* chips, venue, authors = Domain filter size */
+    --fs-pub-md: var(--fs-md); /* chips, venue, authors — one step below paper titles */
 
     /* Flowing border: same spectrum, starts on blue */
     --color-flow-gradient: linear-gradient(
@@ -967,6 +967,12 @@ a:hover {
     cursor: default;
 }
 
+.publication-item-inner .publication-keyword,
+.publication-item-inner .publication-secondary-actions a,
+.publication-item-inner .publication-primary-links a {
+    font-size: var(--fs-pub-md) !important;
+}
+
 .publication-item-inner .publication-keyword i {
     font-size: 0.92em;
     line-height: 1;
@@ -992,11 +998,34 @@ a:hover {
     cursor: pointer;
 }
 
+.publication-item-inner .publication-primary-links {
+    gap: 0.28rem 0.42rem;
+}
+
+.publication-item-inner .publication-primary-links a {
+    display: inline;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    font-weight: 500 !important;
+    line-height: inherit;
+}
+
 .publication-item-inner .publication-secondary-actions a:hover,
 .publication-item-inner .publication-primary-links a:hover {
+    color: var(--color-link-hover) !important;
+}
+
+.publication-item-inner .publication-secondary-actions a:hover {
     background: var(--pill-bg-hover);
     box-shadow: var(--pill-ring-hover);
-    color: var(--color-link-hover) !important;
+}
+
+.publication-item-inner .publication-primary-links a:hover {
+    background: transparent;
+    box-shadow: none;
+    text-decoration: underline !important;
 }
 
 .tag-filter:hover {
@@ -1080,8 +1109,8 @@ a:hover {
     font-weight: 500;
     line-height: 1.4;
     margin: 0 !important;
-    padding-top: calc(var(--pub-text-gap) - var(--pub-pill-pad-y));
-    padding-bottom: 0;
+    padding-top: var(--pub-text-gap);
+    padding-bottom: var(--pub-text-gap);
 }
 
 .publication-item-inner .publication-item-copy {
@@ -1454,7 +1483,7 @@ body.pub-cover-lightbox-open {
 }
 
 .research-highlight-body {
-    padding: 0.8rem 0.85rem var(--pub-text-gap);
+    padding: 1rem 1rem var(--pub-text-gap);
     display: flex;
     flex-direction: column;
     flex: 0 0 auto;
@@ -2493,4 +2522,3 @@ body.page-music .music-tutorial-toggle-chevron {
         border-top-color: var(--music-border);
     }
 }
-
