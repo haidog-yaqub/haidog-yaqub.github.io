@@ -20,7 +20,7 @@ authors:
   - Jiarui Hai
   - Mounya Elhilali
 links:
-  Paper: https://ieeexplore.ieee.org/abstract/document/10248127
+  Paper: https://engineering.jhu.edu/lcap/data/uploads/pdfs/waspaa2023_hai.pdf
   Homepage: https://jhu-lcap.github.io/Diff-Pitcher/
   Code: https://github.com/haidog-yaqub/DiffPitcher
 ---
