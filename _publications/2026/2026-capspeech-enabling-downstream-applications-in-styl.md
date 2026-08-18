@@ -26,7 +26,7 @@ authors:
   - Mounya Elhilali
   - Najim Dehak
 
-cover_large: /assets/images/covers/capspeech.gif
+cover_large: /assets/images/covers/capspeech_cover.mp4
 
 bibtex: |
   @article{wang2025capspeech,

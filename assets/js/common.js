@@ -131,6 +131,7 @@ $(function () {
                             '<i class="fas fa-times" aria-hidden="true"></i>' +
                         '</button>' +
                         '<img alt="">' +
+                        '<video controls muted loop playsinline hidden></video>' +
                     '</div>' +
                 '</div>'
             );
@@ -148,9 +149,24 @@ $(function () {
             return $box;
         }
 
-        function openLightbox(src, alt) {
+        function openLightbox(src, alt, isVideo) {
             var $lb = ensureLightbox();
-            $lb.find('img').attr({ src: src, alt: alt || '' });
+            var $img = $lb.find('img');
+            var $video = $lb.find('video');
+
+            if (isVideo) {
+                $img.attr({ src: '', alt: '' }).attr('hidden', true);
+                $video.attr({ src: src, 'aria-label': alt || '' }).removeAttr('hidden');
+                $video[0].load();
+                var playPromise = $video[0].play();
+                if (playPromise && typeof playPromise.catch === 'function') {
+                    playPromise.catch(function () {});
+                }
+            } else {
+                $video[0].pause();
+                $video.attr('src', '').attr('hidden', true);
+                $img.attr({ src: src, alt: alt || '' }).removeAttr('hidden');
+            }
             $lb.removeAttr('hidden').addClass('is-open');
             $('body').addClass('pub-cover-lightbox-open');
         }
@@ -166,6 +182,9 @@ $(function () {
                 if ($box) {
                     $box.attr('hidden', true).removeClass('is-closing');
                     $box.find('img').attr('src', '');
+                    var $video = $box.find('video');
+                    $video[0].pause();
+                    $video.attr('src', '');
                 }
             }, 180);
         }
@@ -173,12 +192,12 @@ $(function () {
         $(document).on('click', '.publication-cover-wrap:not(.publication-cover-wrap--sm)', function (e) {
             e.preventDefault();
             var $wrap = $(this);
-            var $img = $wrap.find('.publication-cover-thumb').first();
-            var src = $img.attr('data-src') || $img.attr('src');
+            var $media = $wrap.find('.publication-cover-thumb').first();
+            var src = $media.attr('data-src') || $media.attr('src');
             if (!src) {
                 return;
             }
-            openLightbox(src, $img.attr('alt'));
+            openLightbox(src, $media.attr('alt') || $media.attr('aria-label'), $media.is('video'));
         });
 
         $(document).on('keydown.coverLightbox', function (e) {

@@ -21,7 +21,7 @@ authors:
   - Mounya Elhilali
   - Dong Yu
 
-cover_large: /assets/images/covers/ezgif_wide.gif
+cover_large: /assets/images/covers/ezaudio.mp4
 
 links:
   Paper: https://arxiv.org/pdf/2409.10819

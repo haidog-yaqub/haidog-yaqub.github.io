@@ -22,7 +22,9 @@
 <article class="research-highlight-tile publication-item-inner">
   <div class="research-highlight-cover">
     {%- if hl_cover_rel != '' -%}
-      {%- if hl_cover_ext == 'gif' -%}
+      {%- if hl_cover_ext == 'mp4' or hl_cover_ext == 'webm' -%}
+      <video src="{{ hl_cover_rel }}" aria-label="{{ item.title }}" autoplay muted loop playsinline preload="metadata"></video>
+      {%- elsif hl_cover_ext == 'gif' -%}
       <img src="{{ hl_cover_rel }}" alt="{{ item.title }}" decoding="async">
       {%- else -%}
       <img data-src="{{ hl_cover_rel }}" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" alt="{{ item.title }}" class="lazy" loading="lazy" decoding="async">

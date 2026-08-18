@@ -74,7 +74,9 @@
         {%- if pub_cover_rel != '' -%}
         <div class="col-md-4 col-xl-3 mb-md-0 p-md-3">
             <div class="publication-cover-wrap w-100">
-            {%- if pub_cover_ext == 'gif' -%}
+            {%- if pub_cover_ext == 'mp4' or pub_cover_ext == 'webm' -%}
+            <video src="{{ pub_cover_rel }}" aria-label="{{ item.title }}" class="w-100 rounded-sm publication-cover-thumb" autoplay muted loop playsinline preload="metadata"></video>
+            {%- elsif pub_cover_ext == 'gif' -%}
             <img src="{{ pub_cover_rel }}" alt="{{ item.title }}" class="w-100 rounded-sm publication-cover-thumb" decoding="async">
             {%- else -%}
             <img data-src="{{ pub_cover_rel }}" alt="{{ item.title }}" class="lazy w-100 rounded-sm publication-cover-thumb" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" loading="lazy" decoding="async">

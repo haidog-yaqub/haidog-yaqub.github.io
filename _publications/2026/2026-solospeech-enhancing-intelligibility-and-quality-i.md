@@ -29,7 +29,7 @@ bibtex: |
     year = {2026}
   }
 
-cover_large: /assets/images/covers/solospeech.gif
+cover_large: /assets/images/covers/solospeech.mp4
 
 links:
   Paper: https://arxiv.org/abs/2505.19314
