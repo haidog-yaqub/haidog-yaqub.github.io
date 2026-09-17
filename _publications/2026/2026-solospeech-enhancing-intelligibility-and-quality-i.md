@@ -32,7 +32,7 @@ bibtex: |
 cover_large: /assets/images/covers/solospeech.mp4
 
 links:
-  Paper: https://arxiv.org/abs/2505.19314
+  Paper: https://arxiv.org/pdf/2505.19314
   Homepage: https://wanghelin1997.github.io/SoloSpeech-Demo/
   Code: https://github.com/WangHelin1997/SoloSpeech
   Live Demo: https://huggingface.co/spaces/OpenSound/SoloSpeech

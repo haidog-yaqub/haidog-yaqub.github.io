@@ -6,7 +6,7 @@ type:           publication
 tags:           ["audio", "understanding"]
 keywords:       ["Audio Understanding"]
 pub:            "arXiv"
-cover_large: /assets/images/covers/alm2vec.webp
+cover_large: /assets/images/covers/alm2vec.jpg
 abstract: >-
 
 tldr: >-
@@ -28,7 +28,7 @@ bibtex: |
     url = {https://arxiv.org/abs/2606.30682}
   }
 links:
-  Paper: https://arxiv.org/abs/2606.30682
+  Paper: https://arxiv.org/pdf/2606.30682
   Homepage: https://caml-labs.github.io/ALM2Vec/
   Code: https://github.com/caml-labs/ALM2Vec
 ---

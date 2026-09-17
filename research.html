@@ -174,7 +174,10 @@ permalink: /research/
   </div>
 
   <div class="col-12 col-lg-7 research-page-content">
-    {% assign pubs = site.publications | sort: "date" | reverse %}
+    {% assign pubs_by_date = site.publications | sort: "date" | reverse %}
+    {% assign featured_pubs = pubs_by_date | where: "featured", true %}
+    {% assign non_featured_pubs = pubs_by_date | where_exp: "item", "item.featured != true" %}
+    {% assign pubs = featured_pubs | concat: non_featured_pubs %}
 
     {%- assign gscholar_id = site.data.profile.gscholar | split: '&' | first -%}
     {%- if site.data.profile.gscholar contains 'scholar.google' -%}

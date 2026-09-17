@@ -23,6 +23,6 @@ bibtex: |
     year = {2025}
   }
 links:
-  Paper: https://arxiv.org/abs/2509.18603
+  Paper: https://arxiv.org/pdf/2509.18603
   Live Demo: https://huggingface.co/spaces/OpenSound/EzAudio-ControlNet
 ---

@@ -27,7 +27,7 @@ bibtex: |
     year = {2025}
   }
 links:
-  Paper: https://arxiv.org/abs/2509.18606
+  Paper: https://arxiv.org/pdf/2509.18606
   Code: https://github.com/JHU-LCAP/FlexSED?tab=readme-ov-file
   Live Demo: https://huggingface.co/spaces/OpenSound/FlexSED
 ---

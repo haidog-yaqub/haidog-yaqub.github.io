@@ -32,5 +32,5 @@ cover_large: /assets/images/covers/msr.gif
 
 links:
   Homepage: https://msrchallenge.com/
-  Paper: https://arxiv.org/abs/2601.04343
+  Paper: https://arxiv.org/pdf/2601.04343
 ---

@@ -24,7 +24,7 @@ authors:
   - Najim Dehak
   - Mounya Elhilali
 links:
-  Paper: https://arxiv.org/abs/2310.04567
+  Paper: https://arxiv.org/pdf/2310.04567
   Homepage: https://jhu-lcap.github.io/DPM-TSE/
   Code: https://github.com/haidog-yaqub/DPMTSE/tree/main?tab=readme-ov-file
 ---

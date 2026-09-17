@@ -36,7 +36,7 @@ bibtex: |
     year = {2026}
   }
 links:
-  Paper: https://arxiv.org/abs/2506.02863
+  Paper: https://arxiv.org/pdf/2506.02863
   Homepage: https://wanghelin1997.github.io/CapSpeech-demo/
   Code: https://github.com/WangHelin1997/CapSpeech/
   Live Demo: https://huggingface.co/spaces/OpenSound/CapSpeech-TTS
