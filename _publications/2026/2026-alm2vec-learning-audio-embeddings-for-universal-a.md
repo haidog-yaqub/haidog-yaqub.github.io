@@ -6,7 +6,8 @@ type:           publication
 tags:           ["audio", "understanding"]
 keywords:       ["Audio Understanding"]
 pub:            "arXiv"
-cover_large: /assets/images/covers/alm2vec.jpg
+cover_large: /assets/images/covers/alm2vec.webp
+cover_priority: true
 abstract: >-
 
 tldr: >-

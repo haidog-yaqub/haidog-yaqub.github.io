@@ -6,7 +6,8 @@ type:           publication
 tags:           ["voice", "understanding"]
 keywords:       ["Audio Understanding"]
 pub:            "arXiv"
-cover_large:    /assets/images/covers/voicetrace.jpg
+cover_large:    /assets/images/covers/voicetrace.webp
+cover_priority: true
 tldr: >-
   A benchmark and two-stage retrieval framework that jointly retrieves spoken content by what was said and who said it.
 authors:

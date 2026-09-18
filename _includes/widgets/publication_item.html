@@ -79,7 +79,11 @@
             {%- elsif pub_cover_ext == 'gif' -%}
             <img src="{{ pub_cover_rel }}" alt="{{ item.title }}" class="w-100 rounded-sm publication-cover-thumb" decoding="async">
             {%- else -%}
+            {%- if item.cover_priority -%}
+            <img src="{{ pub_cover_rel }}" alt="{{ item.title }}" class="w-100 rounded-sm publication-cover-thumb" loading="eager" fetchpriority="high" decoding="async">
+            {%- else -%}
             <img data-src="{{ pub_cover_rel }}" alt="{{ item.title }}" class="lazy w-100 rounded-sm publication-cover-thumb" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" loading="lazy" decoding="async">
+            {%- endif -%}
             {%- endif -%}
             </div>
         </div>
