@@ -102,6 +102,17 @@ $(function () {
         $btn.attr('aria-expanded', open);
     });
 
+    $(document).on('click', '.about-page-item-collapsible-toggle', function () {
+        var $btn = $(this);
+        var target = $btn.attr('aria-controls');
+        var $panel = target ? $('#' + target) : $();
+        if (!$panel.length) return;
+        var open = !$panel.hasClass('is-open');
+        $panel.toggleClass('is-open', open);
+        $btn.attr('aria-expanded', open);
+    });
+
+
     $(document).on('click', '.research-highlight-authors-toggle', function (e) {
         e.preventDefault();
         e.stopPropagation();

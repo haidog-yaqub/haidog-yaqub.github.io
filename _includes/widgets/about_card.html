@@ -11,7 +11,14 @@
     {% if site.data.profile.about_sections %}
     <div class="about-page-links">
       {% for section in site.data.profile.about_sections %}
+      {% if section.collapsible %}
+      <div class="about-page-item about-page-item-collapsible{% if forloop.last %} mb-0{% endif %}">
+        <button type="button" class="about-page-item-collapsible-toggle" aria-expanded="false" aria-controls="about-details-{{ forloop.index }}">{{ section.label }} <i class="fas fa-angle-down" aria-hidden="true"></i></button>
+        <div id="about-details-{{ forloop.index }}" class="about-page-item-collapsible-body"><div class="about-page-item-collapsible-clip">{{ section.text | lstrip }}</div></div>
+      </div>
+      {% else %}
       <p class="about-page-item{% if forloop.last %} mb-0{% endif %}">{% if section.before %}{{ section.before }}{% endif %}{% if section.url %}<a class="about-page-link-kicker{% if section.url contains 'music' %} about-page-link-kicker--music{% endif %}" href="{{ section.url | relative_url }}">{% if section.icon %}<i class="{{ section.icon }}" aria-hidden="true"></i>{% endif %}{{ section.label }}</a>{% elsif section.label %}<span class="about-page-link-kicker about-page-link-kicker--plain">{% if section.icon %}<i class="{{ section.icon }}" aria-hidden="true"></i>{% endif %}{{ section.label }}</span>{% endif %}{% if section.after %}{{ section.after | lstrip | prepend: ' ' }}{% elsif section.text %} {{ section.text | lstrip }}{% endif %}</p>
+      {% endif %}
       {% endfor %}
     </div>
     {% elsif site.data.profile.short_bio %}
