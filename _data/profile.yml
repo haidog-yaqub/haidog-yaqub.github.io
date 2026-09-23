@@ -37,7 +37,7 @@ about_sections:
     after: " as a producer, mostly hip-hop and hyperpop. This experience shapes how I approach audio research, giving me a creator's perspective on what makes audio tools expressive, controllable, and genuinely useful in the creative process."
   - collapsible: true
     label: "A bit of background prior to audio research"
-    text: "At Tsinghua, I originally studied civil engineering while exploring data-driven research in areas such as economic information management and medical informatics. This gave me a broad quantitative foundation, which I eventually brought together with my long-standing interest in music through audio research."
+    text: "At Tsinghua, I studied civil engineering and information management, taking courses such as fluid mechanics and econometrics while exploring data-driven research in business analytics and medical informatics. This quantitative foundation later came together with my long-standing interest in music, leading me to audio research."
 
 portrait_url: /assets/images/photos/icon.jpg
 # portrait_caption: >-
