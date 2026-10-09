@@ -78,14 +78,14 @@ experience:
   date: Apr 2026 - Aug 2026
   place: USA
 
-- name: Adobe | CAVA
+- name: Adobe Research
   logo: /assets/images/badges/adobe.png
   position: >- 
     Research Scientist Intern
   date: May 2025 - Feb. 2026
   place: CA, USA
 
-- name: Tencent | AI Lab
+- name: Tencent AI Lab
   logo: /assets/images/badges/tencent.png
   position: >- 
     Research Scientist Intern
@@ -94,7 +94,7 @@ experience:
   date: May 2024 - Sep. 2024
   place: WA, USA
 
-- name: Kuaishou | AI Platform
+- name: Kuaishou AI Platform
   logo: /assets/images/badges/kuaishou.png
   position: >- 
     Music Technology Intern
