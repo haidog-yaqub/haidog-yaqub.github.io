@@ -1,7 +1,7 @@
 ---
 title:          "Diff-Pitcher: Diffusion-based Singing Voice Pitch Correction"
 date:           2023-08-01
-selected:       true
+selected:       false
 type:           publication
 tags:           ["voice", "music", "generation"]
 keywords:       ["Voice Design"]

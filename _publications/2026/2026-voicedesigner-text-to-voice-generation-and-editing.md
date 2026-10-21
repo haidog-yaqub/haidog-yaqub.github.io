@@ -2,7 +2,7 @@
 title:          "VoiceDesigner: Text-to-Voice Generation and Editing via Unified Diffusion Modeling and Data Augmentation"
 date:           2026-08-12
 featured:       true
-selected:       false
+selected:       true
 type:           publication
 tags:           ["voice", "generation"]
 keywords:       ["Voice Design"]
