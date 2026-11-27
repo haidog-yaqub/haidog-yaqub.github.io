@@ -27,7 +27,7 @@
       {%- assign gscholar_url = p.gscholar -%}
       {%- else -%}
       {%- assign gscholar_id = p.gscholar | split: '&' | first -%}
-      {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: gscholar_id -%}
+      {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: gscholar_id | append: '&hl=en&view_op=list_works&sortby=pubdate' -%}
       {%- endif -%}
       <a class="profile-link no-break" target="_blank" rel="noopener" href="{{ gscholar_url }}"
          aria-label="Google Scholar">
